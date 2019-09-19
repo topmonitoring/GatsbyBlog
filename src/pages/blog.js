@@ -2,38 +2,39 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styles from './blog.module.css'
-import Layout from "../components/layout"
-import ArticlePreview from '../components/article-preview'
+import Layout from '../components/layout/layout.component'
+import ArticlePreview from '../components/article-preview/article-preview.component'
+import Container from '../components/container'
 
-class BlogIndex extends React.Component {
-  render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+const BlogIndex = props => {
+  const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const posts = get(props, 'data.allContentfulBlogPost.edges')
 
-    return (
-      <Layout location={this.props.location} >
+  return (
+    <Layout location={props.location}>
+      <Container>
         <div style={{ background: '#fff' }}>
           <Helmet title={siteTitle} />
-          <div className={styles.hero}>
-            Blog
-          </div>
-          <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+
+          <h2 className="section-headline">Recent articles</h2>
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              padding: '10px',
+              maxWidth: '70vw',
+            }}
+          >
+            {posts.map(({ node }) => {
+              return <ArticlePreview article={node} key={node.slug} />
+            })}
           </div>
         </div>
-      </Layout>
-    )
-  }
+      </Container>
+    </Layout>
+  )
 }
 
 export default BlogIndex
