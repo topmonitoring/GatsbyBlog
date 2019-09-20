@@ -4,24 +4,30 @@ import { Link } from 'gatsby'
 import {
   PreviewTitle,
   Tag,
-  ArticleContainer,
+  StyledDate,
+  ArticleDisplayContainer,
   StyledPreviewImg,
   StyledDiscription,
+  ArticleInnerGridContainer,
 } from './article-preview.styles'
 
 const ArticlePreview = ({ article }) => (
-  <ArticleContainer>
-    <StyledPreviewImg alt="" fluid={article.heroImage.fluid} />
-    <PreviewTitle>
-      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-    </PreviewTitle>
-    <small>{article.publishDate}</small>
-    <StyledDiscription
-      dangerouslySetInnerHTML={{
-        __html: article.description.childMarkdownRemark.html,
-      }}
-    />
-    {article.tags ? article.tags.map(tag => <Tag key={tag}>{tag}</Tag>) : null}
-  </ArticleContainer>
+  <ArticleDisplayContainer>
+    <ArticleInnerGridContainer>
+      <StyledPreviewImg alt="" fluid={article.heroImage.fluid} />
+      <PreviewTitle>
+        <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+      </PreviewTitle>
+      <StyledDate>{article.publishDate}</StyledDate>
+      <StyledDiscription
+        dangerouslySetInnerHTML={{
+          __html: article.description.childMarkdownRemark.html,
+        }}
+      />
+      {article.tags
+        ? article.tags.map(tag => <Tag key={tag}>{tag}</Tag>)
+        : null}
+    </ArticleInnerGridContainer>
+  </ArticleDisplayContainer>
 )
 export default ArticlePreview
