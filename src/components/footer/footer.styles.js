@@ -3,9 +3,10 @@ import styled from 'styled-components'
 export const StyledFooter = styled.footer`
   align-content: center;
   fill-opacity: '0.7';
-  background-color: lightblue;
+  background-color: #2d3436;
 `
 export const StyledFooterEnd = styled.div`
+  color: white;
   text-align: center;
   margin: auto;
   font-size: 16px;
@@ -13,6 +14,7 @@ export const StyledFooterEnd = styled.div`
   font-family: 'Montserrat', sans-serif;
 `
 export const StyledFooterGrid = styled.div`
+  color: white;
   margin: auto;
   display: grid;
   grid-template-areas: 'info socials links ';
@@ -30,12 +32,14 @@ export const StyledFooterGrid = styled.div`
 `
 export const StyledFooterInfo = styled.div`
   grid-area: info;
+
   h3 {
     font-family: 'Montserrat', sans-serif;
   }
 `
 export const StyledFooterSocials = styled.div`
   grid-area: socials;
+
   h3 {
     font-family: 'Montserrat', sans-serif;
   }
@@ -47,6 +51,7 @@ export const StyledFooterSocials = styled.div`
 `
 export const StyledFooterLinks = styled.div`
   grid-area: links;
+
   h3 {
     font-family: 'Montserrat', sans-serif;
   }

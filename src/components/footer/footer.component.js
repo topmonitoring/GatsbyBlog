@@ -11,11 +11,12 @@ import {
 } from './footer.styles'
 
 import './footer.styles.js'
+import NavbarLinks from '../navbar/navbar-links.component'
 const Footer = () => (
   <StyledFooter>
     <StyledFooterGrid>
       <StyledFooterInfo>
-        <h3>ABOUT THIS SITE</h3>
+        <h3>ABOUT</h3>
         <span>
           This site source code is available on{' '}
           <a
@@ -31,10 +32,11 @@ const Footer = () => (
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>
-        <h3>FOLLOW ME</h3>
+        <h3>SOCIAL MEDIA</h3>
       </StyledFooterSocials>
       <div className="links">
-        <h3>SECTIONS</h3>
+        <h3>PAGES</h3>
+        <NavbarLinks />
       </div>
     </StyledFooterGrid>
     <StyledFooterEnd>
@@ -44,18 +46,7 @@ const Footer = () => (
           <strong> Dobrin Dobrev</strong>
         </a>
       </b>{' '}
-      © {new Date().getFullYear()} Powerd by Gatsby and GRAFCMS{' '}
-      <span role="img" aria-label="heart">
-        ❤️
-      </span>
-      Logo by{' '}
-      <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-        Freepik
-      </a>{' '}
-      from{' '}
-      <a href="https://www.flaticon.com/" title="Flaticon">
-        www.flaticon.com
-      </a>
+      © {new Date().getFullYear()} Powerd by Gatsby and Contentfull{' '}
     </StyledFooterEnd>
   </StyledFooter>
 )

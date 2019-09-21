@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout/layout.component'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 const AboutPage = props => {
   const [author] = get(props, 'data.allContentfulPerson.edges')

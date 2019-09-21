@@ -1,18 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Navbar from '../navbar/Navbar'
 
-import { StyledLink, NavContainer } from './heder.styles'
+const Heder = () => {
+  const [navbarOpen, setOpen] = useState(false)
 
-const NAV_ITEMS = ['About', 'Contact', 'Books', 'Blog']
-
-const Heder = () => (
-  <NavContainer>
-    <StyledLink to="/">HOME</StyledLink>
-    {NAV_ITEMS.map(navItem => (
-      <StyledLink key={navItem} to={`/${navItem.toLowerCase()}`}>
-        {navItem}
-      </StyledLink>
-    ))}
-  </NavContainer>
-)
+  const handleNavbar = () => {
+    setOpen(!navbarOpen)
+  }
+  return <Navbar navbarState={navbarOpen} handleNavbar={handleNavbar} />
+}
 
 export default Heder

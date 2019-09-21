@@ -18,17 +18,13 @@ const BackgroundSection = ({ className }) => (
       }
     `}
     render={data => {
-      // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
-          Tag="section"
           className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
-        >
-          <h1>Hello gatsby-background-image</h1>
-        </BackgroundImage>
+        ></BackgroundImage>
       )
     }}
   />
