@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../navbar/Navbar'
+import Headroom from 'react-headroom'
 
 const Heder = () => {
   const [navbarOpen, setOpen] = useState(false)
@@ -7,7 +8,11 @@ const Heder = () => {
   const handleNavbar = () => {
     setOpen(!navbarOpen)
   }
-  return <Navbar navbarState={navbarOpen} handleNavbar={handleNavbar} />
+  return (
+    <Headroom>
+      <Navbar navbarState={navbarOpen} handleNavbar={handleNavbar} />
+    </Headroom>
+  )
 }
 
 export default Heder

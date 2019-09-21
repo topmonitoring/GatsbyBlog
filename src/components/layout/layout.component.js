@@ -11,11 +11,11 @@ const Template = ({ location, children }) => {
   return (
     <>
       <GlobalStyles />
-      <Heder />
       <div style={{ height: '100%', width: '100%', overflow: 'hidden' }}>
+        <Heder />
         <main>{children}</main>
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

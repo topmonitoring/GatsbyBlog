@@ -4,11 +4,11 @@ import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
 
-const BackgroundSection = ({ className }) => (
+const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "homeCover.jpg" }) {
+        bgr: file(relativePath: { eq: "homeCover.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -18,13 +18,15 @@ const BackgroundSection = ({ className }) => (
       }
     `}
     render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
+      const imageData = data.bgr.childImageSharp.fluid
       return (
         <BackgroundImage
           className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
-        ></BackgroundImage>
+        >
+          {children}
+        </BackgroundImage>
       )
     }}
   />
@@ -35,7 +37,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   height: 1000px;
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: -75px;
   background-repeat: no-repeat;
 `
 export default StyledBackgroundSection

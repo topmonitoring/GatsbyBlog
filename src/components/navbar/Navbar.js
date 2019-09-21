@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated, config } from 'react-spring'
 
-import Brand from './Brand'
+import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
@@ -24,7 +24,7 @@ const Navbar = props => {
     <>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          <Brand />
+          <Logo />
 
           <NavLinks style={linkAnimation}>
             <NavbarLinks />
@@ -49,7 +49,6 @@ const Navbar = props => {
 export default Navbar
 
 const NavBar = styled(animated.nav)`
-  position: fixed;
   height: 75px;
   width: 100%;
   top: 0;

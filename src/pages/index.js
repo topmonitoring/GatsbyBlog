@@ -13,7 +13,7 @@ const RootIndex = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
-      <HomeCover />
+      <HomeCover></HomeCover>
       <Container>
         <PostsPreview />
       </Container>
