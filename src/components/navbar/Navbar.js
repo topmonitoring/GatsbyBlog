@@ -1,11 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated, config } from 'react-spring'
+import ToggleMode from '../theme/ToogleMode'
 
 import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
+import theme from 'styled-theming'
+
+const getBackground = theme('mode', {
+  light: '#D8DEE9  ',
+  dark: '#2d3436 ',
+})
+const getForeground = theme('mode', {
+  light: 'black',
+  dark: 'white ',
+})
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -29,7 +40,7 @@ const Navbar = props => {
           <NavLinks style={linkAnimation}>
             <NavbarLinks />
           </NavLinks>
-
+          <ToggleMode />
           <BurgerWrapper>
             <BurgerMenu
               navbarState={props.navbarState}
@@ -53,7 +64,7 @@ const NavBar = styled(animated.nav)`
   width: 100%;
   top: 0;
   left: 0;
-  background: #2d3436;
+  background-color: ${getBackground};
   z-index: 1;
   font-size: 1.4rem;
 `
@@ -86,7 +97,7 @@ const NavLinks = styled(animated.ul)`
   column-gap: 20px;
 
   & a {
-    color: white;
+    color: ${getForeground};
     text-transform: uppercase;
     font-weight: 600;
     border-bottom: 1px solid transparent;

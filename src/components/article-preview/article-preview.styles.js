@@ -1,5 +1,11 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import theme from 'styled-theming'
+
+const getBackground = theme('mode', {
+  light: '#E5E9F0',
+  dark: '#3B4252 ',
+})
 
 export const StyledPreviewImg = styled(Img)`
   display: block;
@@ -11,14 +17,14 @@ export const StyledDate = styled.div`
   grid-area: date;
 `
 export const StyledDiscription = styled.p`
-  margin: 2px 2px;
+  margin: 2px 10px;
   font-size: 16px;
   grid-area: discription;
 `
 export const PreviewTitle = styled.h3`
   font-size: 20px;
   height: 10%;
-  margin: 2px;
+  margin: 10px;
   grid-area: 'title';
 `
 export const Tag = styled.p`
@@ -29,7 +35,7 @@ export const Tag = styled.p`
   line-height: 1;
   border-radius: 2px;
   border: 1px solid #a0a0a0;
-  margin: 2px;
+  margin: 10px;
   grid-area: tag;
 `
 export const ArticleInnerGridContainer = styled.div`
@@ -47,6 +53,7 @@ export const ArticleDisplayContainer = styled.article`
   flex-direction: column;
   border: 1px solid black;
   margin: 15px;
+  background-color: ${getBackground};
 
   flex: 0 0 calc(90%);
 

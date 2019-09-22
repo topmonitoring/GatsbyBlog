@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Layout from '../components/layout/layout.component'
-import Container from '../components/container'
 import { BlogPostBody, PostBagroundImg } from './blog-post.styles'
 
 const BlogPostTemplate = props => {
@@ -14,17 +13,15 @@ const BlogPostTemplate = props => {
     <Layout location={props.location}>
       <Helmet title={`${post.title} | ${siteTitle}`} />
       <PostBagroundImg alt={post.title} fluid={post.heroImage.fluid} />
-      <Container>
-        <BlogPostBody>
-          <h1>{post.title}</h1>
-          <p>{post.publishDate}</p>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: post.body.childMarkdownRemark.html,
-            }}
-          />
-        </BlogPostBody>
-      </Container>
+      <BlogPostBody>
+        <h1>{post.title}</h1>
+        <p>{post.publishDate}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: post.body.childMarkdownRemark.html,
+          }}
+        />
+      </BlogPostBody>
     </Layout>
   )
 }

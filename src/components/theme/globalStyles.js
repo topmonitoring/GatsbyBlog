@@ -1,4 +1,16 @@
 import { createGlobalStyle } from 'styled-components'
+import style from 'styled-theming'
+
+const getBackground = style('mode', {
+  light: '#ECEFF4',
+  dark: '#111',
+})
+
+const getForeground = style('mode', {
+  light: '#111',
+  dark: '#EEE',
+})
+
 export const GlobalStyles = createGlobalStyle`
 @font-face {
   font-family: 'Avenir';
@@ -8,26 +20,14 @@ export const GlobalStyles = createGlobalStyle`
   font-display: swap;
 }
 
+
 body {
-  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
+  background-color: ${getBackground};
+  color: ${getForeground};
   font-size: 1em;
+  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
   line-height: 1.65;
-  color: #373f49;
-  background: #eee;
   margin: 0;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-
-h1,
-h2,
-h3 {
-  font-size: 2em;
-  font-weight: normal;
 }
 
 a {

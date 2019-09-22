@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
-import Container from '../components/container'
 import PostsPreview from '../components/postsPreview/posts-preview.component'
 
 const BlogIndex = props => {
@@ -12,11 +11,8 @@ const BlogIndex = props => {
 
   return (
     <Layout location={props.location}>
-      <Container>
-        <Helmet title={siteTitle} />
-
-        <PostsPreview />
-      </Container>
+      <Helmet title={siteTitle} />
+      <PostsPreview />
     </Layout>
   )
 }

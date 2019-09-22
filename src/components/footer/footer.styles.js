@@ -1,12 +1,24 @@
 import styled from 'styled-components'
+import theme from 'styled-theming'
+
+const getBackground = theme('mode', {
+  light: '#D8DEE9  ',
+  dark: '#2d3436 ',
+})
+const getForeground = theme('mode', {
+  light: 'black',
+  dark: 'white ',
+})
+
+//#2d3436 default black
 
 export const StyledFooter = styled.footer`
+  color: ${getForeground};
   align-content: center;
   fill-opacity: '0.7';
-  background-color: #2d3436;
+  background-color: ${getBackground};
 `
 export const StyledFooterEnd = styled.div`
-  color: white;
   text-align: center;
   margin: auto;
   font-size: 16px;
@@ -14,7 +26,6 @@ export const StyledFooterEnd = styled.div`
   font-family: 'Montserrat', sans-serif;
 `
 export const StyledFooterGrid = styled.div`
-  color: white;
   margin: auto;
   display: grid;
   grid-template-areas: 'info socials links ';

@@ -1,22 +1,33 @@
 import React from 'react'
-import { GlobalStyles } from './globalStyles.js'
+import { GlobalStyles } from '../theme/globalStyles.js'
 import Heder from '../heder/heder.component'
 import Footer from '../footer/footer.component'
+
+import { ThemeProvider } from 'styled-components'
+import useTheme from '../theme/useTheme'
 
 const Template = ({ location, children }) => {
   if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
     rootPath = __PATH_PREFIX__ + `/`
   }
-
+  const theme = useTheme()
   return (
-    <>
-      <GlobalStyles />
-      <div style={{ height: '100%', width: '100%', overflow: 'hidden' }}>
-        <Heder />
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <div
+          style={{
+            height: '100%',
+            width: '100%',
+            overflow: 'hidden',
+          }}
+        >
+          <Heder />
+          {children}
+          <Footer />
+        </div>
+      </>
+    </ThemeProvider>
   )
 }
 

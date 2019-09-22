@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
-import Container from '../components/container'
 import HomeCover from '../components/homeCover/home-cover.component'
 import PostsPreview from '../components/postsPreview/posts-preview.component'
 
@@ -14,9 +13,8 @@ const RootIndex = props => {
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
       <HomeCover></HomeCover>
-      <Container>
-        <PostsPreview />
-      </Container>
+
+      <PostsPreview />
     </Layout>
   )
 }
