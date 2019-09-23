@@ -48,7 +48,7 @@ export const ArticleInnerGridContainer = styled.div`
 `
 
 export const ArticleDisplayContainer = styled.article`
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   border: 1px solid black;

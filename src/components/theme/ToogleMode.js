@@ -6,7 +6,8 @@ export default function ToggleMode() {
   return (
     <ThemeConsumer>
       {theme => (
-        <Button
+        <div
+          style={{ margin: 'auto 0' }}
           variant="primary"
           onClick={e =>
             theme.setTheme(
@@ -16,8 +17,8 @@ export default function ToggleMode() {
             )
           }
         >
-          Toggle Mode
-        </Button>
+          <Button />
+        </div>
       )}
     </ThemeConsumer>
   )

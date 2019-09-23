@@ -4,8 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
 import HomeCover from '../components/homeCover/home-cover.component'
-import PostsPreview from '../components/postsPreview/posts-preview.component'
-
+import PreviewCourses from '../components/pereview-courses/preview-courses.component'
 const RootIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
 
@@ -13,8 +12,7 @@ const RootIndex = props => {
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
       <HomeCover></HomeCover>
-
-      <PostsPreview />
+      <PreviewCourses />
     </Layout>
   )
 }

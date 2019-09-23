@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import style from 'styled-theming'
 
 const getBackground = style('mode', {
-  light: '#ECEFF4',
+  light: '#EEE',
   dark: '#111',
 })
 
