@@ -1,32 +1,32 @@
-import styled from 'styled-components'
-import Img from 'gatsby-image'
-import theme from 'styled-theming'
+import styled from "styled-components";
+import Img from "gatsby-image";
+import theme from "styled-theming";
 
-const getBackground = theme('mode', {
-  light: '#E5E9F0',
-  dark: '#3B4252 ',
-})
+const getBackground = theme("mode", {
+  light: "#E5E9F0",
+  dark: "#3B4252 "
+});
 
 export const StyledPreviewImg = styled(Img)`
   display: block;
   width: 100%;
   height: 250px;
   grid-area: img;
-`
+`;
 export const StyledDate = styled.div`
   grid-area: date;
-`
+`;
 export const StyledDiscription = styled.p`
   margin: 2px 10px;
   font-size: 16px;
   grid-area: discription;
-`
+`;
 export const PreviewTitle = styled.h3`
   font-size: 20px;
   height: 10%;
   margin: 10px;
-  grid-area: 'title';
-`
+  grid-area: "title";
+`;
 export const Tag = styled.p`
   width: 70px;
   color: #a0a0a0;
@@ -37,15 +37,15 @@ export const Tag = styled.p`
   border: 1px solid #a0a0a0;
   margin: 10px;
   grid-area: tag;
-`
+`;
 export const ArticleInnerGridContainer = styled.div`
   display: grid;
   grid-template-areas:
-    'img img img'
-    'title title date'
-    'discription discription discription '
-    'tag tag tag';
-`
+    "img img img"
+    "title title date"
+    "discription discription discription "
+    "tag tag tag";
+`;
 
 export const ArticleDisplayContainer = styled.article`
   height: 500px;
@@ -66,4 +66,4 @@ export const ArticleDisplayContainer = styled.article`
   :nth-child(5n + 5) {
     flex: 0 0 calc(33.33% - 32px);
   }
-`
+`;

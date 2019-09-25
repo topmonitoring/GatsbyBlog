@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import {Link} from 'gatsby';
 
 import {
   PreviewTitle,
@@ -9,9 +9,9 @@ import {
   StyledPreviewImg,
   StyledDiscription,
   ArticleInnerGridContainer,
-} from './preview-blog-post.styles'
+} from './preview-blog-post.styles';
 
-const ArticlePreview = ({ article }) => (
+const ArticlePreview = ({article}) => (
   <ArticleDisplayContainer>
     <ArticleInnerGridContainer>
       <StyledPreviewImg alt="" fluid={article.heroImage.fluid} />
@@ -25,9 +25,9 @@ const ArticlePreview = ({ article }) => (
         }}
       />
       {article.tags
-        ? article.tags.map(tag => <Tag key={tag}>{tag}</Tag>)
+        ? article.tags.map (tag => <Tag key={tag}>{tag}</Tag>)
         : null}
     </ArticleInnerGridContainer>
   </ArticleDisplayContainer>
-)
-export default ArticlePreview
+);
+export default ArticlePreview;
