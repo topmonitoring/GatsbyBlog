@@ -9,7 +9,11 @@ const AboutPage = props => {
   return (
     <Layout location={props.location}>
       <div>
-        <Img alt={author.node.name} fluid={author.node.heroImage.fluid} />
+        <Img
+          alt={author.node.name}
+          fluid={author.node.heroImage.fluid}
+          style={{ height: '80vh', width: '70vw', margin: 'auto' }}
+        />
         <div>
           <h3>{author.node.name}</h3>
           <p>{author.node.title}</p>
@@ -34,8 +38,8 @@ export const pageQuery = graphql`
           title
           heroImage: image {
             fluid(
-              maxWidth: 1180
-              maxHeight: 480
+              maxWidth: 1024
+              maxHeight: 1920
               resizingBehavior: PAD
               background: "rgb:000000"
             ) {

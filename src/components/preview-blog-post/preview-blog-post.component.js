@@ -9,7 +9,7 @@ import {
   StyledPreviewImg,
   StyledDiscription,
   ArticleInnerGridContainer,
-} from './article-preview.styles'
+} from './preview-blog-post.styles'
 
 const ArticlePreview = ({ article }) => (
   <ArticleDisplayContainer>

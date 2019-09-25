@@ -3,10 +3,11 @@ import { animated } from 'react-spring'
 
 export const AnimatedCard = styled(animated.div)`
   flex-direction: row;
-  width: 20vw;
-  height: 300px;
+  width: 400px;
+  height: 250px;
   background: aqua;
   margin: 5px;
+  cursor: pointer;
   will-change: transform;
   &:hover {
     background: hotpink;
