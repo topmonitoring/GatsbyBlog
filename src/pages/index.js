@@ -14,7 +14,7 @@ const RootIndex = props => {
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
       <HomeCover></HomeCover>
-      {/* <PreviewCourses /> */}
+      <PreviewCourses />
       <Resources />
     </Layout>
   )

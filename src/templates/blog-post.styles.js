@@ -7,6 +7,11 @@ const getBackground = theme('mode', {
   dark: '#3B4252 ',
 })
 
+const getBackgroundForComments = theme('mode', {
+  light: '#D8DEE9  ',
+  dark: '#2d3436 ',
+})
+
 export const PostBagroundImg = styled(Img)`
   height: 60vh;
   max-height: 900px;
@@ -20,11 +25,26 @@ export const BlogPostBody = styled.div`
   margin-top: -100px;
   background: ${getBackground};
   z-index: 1000;
-  max-width: 1180px;
+  max-width: 1080px;
 `
-export const StyledHeder = styled.div`
-  position: relative;
-  background: #000;
-  color: #fff;
+export const StyledHeder = styled.h1`
   text-align: center;
+  margin: auto;
+  font-weight: 900;
+`
+export const StyledDate = styled.div`
+  text-align: center;
+  color: blue;
+  margin: auto;
+  font-weight: 200;
+`
+export const StyledContentBody = styled.div`
+  padding: 50px;
+`
+
+export const StyledComentSection = styled.div`
+  width: 80vw;
+  margin: 50px auto;
+  padding: 50px;
+  background: ${getBackgroundForComments};
 `
