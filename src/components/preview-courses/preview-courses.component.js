@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import {
   AnimatedCardContainer,
   PreviewCoursesTitle,
-} from './preview-courses.styles';
-import {StaticQuery, graphql} from 'gatsby';
-import PreviewCourse from '../preview-course/preview-course.component';
+} from './preview-courses.styles'
+import { StaticQuery, graphql } from 'gatsby'
+import PreviewCourse from '../preview-course/preview-course.component'
 
 const PreviewCourses = () => (
   <StaticQuery
@@ -26,21 +26,19 @@ const PreviewCourses = () => (
       }
     `}
     render={data => {
-      const courses = data.allContentfulCourses.edges;
+      const courses = data.allContentfulCourses.edges
       return (
         <>
-        <PreviewCoursesTitle>
-            Check out my projects
-          </PreviewCoursesTitle>
-        <AnimatedCardContainer>
-          {courses.map (({node}) => (
-            <PreviewCourse key={node.courseName} node={{...node}} />
-          ))}
-        </AnimatedCardContainer>
+          <PreviewCoursesTitle>Hot topics</PreviewCoursesTitle>
+          <AnimatedCardContainer>
+            {courses.map(({ node }) => (
+              <PreviewCourse key={node.courseName} node={{ ...node }} />
+            ))}
+          </AnimatedCardContainer>
         </>
-      );
+      )
     }}
   />
-);
+)
 
-export default PreviewCourses;
+export default PreviewCourses

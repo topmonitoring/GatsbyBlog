@@ -1,5 +1,5 @@
-import React from 'react';
-import {Link} from 'gatsby';
+import React from 'react'
+import { Link } from 'gatsby'
 
 import {
   PreviewTitle,
@@ -9,25 +9,28 @@ import {
   StyledPreviewImg,
   StyledDiscription,
   ArticleInnerGridContainer,
-} from './preview-blog-post.styles';
+  TagContainer,
+} from './preview-blog-post.styles'
 
-const ArticlePreview = ({article}) => (
+const ArticlePreview = ({ article }) => (
   <ArticleDisplayContainer>
-    <ArticleInnerGridContainer>
-      <StyledPreviewImg alt="" fluid={article.heroImage.fluid} />
-      <PreviewTitle>
-        <Link to={`/blog/${article.slug}`}>{article.title}</Link>
-      </PreviewTitle>
-      <StyledDate>{article.publishDate}</StyledDate>
-      <StyledDiscription
-        dangerouslySetInnerHTML={{
-          __html: article.description.childMarkdownRemark.html,
-        }}
-      />
-      {article.tags
-        ? article.tags.map (tag => <Tag key={tag}>{tag}</Tag>)
-        : null}
-    </ArticleInnerGridContainer>
+    <Link to={`/blog/${article.slug}`} style={{ textDecoration: 'none' }}>
+      <ArticleInnerGridContainer>
+        <StyledPreviewImg alt="" fluid={article.heroImage.fluid} />
+        <PreviewTitle>{article.title}</PreviewTitle>
+        <StyledDate>{article.publishDate}</StyledDate>
+        <StyledDiscription
+          dangerouslySetInnerHTML={{
+            __html: article.description.childMarkdownRemark.html,
+          }}
+        />
+        <TagContainer>
+          {article.tags
+            ? article.tags.map(tag => <Tag key={tag}>{tag}</Tag>)
+            : null}
+        </TagContainer>
+      </ArticleInnerGridContainer>
+    </Link>
   </ArticleDisplayContainer>
-);
-export default ArticlePreview;
+)
+export default ArticlePreview

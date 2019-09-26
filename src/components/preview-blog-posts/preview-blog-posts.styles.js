@@ -13,6 +13,6 @@ export const StyledPreview = styled.div`
   margin-right: auto;
   padding: 10px;
   margin: auto;
-  max-width: 1180px;
+  max-width: 60vw;
   background-color: ${getBackground};
 `

@@ -4,10 +4,19 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Layout from '../components/layout/layout.component'
 import { BlogPostBody, PostBagroundImg } from './blog-post.styles'
+import { DiscussionEmbed } from 'disqus-react'
 
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
+  const slug = get(props, 'data.contentfulBlogPost.slug')
   const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const baseURL = 'https://pure-water.netlify.com/'
+  const fullURL = baseURL + slug
+  console.log(fullURL)
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: slug, title: post.title, url: fullURL },
+  }
 
   return (
     <Layout location={props.location}>
@@ -22,6 +31,7 @@ const BlogPostTemplate = props => {
           }}
         />
       </BlogPostBody>
+      <DiscussionEmbed {...disqusConfig} />
     </Layout>
   )
 }
@@ -36,6 +46,7 @@ export const pageQuery = graphql`
       }
     }
     contentfulBlogPost(slug: { eq: $slug }) {
+      slug
       title
       publishDate(formatString: "MMMM DD, YYYY")
       heroImage {

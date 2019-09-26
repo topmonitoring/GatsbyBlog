@@ -89,11 +89,11 @@ const NavLinks = styled(animated.ul)`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
-  -moz-column-count: 4;
+  -moz-column-count: 5;
   -moz-column-gap: 20px;
-  -webkit-column-count: 4;
+  -webkit-column-count: 5;
   -webkit-column-gap: 20px;
-  column-count: 4;
+  column-count: 5;
   column-gap: 20px;
 
   & a {

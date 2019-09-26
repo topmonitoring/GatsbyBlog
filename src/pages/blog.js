@@ -3,7 +3,8 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
-import PostsPreview from '../components/preview-blog-posts-list/preview-blog-posts-list.component'
+import PostsPreview from '../components/preview-blog-posts/preview-blog-posts.component'
+import HomeCover from '../components/home-cover/home-cover.component'
 
 const BlogIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -11,6 +12,7 @@ const BlogIndex = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
+      <HomeCover />
       <PostsPreview />
     </Layout>
   )

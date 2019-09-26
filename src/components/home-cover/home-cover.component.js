@@ -34,7 +34,7 @@ const BackgroundSection = ({ className, children }) => (
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100vw;
-  height: 1000px;
+  height: 500px;
   position: absolute;
   left: 0px;
   top: -75px;

@@ -3,6 +3,9 @@
   "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
   "author": "Stefan Judis <stefanjudis@gmail.com>",
+  "resolutions": {
+    "image-webpack-loader/imagemin-pngquant": "5.0.1"
+  },
   "bugs": {
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },

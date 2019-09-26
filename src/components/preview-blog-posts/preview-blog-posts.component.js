@@ -1,7 +1,7 @@
 import React from 'react'
 import ArticlePreview from '../preview-blog-post/preview-blog-post.component'
 import { StaticQuery, graphql } from 'gatsby'
-import { StyledPreview } from './preview-blog-posts-list.styles'
+import { StyledPreview } from './preview-blog-posts.styles'
 
 const PostsPreview = () => {
   return (
