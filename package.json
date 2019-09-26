@@ -3,14 +3,12 @@
   "description": "Starter Contentful Gatsby Blog",
   "version": "1.0.0",
   "author": "Stefan Judis <stefanjudis@gmail.com>",
-  "resolutions": {
-    "image-webpack-loader/imagemin-pngquant": "5.0.1"
-  },
   "bugs": {
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "disqus-react": "^1.0.7",
     "gatsby-background-image": "^0.8.11",
     "gatsby-image": "^2.0.38",
     "gatsby-plugin-react-helmet": "^3.0.12",
@@ -22,7 +20,6 @@
     "gatsby-transformer-sharp": "^2.1.18",
     "local-storage-fallback": "^4.1.1",
     "lodash": "^4.17.11",
-    "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.0",
