@@ -39,5 +39,6 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   left: 0px;
   top: -75px;
   background-repeat: no-repeat;
+  margin-bottom: -75px;
 `
 export default StyledBackgroundSection

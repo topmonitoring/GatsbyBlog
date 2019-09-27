@@ -12,12 +12,12 @@ import {
   StyledComentSection,
 } from './blog-post.styles'
 import { DiscussionEmbed } from 'disqus-react'
+import { Link } from 'gatsby'
 
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
   const slug = get(props, 'data.contentfulBlogPost.slug')
   const siteTitle = get(props, 'data.site.siteMetadata.title')
-
   const baseURL = 'https://pure-water.netlify.com/'
   const fullURL = baseURL + slug
 
@@ -40,6 +40,7 @@ const BlogPostTemplate = props => {
           }}
         />
       </BlogPostBody>
+
       <StyledComentSection>
         <DiscussionEmbed {...disqusConfig} />
       </StyledComentSection>
@@ -57,8 +58,8 @@ export const pageQuery = graphql`
       }
     }
     contentfulBlogPost(slug: { eq: $slug }) {
-      slug
       title
+      slug
       publishDate(formatString: "MMMM DD, YYYY")
       heroImage {
         fluid(maxWidth: 1920, background: "rgb:000000") {
