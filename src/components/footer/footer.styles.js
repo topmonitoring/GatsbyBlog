@@ -1,22 +1,14 @@
 import styled from 'styled-components'
-import theme from 'styled-theming'
-
-const getBackground = theme('mode', {
-  light: '#D8DEE9  ',
-  dark: '#2d3436 ',
-})
-const getForeground = theme('mode', {
-  light: 'black',
-  dark: 'white ',
-})
-
-//#2d3436 default black
+import {
+  getBackgroundForNavAndFooter,
+  getGlobalForeground,
+} from '../theme/colors'
 
 export const StyledFooter = styled.footer`
-  color: ${getForeground};
+  color: ${getGlobalForeground};
   align-content: center;
   fill-opacity: '0.7';
-  background-color: ${getBackground};
+  background-color: ${getBackgroundForNavAndFooter};
 `
 export const StyledFooterEnd = styled.div`
   text-align: center;

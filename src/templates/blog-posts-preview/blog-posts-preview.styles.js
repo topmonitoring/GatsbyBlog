@@ -1,10 +1,5 @@
 import styled from 'styled-components'
-import theme from 'styled-theming'
-
-const getBackground = theme('mode', {
-  light: '#fff',
-  dark: '#2E3440',
-})
+import { getBackgroundForBlogPostsPreview } from '../../components/theme/colors'
 
 export const StyledPreview = styled.div`
   display: flex;
@@ -14,6 +9,6 @@ export const StyledPreview = styled.div`
   padding: 10px;
   margin: auto;
   max-width: 55vw;
-  background-color: ${getBackground};
+  background-color: ${getBackgroundForBlogPostsPreview};
   border-radius: 10px;
 `

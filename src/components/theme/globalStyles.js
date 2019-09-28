@@ -1,15 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import style from 'styled-theming'
-
-const getBackground = style('mode', {
-  light: '#EEE',
-  dark: '#111',
-})
-
-const getForeground = style('mode', {
-  light: '#111',
-  dark: '#EEE',
-})
+import { getGlobalBackground, getGlobalForeground } from './colors'
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -22,8 +12,8 @@ export const GlobalStyles = createGlobalStyle`
 
 
 body {
-  background-color: ${getBackground};
-  color: ${getForeground};
+  background-color: ${getGlobalBackground};
+  color: ${getGlobalForeground};
   font-size: 1em;
   font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
   line-height: 1.65;

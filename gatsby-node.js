@@ -6,7 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
+    const blogPost = path.resolve('./src/templates/blog-post/blog-post.js')
     resolve(
       graphql(
         `
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: i === 0 ? '/blog' : `/blog/${i + 1}`,
             component: path.resolve(
-              './src/templates/preview-blog-posts/preview-blog-posts.component.js'
+              './src/templates/blog-posts-preview/blog-posts-preview.component.js'
             ),
             context: {
               limit: postsPerPage,

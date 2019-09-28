@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Layout from '../components/layout/layout.component'
+import Layout from '../../components/layout/layout.component'
 import {
   BlogPostBody,
   PostBagroundImg,
@@ -12,7 +12,6 @@ import {
   StyledComentSection,
 } from './blog-post.styles'
 import { DiscussionEmbed } from 'disqus-react'
-import { Link } from 'gatsby'
 
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')

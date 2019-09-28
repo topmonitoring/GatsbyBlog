@@ -3,7 +3,7 @@ import {
   StyledSection,
   StyledTitle,
   StyledSectionContainer,
-} from './resources.styles'
+} from './preview-resources.styles'
 
 const Resources = () => {
   return (

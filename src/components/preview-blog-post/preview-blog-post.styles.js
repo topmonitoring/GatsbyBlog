@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import theme from 'styled-theming'
-
-const getBackground = theme('mode', {
-  light: '#E5E9F0',
-  dark: '#3B4252 ',
-})
+import { getBackgroundForArticlePreview } from '../theme/colors'
 
 export const StyledPreviewImg = styled(Img)`
   display: block;
@@ -67,7 +62,7 @@ export const ArticleDisplayContainer = styled.article`
   flex-direction: column;
   border: 1px solid black;
   margin: 15px;
-  background-color: ${getBackground};
+  background-color: ${getBackgroundForArticlePreview};
 
   flex: 0 0 calc(50% - 33px);
 `

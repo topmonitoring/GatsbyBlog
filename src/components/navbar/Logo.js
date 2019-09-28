@@ -30,6 +30,7 @@ export default Logo
 const StyledLogo = styled.svg`
   height: 50px;
   width: 50px;
+  float: right;
 `
 const StyledLink = styled(Link)`
   margin: auto 0;

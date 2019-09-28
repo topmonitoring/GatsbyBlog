@@ -13,10 +13,6 @@ const getBackground = theme('mode', {
   light: '#D8DEE9  ',
   dark: '#2d3436 ',
 })
-const getForeground = theme('mode', {
-  light: 'black',
-  dark: 'white ',
-})
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -62,11 +58,9 @@ export default Navbar
 const NavBar = styled(animated.nav)`
   height: 75px;
   width: 100%;
-  top: 0;
-  left: 0;
+  font-size: 1.2rem;
   background-color: ${getBackground};
   z-index: 1;
-  font-size: 1.4rem;
 `
 
 const FlexContainer = styled.div`
@@ -96,23 +90,7 @@ const NavLinks = styled(animated.ul)`
   column-count: 5;
   column-gap: 20px;
 
-  & a {
-    color: ${getForeground};
-    text-transform: uppercase;
-    font-weight: 600;
-    border-bottom: 1px solid transparent;
-    margin: 0 1.5rem;
-    transition: all 300ms linear 0s;
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-      color: aqua;
-      border-bottom: 1px solid aqua;
-    }
-
-    @media (max-width: 768px) {
-      display: none;
-    }
+  @media (max-width: 768px) {
+    display: none;
   }
 `

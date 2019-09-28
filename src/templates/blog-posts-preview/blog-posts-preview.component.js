@@ -1,7 +1,7 @@
 import React from 'react'
 import ArticlePreview from '../../components/preview-blog-post/preview-blog-post.component'
 import { graphql } from 'gatsby'
-import { StyledPreview } from './preview-blog-posts.styles'
+import { StyledPreview } from './blog-posts-preview.styles'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../../components/layout/layout.component'
