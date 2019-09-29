@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { getGlobalForeground } from '../theme/colors'
 
 const Burgermenu = props => {
   return (
@@ -21,7 +22,7 @@ const Wrapper = styled.div`
   display: block;
 
   & span {
-    background: aqua;
+    background: ${getGlobalForeground};
     display: block;
     position: relative;
     width: 3.5rem;

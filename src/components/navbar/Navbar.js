@@ -7,12 +7,7 @@ import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
-import theme from 'styled-theming'
-
-const getBackground = theme('mode', {
-  light: '#D8DEE9  ',
-  dark: '#2d3436 ',
-})
+import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -32,7 +27,6 @@ const Navbar = props => {
       <NavBar style={barAnimation}>
         <FlexContainer>
           <Logo />
-
           <NavLinks style={linkAnimation}>
             <NavbarLinks />
           </NavLinks>
@@ -59,7 +53,7 @@ const NavBar = styled(animated.nav)`
   height: 75px;
   width: 100%;
   font-size: 1.2rem;
-  background-color: ${getBackground};
+  background-color: ${getBackgroundForNavAndFooter};
   z-index: 1;
 `
 

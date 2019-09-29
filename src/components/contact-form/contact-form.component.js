@@ -24,7 +24,7 @@ const FormComponent = () => {
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    fetch('/', {
+    fetch('/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({

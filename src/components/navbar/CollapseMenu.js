@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import NavbarLinks from './navbar-links.component'
 import { useSpring, animated } from 'react-spring'
+import {
+  getGlobalForeground,
+  getBackgroundForNavAndFooter,
+} from '../theme/colors'
 
 const CollapseMenu = props => {
   const { open } = useSpring({ open: props.navbarState ? 0 : 1 })
@@ -31,7 +35,7 @@ export default CollapseMenu
 
 const CollapseWrapper = styled(animated.div)`
   z-index: 2000;
-  background: #2d3436;
+  background: ${getBackgroundForNavAndFooter};
   position: fixed;
   top: 4.5rem;
   left: 0;
@@ -42,21 +46,28 @@ const NavLinks = styled.ul`
   list-style-type: none;
   padding: 2rem 1rem 2rem 2rem;
 
+  li {
+    div {
+      div {
+        margin-top: 0px;
+        & a {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
   & li {
     transition: all 300ms linear 0s;
   }
 
-  & a {
+  a {
     font-size: 1.4rem;
     line-height: 2;
-    color: #dfe6e9;
+    color: ${getGlobalForeground};
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-
-    &:hover {
-      color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
-    }
+    text-align: start;
   }
 `

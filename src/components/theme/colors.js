@@ -34,8 +34,3 @@ export const getBackgroundForArticlePreview = theme('mode', {
   light: '#E5E9F0',
   dark: '#3B4252 ',
 })
-
-const getForeground = theme('mode', {
-  light: 'black',
-  dark: 'white ',
-})
