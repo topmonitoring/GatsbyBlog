@@ -12,6 +12,7 @@ import {
   StyledComentSection,
 } from './blog-post.styles'
 import { DiscussionEmbed } from 'disqus-react'
+import SocialButtons from '../../components/share-buttons/share-buttons.component'
 
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
@@ -39,6 +40,8 @@ const BlogPostTemplate = props => {
           }}
         />
       </BlogPostBody>
+
+      <SocialButtons link={fullURL} message={post.title} />
 
       <StyledComentSection>
         <DiscussionEmbed {...disqusConfig} />

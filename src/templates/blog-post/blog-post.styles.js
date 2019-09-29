@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 import {
   getBackgroundForComments,
   getBackgroundForBlogPost,
+  getForegroundForDate,
 } from '../../components/theme/colors'
 
 export const PostBagroundImg = styled(Img)`
@@ -27,7 +28,7 @@ export const StyledHeder = styled.h1`
 `
 export const StyledDate = styled.div`
   text-align: center;
-  color: blue;
+  color: ${getForegroundForDate};
   margin: auto;
   font-weight: 200;
 `

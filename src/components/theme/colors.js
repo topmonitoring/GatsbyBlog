@@ -34,3 +34,7 @@ export const getBackgroundForArticlePreview = theme('mode', {
   light: '#E5E9F0',
   dark: '#3B4252 ',
 })
+export const getForegroundForDate = theme('mode', {
+  light: 'blue',
+  dark: 'aqua',
+})
