@@ -15,11 +15,10 @@ function encode(data) {
 }
 
 const FormComponent = () => {
-  const [inputs, setInputs] = useState({})
+  const [isValidated, setValidated] = useState({})
 
   const handleChange = e => {
-    event.persist()
-    setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }))
+    setValidated({ [e.target.name]: e.target.value })
   }
 
   const handleSubmit = e => {
@@ -30,7 +29,7 @@ const FormComponent = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...inputs,
+        ...isValidated,
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
