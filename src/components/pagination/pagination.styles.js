@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import {
+  getBackgroundForBlogPostsPreview,
+  getGlobalForeground,
+} from '../theme/colors'
 
 export const StyledLink = styled(Link)`
-  background: #fff;
-  color: black;
+  background: ${getBackgroundForBlogPostsPreview};
+  color: ${getGlobalForeground};
   float: left;
   padding: 8px 16px;
   text-decoration: none;

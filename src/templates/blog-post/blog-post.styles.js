@@ -34,6 +34,10 @@ export const StyledDate = styled.div`
 `
 export const StyledContentBody = styled.div`
   padding: 50px;
+  img {
+    width: 50%;
+    height: 50%;
+  }
 `
 
 export const StyledComentSection = styled.div`
