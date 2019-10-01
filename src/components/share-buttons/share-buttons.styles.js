@@ -18,4 +18,22 @@ export const SocialLinksContainer = styled.div`
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    position: relative;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80vw;
+
+    a {
+      margin: 2px;
+      div {
+        height: 15px;
+        width: 15px;
+        div {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 `

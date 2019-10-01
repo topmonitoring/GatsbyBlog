@@ -6,6 +6,7 @@ import {
   getGlobalForeground,
   getBackgroundForNavAndFooter,
 } from '../theme/colors'
+import Resources from './resources-dropdown-menu'
 
 const CollapseMenu = props => {
   const { open } = useSpring({ open: props.navbarState ? 0 : 1 })
@@ -24,6 +25,9 @@ const CollapseMenu = props => {
       >
         <NavLinks>
           <NavbarLinks />
+          <li key="resources">
+            <Resources />
+          </li>
         </NavLinks>
       </CollapseWrapper>
     )

@@ -18,17 +18,9 @@ const Footer = () => (
       <StyledFooterInfo>
         <h3>ABOUT</h3>
         <span>
-          This site source code is available on{' '}
-          <a
-            href="https://github.com/topmonitoring/gatsbyCV"
-            title="github link"
-            target="blank"
-          >
-            GitHub
-          </a>
-          . Follow the link to see all the technologies behind this project and
-          how to set it up for yourself. Creating beautiful sites take a lot of
-          time and effort, feel free to donate to my hard work here.{' '}
+          This blog purpose is to educate users, allow programmers to discover
+          practical solutions, new technologies and share their knowledge with
+          each other.
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>

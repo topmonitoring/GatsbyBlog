@@ -4,6 +4,9 @@ import Img from 'gatsby-image'
 export const StyledAboutSection = styled.div`
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `
 export const StyledAboutInfo = styled.div`
   display: flex;
@@ -17,6 +20,10 @@ export const StyledImg = styled(Img)`
   width: 500px;
   float: right;
   margin: 50px;
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+    height: 250px;
+  }
 `
 export const StyledName = styled.h3`
   text-align: center;

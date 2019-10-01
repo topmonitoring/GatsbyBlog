@@ -7,12 +7,9 @@ const interp = i => r =>
 
 const PreviewCourse = ({ node }) => {
   const { radians } = useSpring({
-    to: async next => {
-      while (1) await next({ radians: 2 * Math.PI })
-    },
+    to: { radians: 2 * Math.PI },
     from: { radians: 0 },
     config: { duration: 3500 },
-    reset: true,
   })
   return (
     <AnimatedCard

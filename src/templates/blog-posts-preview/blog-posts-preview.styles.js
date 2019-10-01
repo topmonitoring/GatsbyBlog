@@ -8,7 +8,10 @@ export const StyledPreview = styled.div`
   margin-right: auto;
   padding: 10px;
   margin: auto;
-  max-width: 55vw;
+  width: 55vw;
   background-color: ${getBackgroundForBlogPostsPreview};
   border-radius: 10px;
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+  }
 `

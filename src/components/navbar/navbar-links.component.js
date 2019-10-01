@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Resources from './resources-dropdown-menu'
 import styled from 'styled-components'
 import theme from 'styled-theming'
 
@@ -18,9 +17,6 @@ const NavbarLinks = () => (
         </StyledNavLink>
       </li>
     ))}
-    <li key="resources">
-      <Resources />
-    </li>
   </>
 )
 

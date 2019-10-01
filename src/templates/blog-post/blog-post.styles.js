@@ -37,6 +37,15 @@ export const StyledContentBody = styled.div`
   img {
     width: 50%;
     height: 50%;
+    margin-left: 25%;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 10px;
+    img {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
   }
 `
 

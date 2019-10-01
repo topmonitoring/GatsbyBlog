@@ -15,6 +15,9 @@ export const StyledDiscription = styled.p`
   margin: 2px 10px;
   font-size: 16px;
   grid-area: discription;
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
 `
 export const PreviewTitle = styled.h3`
   position: absolute;
@@ -63,6 +66,9 @@ export const ArticleDisplayContainer = styled.article`
   border: 1px solid black;
   margin: 15px;
   background-color: ${getBackgroundForArticlePreview};
-
   flex: 0 0 calc(50% - 33px);
+  @media screen and (max-width: 800px) {
+    flex: 0 0 calc(100% - 33px);
+    font-size: 12px;
+  }
 `
