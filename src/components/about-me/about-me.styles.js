@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { getBackgroundForBlogPostsPreview } from '../theme/colors'
 
 export const StyledAboutSection = styled.div`
   display: flex;
   flex-direction: row;
+  align-content: center;
+  background-color: ${getBackgroundForBlogPostsPreview};
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
@@ -11,15 +14,18 @@ export const StyledAboutSection = styled.div`
 export const StyledAboutInfo = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 20px auto;
   padding: 50px;
-  width: 60vw;
+  width: 600px;
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+  }
 `
 export const StyledImg = styled(Img)`
   height: 600px;
   width: 500px;
   float: right;
-  margin: 50px;
+  margin: 50px auto;
   @media screen and (max-width: 800px) {
     width: 80vw;
     height: 250px;
