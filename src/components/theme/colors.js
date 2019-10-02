@@ -1,5 +1,5 @@
 import style from 'styled-theming'
-import theme from 'styled-theming'
+//import theme from 'styled-theming'
 
 export const getGlobalBackground = style('mode', {
   light: '#EEE',
@@ -11,30 +11,30 @@ export const getGlobalForeground = style('mode', {
   dark: '#EEE',
 })
 
-export const getBackgroundForComments = theme('mode', {
+export const getBackgroundForComments = style('mode', {
   light: '#D8DEE9  ',
   dark: '#2d3436 ',
 })
-export const getBackgroundForNavAndFooter = theme('mode', {
+export const getBackgroundForNavAndFooter = style('mode', {
   light: '#D8DEE9  ',
   dark: '#2d3436 ',
 })
 
-export const getBackgroundForBlogPost = theme('mode', {
+export const getBackgroundForBlogPost = style('mode', {
   light: '#fff',
   dark: '#3B4252 ',
 })
 
-export const getBackgroundForBlogPostsPreview = theme('mode', {
+export const getBackgroundForBlogPostsPreview = style('mode', {
   light: '#fff',
   dark: '#2E3440',
 })
 
-export const getBackgroundForArticlePreview = theme('mode', {
+export const getBackgroundForArticlePreview = style('mode', {
   light: '#E5E9F0',
   dark: '#3B4252 ',
 })
-export const getForegroundForDate = theme('mode', {
+export const getForegroundForDate = style('mode', {
   light: 'blue',
   dark: 'aqua',
 })
