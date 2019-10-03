@@ -13,7 +13,7 @@ import { InstantSearch } from 'react-instantsearch-dom'
 
 const searchClient = algoliasearch(
   process.env.ALGOLIA_APP_ID,
-  process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+  'fbb4d53973362ece715eaab2441bee7f'
 )
 
 const SearchBlogPost = () => {
