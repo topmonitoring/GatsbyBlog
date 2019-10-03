@@ -13,8 +13,10 @@ import { InstantSearch } from 'react-instantsearch-dom'
 
 const searchClient = algoliasearch(
   process.env.ALGOLIA_APP_ID,
-  'fbb4d53973362ece715eaab2441bee7f'
+  process.env.ALGOLIA_SEARCH_ONLY_API_KEY
 )
+console.log(process.env.ALGOLIA_APP_ID)
+console.log(process.env.ALGOLIA_SEARCH_ONLY_API_KEY)
 
 const SearchBlogPost = () => {
   const [showResults, setShowResults] = useState(false)
@@ -37,7 +39,6 @@ const SearchBlogPost = () => {
 export default SearchBlogPost
 
 const HitPreview = ({ hit }) => {
-  console.log(hit)
   return (
     <StyledSearchResults>
       <Link
