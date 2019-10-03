@@ -12,11 +12,9 @@ import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch } from 'react-instantsearch-dom'
 
 const searchClient = algoliasearch(
-  process.env.ALGOLIA_APP_ID,
-  process.env.ALGOLIA_SEARCH_ONLY_API_KEY
+  `ASRLVIQT09`,
+  `fbb4d53973362ece715eaab2441bee7f`
 )
-console.log(process.env.ALGOLIA_APP_ID)
-console.log(process.env.ALGOLIA_SEARCH_ONLY_API_KEY)
 
 const SearchBlogPost = () => {
   const [showResults, setShowResults] = useState(false)
