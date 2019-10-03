@@ -17,7 +17,8 @@ const PostsPreview = props => {
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
       <HomeCover />
-      <SearchBlogPost />
+      <SearchBlogPost style={{ position: 'absolute', marginTop: '200px' }} />
+
       <StyledPreview>
         {posts.map(({ node }) => {
           return <ArticlePreview article={node} key={node.slug} />
@@ -56,9 +57,9 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
-          description {
+          body {
             childMarkdownRemark {
-              html
+              excerpt
             }
           }
         }

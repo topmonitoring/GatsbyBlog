@@ -25,6 +25,10 @@ const MyQuery = `{
         publishDate
         body {
           body
+          childMarkdownRemark
+          {
+            excerpt
+          }
         }
       }
     }

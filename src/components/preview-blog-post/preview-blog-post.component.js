@@ -21,7 +21,7 @@ const ArticlePreview = ({ article }) => (
         <StyledDate>{article.publishDate}</StyledDate>
         <StyledDiscription
           dangerouslySetInnerHTML={{
-            __html: article.description.childMarkdownRemark.html,
+            __html: article.body.childMarkdownRemark.excerpt,
           }}
         />
         <TagContainer>
