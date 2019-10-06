@@ -1,15 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   StyledInput,
-  StyledLabel,
+  StyledResultsContainer,
   StyledSearchContainer,
-  StyledSearchResults,
+  StyledSearchResult,
   StyledHits,
-  StyledHighlight,
+  StyledHighlightTitle,
+  StyledDiscription,
+  StyledNotFound,
 } from './search-blog-post.styles'
 import { Link } from 'gatsby'
 import algoliasearch from 'algoliasearch/lite'
-import { InstantSearch } from 'react-instantsearch-dom'
+import {
+  InstantSearch,
+  Highlight,
+  Configure,
+  connectStateResults,
+} from 'react-instantsearch-dom'
+import SearchLogo from './search-logo.component'
 
 const searchClient = algoliasearch(
   `ASRLVIQT09`,
@@ -17,9 +25,18 @@ const searchClient = algoliasearch(
 )
 
 const SearchBlogPost = () => {
-  const [showResults, setShowResults] = useState(false)
+  const [showResults, setShowResults] = useState(true)
 
-  useEffect(() => {}, [])
+  const handleChange = e => {
+    e.preventDefault()
+    const searchInput = e.target.value
+    if (searchInput.length === 0) {
+      setShowResults(true)
+    } else {
+      setShowResults(false)
+    }
+  }
+
   return (
     <StyledSearchContainer>
       <InstantSearch
@@ -28,8 +45,9 @@ const SearchBlogPost = () => {
         indexName="Blog"
         style={{ margin: 'auto', width: '80vw' }}
       >
-        <StyledInput />
-        {showResults ? null : <StyledHits hitComponent={HitPreview} />}
+        <StyledInput onChange={handleChange} />
+        <Configure hitsPerPage={6} />
+        {showResults ? null : <Content />}
       </InstantSearch>
     </StyledSearchContainer>
   )
@@ -38,18 +56,40 @@ export default SearchBlogPost
 
 const HitPreview = ({ hit }) => {
   return (
-    <StyledSearchResults>
+    <StyledSearchResult>
       <Link
         style={{ boxShadow: `none`, textDecoration: 'none' }}
         to={`/blog/${hit.slug}`}
       >
-        <StyledHighlight hit={hit} attribute="title" tagName="mark" />
+        <StyledHighlightTitle hit={hit} attribute="title" tagName="mark" />
 
         <small style={{ float: 'right' }}>
           {new Date(hit.publishDate).toLocaleDateString()}
         </small>
-        <div>{hit.body.childMarkdownRemark.excerpt}</div>
+        <StyledDiscription>
+          <Highlight
+            hit={hit}
+            attribute="body.childMarkdownRemark.excerpt"
+            tagName="mark"
+          />
+        </StyledDiscription>
       </Link>
-    </StyledSearchResults>
+    </StyledSearchResult>
   )
 }
+
+const Content = connectStateResults(({ searchState, searchResults }) =>
+  searchResults && searchResults.nbHits !== 0 ? (
+    <StyledResultsContainer>
+      <StyledHits hitComponent={HitPreview} />
+      <SearchLogo />
+    </StyledResultsContainer>
+  ) : (
+    <StyledResultsContainer>
+      <StyledNotFound>
+        No results has been found for {searchState.query}
+      </StyledNotFound>
+      <SearchLogo />
+    </StyledResultsContainer>
+  )
+)

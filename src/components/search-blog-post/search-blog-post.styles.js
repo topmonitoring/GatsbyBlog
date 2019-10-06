@@ -1,23 +1,39 @@
 import styled from 'styled-components'
 import {
   getBackgroundForBlogPostsPreview,
+  getBackgroundForBlogPost,
+  getBackgroundForNavAndFooter,
   getGlobalForeground,
 } from '../theme/colors'
 import { SearchBox, Hits, Highlight } from 'react-instantsearch-dom'
 
-export const StyledSearchResults = styled.div`
-  width: 600px;
-  margin: 2px auto;
-  padding: 0px 5px;
-  background-color: ${getBackgroundForBlogPostsPreview};
+export const StyledDiscription = styled.p`
+  font-size: 16px;
   @media screen and (max-width: 800px) {
-    width: 80vw;
-    margin: 2px auto;
+    font-size: 14px;
   }
 `
-export const StyledHighlight = styled(Highlight)`
+export const StyledNotFound = styled.div`
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 5px;
+`
+
+export const StyledSearchLogo = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  span {
+    font-size: 20px;
+  }
+`
+
+export const StyledHighlightTitle = styled(Highlight)`
   font-size: 20px;
   font-weight: 800;
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
 `
 export const StyledHits = styled(Hits)`
   ul {
@@ -50,11 +66,35 @@ export const StyledInput = styled(SearchBox)`
   }
 `
 
-export const StyledLabel = styled.label`
-  margin: auto;
+export const StyledResultsContainer = styled.div`
+  width: 620px;
+  position: absolute;
+  z-index: 9999;
+  background-color: ${getBackgroundForNavAndFooter};
+  left: 0;
+  right: 0;
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  @media screen and (max-width: 800px) {
+    width: 82vw;
+  }
 `
+export const StyledSearchResult = styled.div`
+  width: 600px;
+  margin: 2px auto;
+  padding: 0px 5px;
+  :hover {
+    background-color: ${getBackgroundForBlogPost};
+  }
+  @media screen and (max-width: 800px) {
+    width: 80vw;
+    margin: 2px auto;
+  }
+`
+
 export const StyledSearchContainer = styled.div`
   align-content: center;
-
   padding: 20px;
 `

@@ -24,7 +24,6 @@ const MyQuery = `{
         title
         publishDate
         body {
-          body
           childMarkdownRemark
           {
             excerpt
