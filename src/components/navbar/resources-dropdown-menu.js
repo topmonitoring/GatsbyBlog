@@ -26,6 +26,7 @@ const Resources = () => {
       {isOpen ? (
         <StyledDropdownMenu>
           <StyledLink to="/books">Books</StyledLink>
+          <StyledLink to="/books">Links</StyledLink>
           <StyledLink to="/books">Open Source Projects </StyledLink>
           <StyledLink to="/books"> Downloads </StyledLink>
         </StyledDropdownMenu>
@@ -47,7 +48,7 @@ const StyledLink = styled(Link)`
 `
 const StyledDropdownMenu = styled.div`
   width: 250px;
-  height: 150px;
+  height: 200px;
   position: absolute;
   display: flex;
   flex-direction: column;

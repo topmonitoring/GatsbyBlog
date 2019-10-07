@@ -1,22 +1,26 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Resources from './resources-dropdown-menu'
 import styled from 'styled-components'
 import theme from 'styled-theming'
 
 const NAV_ITEMS = ['About', 'Contact', 'Blog']
 
-const NavbarLinks = () => (
+const NavbarLinks = ({ isFooter }) => (
   <>
-    <li key="home">
-      <StyledNavLink to={`/`}>Home</StyledNavLink>
-    </li>
+    <div>
+      <StyledNavLink to={`/`} key="home">
+        Home
+      </StyledNavLink>
+    </div>
     {NAV_ITEMS.map(navItem => (
-      <li key={navItem}>
+      <div key={navItem}>
         <StyledNavLink to={`/${navItem.toLowerCase()}`}>
           {navItem}
         </StyledNavLink>
-      </li>
+      </div>
     ))}
+    {isFooter ? null : <Resources />}
   </>
 )
 

@@ -13,6 +13,7 @@ const Resources = () => {
         <StyledSection>Books</StyledSection>
         <StyledSection>Links</StyledSection>
         <StyledSection>Open Source Projects</StyledSection>
+        <StyledSection>Downloads</StyledSection>
       </StyledSectionContainer>
     </>
   )

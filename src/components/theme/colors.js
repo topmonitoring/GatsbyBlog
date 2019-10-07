@@ -38,3 +38,7 @@ export const getForegroundForDate = style('mode', {
   light: 'blue',
   dark: 'aqua',
 })
+export const getBoxShadow = style('mode', {
+  light: 'rgba(0, 0, 0, 0.47)',
+  dark: ' rgb( 134, 135, 138) ',
+})

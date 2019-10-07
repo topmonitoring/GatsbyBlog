@@ -28,7 +28,7 @@ const Footer = () => (
       </StyledFooterSocials>
       <div className="links">
         <h3>PAGES</h3>
-        <NavbarLinks />
+        <NavbarLinks isFooter={true} />
       </div>
     </StyledFooterGrid>
     <StyledFooterEnd>

@@ -14,7 +14,7 @@ const getDispleyDark = theme('mode', {
 
 const Button = () => {
   return (
-    <StyledButton>
+    <StyledButton aria-label="Theme change">
       <StyledMoon
         viewBox="0 0 24 24"
         transform="translate(0, 0) translate(-12.021049737930298, -12.021688222885132) scale(1, 1) translate(12.021049737930298, 12.021688222885132) rotate(0, 12.021049737930298, 12.021688222885132) skewX(0) skewY(0) "

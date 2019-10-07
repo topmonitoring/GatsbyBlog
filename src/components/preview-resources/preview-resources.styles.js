@@ -1,18 +1,17 @@
 import styled from 'styled-components'
+import { getBoxShadow } from '../theme/colors'
 
 export const StyledTitle = styled.h1`
   margin: auto;
   text-align: center;
 `
 export const StyledSection = styled.div`
-  height: 300px;
-  width: 30%;
+  height: 250px;
+  width: 22%;
   background-color: aqua;
   display: flex;
   margin: auto;
-  -webkit-box-shadow: 10px 11px 21px -5px rgba(0, 0, 0, 0.47);
-  -moz-box-shadow: 10px 11px 21px -5px rgba(0, 0, 0, 0.47);
-  box-shadow: 10px 11px 21px -5px rgba(0, 0, 0, 0.47);
+  box-shadow: 10px 11px 21px -5px ${getBoxShadow};
   transition: all 0.4s ease-in-out;
   &:hover {
     transform: scale(1.1);

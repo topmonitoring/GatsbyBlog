@@ -8,7 +8,7 @@ import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
 import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
-import Resources from './resources-dropdown-menu'
+
 const Navbar = props => {
   const barAnimation = useSpring({
     from: { transform: 'translate3d(0, -10rem, 0)' },
@@ -29,9 +29,6 @@ const Navbar = props => {
           <Logo />
           <NavLinks style={linkAnimation}>
             <NavbarLinks />
-            <li key="resources">
-              <Resources />
-            </li>
           </NavLinks>
           <ToggleMode />
           <BurgerWrapper>
@@ -76,7 +73,7 @@ const BurgerWrapper = styled.div`
     display: none;
   }
 `
-const NavLinks = styled(animated.ul)`
+const NavLinks = styled(animated.div)`
   justify-self: end;
   list-style-type: none;
   margin: auto 0;
