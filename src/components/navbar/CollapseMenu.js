@@ -46,18 +46,16 @@ const NavLinks = styled.ul`
   list-style-type: none;
   padding: 2rem 1rem 2rem 2rem;
 
-  li {
+  div {
     div {
-      div {
-        margin-top: 0px;
-        & a {
-          font-size: 1.2rem;
-        }
+      margin-top: 0px;
+      & a {
+        font-size: 16px;
       }
     }
   }
 
-  & li {
+  & a {
     transition: all 300ms linear 0s;
   }
 

@@ -6,7 +6,6 @@ export const StyledAboutSection = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
-  background-color: ${getBackgroundForBlogPostsPreview};
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
@@ -17,6 +16,7 @@ export const StyledAboutInfo = styled.div`
   margin: 20px auto;
   padding: 50px;
   width: 600px;
+  background-color: ${getBackgroundForBlogPostsPreview};
   @media screen and (max-width: 800px) {
     width: 80vw;
   }

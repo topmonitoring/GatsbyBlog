@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { animated } from "react-spring";
-import BackgroundImage from "gatsby-background-image";
+import styled from 'styled-components'
+import { animated } from 'react-spring'
+import BackgroundImage from 'gatsby-background-image'
 
 export const AnimatedCard = styled(animated.div)`
   flex-direction: row;
@@ -10,7 +10,11 @@ export const AnimatedCard = styled(animated.div)`
   margin: 5px;
   cursor: pointer;
   will-change: transform;
-`;
+
+  &:hover {
+    animation: transform;
+  }
+`
 export const Bgr = styled(BackgroundImage)`
   width: 100%;
   height: 100%;
@@ -18,11 +22,7 @@ export const Bgr = styled(BackgroundImage)`
   position: absolute;
   left: 0;
   right: 0;
-
-  &:hover {
-    background: hotpink;
-  }
-`;
+`
 
 export const CardTagName = styled.div`
   background-color: aqua;
@@ -34,4 +34,4 @@ export const CardTagName = styled.div`
   color: black;
   text-align: center;
   clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0% 100%, 10% 50%, 0 0);
-`;
+`

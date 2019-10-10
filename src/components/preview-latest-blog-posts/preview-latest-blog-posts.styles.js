@@ -19,6 +19,7 @@ export const StyledLatestBlogPostsGrid = styled.div`
     @media screen and (max-width: 800px) {
       flex: 0 0 calc(100% - 33px);
       font-size: 12px;
+      margin: 30px auto;
     }
   }
   @media screen and (max-width: 800px) {

@@ -6,7 +6,7 @@ export const StyledPreview = styled.div`
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding: 20px;
   margin: auto;
   width: 55vw;
   background-color: ${getBackgroundForBlogPostsPreview};

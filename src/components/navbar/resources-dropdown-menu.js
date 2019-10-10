@@ -37,18 +37,17 @@ const Resources = () => {
 export default Resources
 
 const StyledLink = styled(Link)`
-  width: 100%;
+  width: 100%-20px;
   height: 100%;
   font-size: 16px;
+  padding: 10px;
   text-decoration: none;
-  text-align: center;
   &:hover {
     background-color: ${getBackgroundForBlogPost};
   }
 `
 const StyledDropdownMenu = styled.div`
   width: 250px;
-  height: 200px;
   position: absolute;
   display: flex;
   flex-direction: column;

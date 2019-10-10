@@ -1,14 +1,17 @@
 import styled from 'styled-components'
-import { getBoxShadow } from '../theme/colors'
+import { getBoxShadow, getBackgroundForArticlePreview } from '../theme/colors'
 
 export const StyledTitle = styled.h1`
   margin: auto;
   text-align: center;
 `
 export const StyledSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   height: 250px;
   width: 22%;
-  background-color: aqua;
+  background-color: ${getBackgroundForArticlePreview};
   display: flex;
   margin: auto;
   box-shadow: 10px 11px 21px -5px ${getBoxShadow};

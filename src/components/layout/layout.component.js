@@ -5,6 +5,7 @@ import Footer from '../footer/footer.component'
 
 import { ThemeProvider } from 'styled-components'
 import useTheme from '../theme/useTheme'
+import SEO from '../seo/seo.component'
 
 const Template = ({ location, children }) => {
   if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
@@ -14,6 +15,7 @@ const Template = ({ location, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
+        <SEO />
         <GlobalStyles />
         <div
           style={{
