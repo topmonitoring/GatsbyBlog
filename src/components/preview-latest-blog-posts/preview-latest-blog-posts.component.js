@@ -1,9 +1,10 @@
 import React from 'react'
 import ArticlePreview from '../preview-blog-post/preview-blog-post.component'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import {
   StyledLatestBlogPostsGrid,
   PreviewLatestBlogPostsTitle,
+  SeeAllBlogPosts,
 } from './preview-latest-blog-posts.styles'
 
 const LatestBlogPosts = () => (
@@ -12,7 +13,7 @@ const LatestBlogPosts = () => (
       query {
         allContentfulBlogPost(
           sort: { fields: [publishDate], order: DESC }
-          limit: 3
+          limit: 6
         ) {
           edges {
             node {
@@ -47,6 +48,8 @@ const LatestBlogPosts = () => (
               return <ArticlePreview article={node} key={node.slug} />
             })}
           </StyledLatestBlogPostsGrid>
+
+          <SeeAllBlogPosts to="/blog">See All</SeeAllBlogPosts>
         </>
       )
     }}

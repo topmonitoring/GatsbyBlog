@@ -6,6 +6,7 @@ export const StyledTitle = styled.h1`
   text-align: center;
 `
 export const StyledSection = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -17,7 +18,8 @@ export const StyledSection = styled.div`
   box-shadow: 10px 11px 21px -5px ${getBoxShadow};
   transition: all 0.4s ease-in-out;
   &:hover {
-    transform: scale(1.1);
+    transform: translateY(-10px);
+    box-shadow: 10px 11px 21px -5px aqua;
   }
 `
 export const StyledSectionContainer = styled.div`

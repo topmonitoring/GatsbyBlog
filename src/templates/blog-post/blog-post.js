@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Layout from '../../components/layout/layout.component'
@@ -17,10 +17,10 @@ import SocialButtons from '../../components/share-buttons/share-buttons.componen
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
   const slug = get(props, 'data.contentfulBlogPost.slug')
+  const { next, previous } = get(props, 'pageContext')
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const baseURL = 'https://pure-water.netlify.com/'
   const fullURL = baseURL + slug
-
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: { identifier: slug, title: post.title, url: fullURL },
@@ -42,7 +42,32 @@ const BlogPostTemplate = props => {
       </BlogPostBody>
 
       <SocialButtons link={fullURL} message={post.title} />
-
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          textAlign: 'center',
+        }}
+      >
+        {previous && (
+          <div
+            style={{ margin: 'auto', display: 'flex', flexDirection: 'column' }}
+          >
+            {' '}
+            Read Previous:
+            <Link to={`blog/${previous.slug}`}>&#8249;{previous.title} </Link>
+          </div>
+        )}{' '}
+        {next && (
+          <div
+            style={{ margin: 'auto', display: 'flex', flexDirection: 'column' }}
+          >
+            {' '}
+            Read Next:{' '}
+            <Link to={`blog/${next.slug}`}>{next.title} &#8250;</Link>
+          </div>
+        )}
+      </div>
       <StyledComentSection>
         <DiscussionEmbed {...disqusConfig} />
       </StyledComentSection>

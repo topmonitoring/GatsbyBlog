@@ -29,7 +29,7 @@ const PreviewCourses = () => (
       const courses = data.allContentfulCourses.edges
       return (
         <>
-          <PreviewCoursesTitle>Popular Blog Posts</PreviewCoursesTitle>
+          <PreviewCoursesTitle>Courses</PreviewCoursesTitle>
           <AnimatedCardContainer>
             {courses.map(({ node }) => (
               <PreviewCourse key={node.courseName} node={{ ...node }} />

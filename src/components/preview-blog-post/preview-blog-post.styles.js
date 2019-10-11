@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { getBackgroundForArticlePreview } from '../theme/colors'
+import { getBackgroundForArticlePreview, getBoxShadow } from '../theme/colors'
 
 export const StyledPreviewImg = styled(Img)`
   display: block;
@@ -67,6 +67,12 @@ export const ArticleDisplayContainer = styled.article`
   margin: 15px;
   background-color: ${getBackgroundForArticlePreview};
   flex: 0 0 calc(50% - 33px);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 10px 11px 21px -5px ${getBoxShadow};
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 11px 21px -5px aqua;
+  }
   @media screen and (max-width: 800px) {
     flex: 0 0 calc(100% - 33px);
     font-size: 12px;
