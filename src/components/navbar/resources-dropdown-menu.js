@@ -25,10 +25,20 @@ const Resources = () => {
       </StyledNavLink>
       {isOpen ? (
         <StyledDropdownMenu>
-          <StyledLink to="/books">Books</StyledLink>
-          <StyledLink to="/books">Links</StyledLink>
-          <StyledLink to="/books">Open Source Projects </StyledLink>
-          <StyledLink to="/books"> Downloads </StyledLink>
+          <StyledLink to="/books">
+            <i className="fas fa-book"></i> Books{' '}
+          </StyledLink>
+          <StyledLink to="/books">
+            <i className="fas fa-link"></i> Links
+          </StyledLink>
+          <StyledLink to="/books">
+            {' '}
+            <i className="fas fa-project-diagram"></i> Open Source Projects{' '}
+          </StyledLink>
+          <StyledLink to="/books">
+            <i className="fas fa-download"></i>
+            Downloads{' '}
+          </StyledLink>
         </StyledDropdownMenu>
       ) : null}
     </div>
@@ -44,6 +54,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   &:hover {
     background-color: ${getBackgroundForBlogPost};
+    color: aqua;
+  }
+  i {
+    float: right;
   }
 `
 const StyledDropdownMenu = styled.div`
