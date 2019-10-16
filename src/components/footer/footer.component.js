@@ -1,5 +1,5 @@
 import React from 'react'
-//import { SocialMediaLinksFooter } from '../social/social-media-links.component'
+import SocialMediaLinks from '../social-links/social-links.component'
 //import { NavListFooter } from '../navigation/navigation.component'
 import {
   StyledFooter,
@@ -25,6 +25,7 @@ const Footer = () => (
       </StyledFooterInfo>
       <StyledFooterSocials>
         <h3>SOCIAL MEDIA</h3>
+        <SocialMediaLinks />
       </StyledFooterSocials>
       <div className="links">
         <h3>PAGES</h3>

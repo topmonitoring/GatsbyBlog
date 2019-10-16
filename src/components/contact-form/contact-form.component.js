@@ -6,6 +6,7 @@ import {
   StyledMassegeInput,
   StyledSubmitButton,
   StyledNameInput,
+  StyledSelectInput,
 } from './contact-form.styles'
 
 function encode(data) {
@@ -75,7 +76,18 @@ const FormComponent = () => {
           required={true}
           placeholder={'Your e-mail'}
         />
-
+        <StyledSelectInput onChange={handleChange}>
+          <option value="Thanks">What is your message about?</option>
+          <option value="Thanks">I want to Hire you for a project</option>
+          <option value="Thanks">I want to contribute</option>
+          <option value="Thanks">Interview or media request</option>
+          <option value="Thanks">
+            Looking for help to grow my buisness/audiance
+          </option>
+          <option value="Thanks">Looking for general advice</option>
+          <option value="Thanks">Just want to say Thank You</option>
+          <option value="Thanks">Other</option>
+        </StyledSelectInput>
         <StyledMassegeInput
           type="text"
           aria-label="message input"
@@ -84,10 +96,6 @@ const FormComponent = () => {
           id={'message'}
           required={true}
           placeholder={'Message'}
-          style={{
-            width: '100%',
-            height: '150px',
-          }}
         />
 
         <StyledSubmitButton type="submit">Send</StyledSubmitButton>

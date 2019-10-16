@@ -1,50 +1,66 @@
-import React, { useState } from 'react'
-import addToMailchimp from 'gatsby-plugin-mailchimp'
+import React, {useState} from 'react';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 import {
   StyledSubscribeContainer,
   StyledSubscribeForm,
   StyledInput,
   StyledButton,
-} from './subscribe-form.styles'
+  SubscribeInfo,
+} from './subscribe-form.styles';
 
 const EmailSubscribeForm = () => {
-  const [email, setEmail] = useState('')
+  const [name, setName] = useState ('');
+  const [email, setEmail] = useState ('');
 
   const handleSubmit = e => {
-    e.preventDefault()
+    e.preventDefault ();
 
-    addToMailchimp(email)
-      .then(data => {
-        alert(data.result)
+    addToMailchimp (email, {
+      FNAME: name,
+    })
+      .then (data => {
+        alert (data.result);
       })
-      .catch(error => {
-        alert('A problem ocured while procesing your request')
+      .catch (error => {
+        alert ('A problem ocured while procesing your request');
         // Errors in here are client side
         // Mailchimp always returns a 200
-      })
-  }
+      });
+  };
 
   const handleEmailChange = e => {
-    setEmail(e.currentTarget.value)
-  }
+    setEmail (e.currentTarget.value);
+  };
+  const handleNameChange = e => {
+    setName (e.currentTarget.value);
+  };
 
   return (
     <StyledSubscribeContainer>
+      <SubscribeInfo>
+        <h2>Never miss a story!</h2>
+        <span>Get all new blog posts directly in your inbox</span>
+      </SubscribeInfo>
       <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
-        <h2>Subscribe to the newsletter!</h2>
-        <div>
-          <StyledInput
-            aria-label="input email field"
-            placeholder="Email address"
-            name="email"
-            type="text"
-            onChange={handleEmailChange}
-          />
-          <StyledButton type="submit">Subscribe</StyledButton>
-        </div>
+        <StyledInput
+          aria-label="input name"
+          placeholder="First Name"
+          name="name"
+          type="text"
+          onChange={handleNameChange}
+        />
+        <StyledInput
+          aria-label="input email"
+          placeholder="Email address"
+          name="email"
+          type="text"
+          onChange={handleEmailChange}
+        />
+        <StyledButton type="submit">Subscribe</StyledButton>
+
       </StyledSubscribeForm>
     </StyledSubscribeContainer>
-  )
-}
+  );
+};
 
-export default EmailSubscribeForm
+export default EmailSubscribeForm;
