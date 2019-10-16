@@ -5,6 +5,7 @@ import {
   StyledAboutInfo,
   StyledImg,
   StyledName,
+  StyledTitle,
 } from './about-me.styles'
 
 const About = () => (
@@ -29,17 +30,18 @@ const About = () => (
     render={data => {
       const author = data.person
       return (
-        <StyledAboutSection>
-          <StyledAboutInfo>
+        <>
+          <StyledAboutSection>
+            <StyledTitle>About The Author</StyledTitle>
             <StyledName>{author.name}</StyledName>
-            <div
+            <StyledImg alt={author.name} fluid={author.heroImage.fluid} />
+            <StyledAboutInfo
               dangerouslySetInnerHTML={{
                 __html: author.aboutAuthor.childMarkdownRemark.html,
               }}
-            ></div>
-          </StyledAboutInfo>
-          <StyledImg alt={author.name} fluid={author.heroImage.fluid} />
-        </StyledAboutSection>
+            />
+          </StyledAboutSection>
+        </>
       )
     }}
   />

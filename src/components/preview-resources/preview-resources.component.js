@@ -3,6 +3,7 @@ import {
   StyledSection,
   StyledTitle,
   StyledSectionContainer,
+  StyledIcon,
 } from './preview-resources.styles'
 
 const Resources = () => {
@@ -10,24 +11,21 @@ const Resources = () => {
     <>
       <StyledTitle>Free resources</StyledTitle>
       <StyledSectionContainer>
-        <StyledSection>
+        <StyledSection to="/books">
           <h3>Books</h3>
-          <i style={{ fontSize: '60px' }} className="fas fa-book"></i>
+          <StyledIcon className="fas fa-book" />
         </StyledSection>
-        <StyledSection>
+        <StyledSection to="/links">
           <h3>Links</h3>
-          <i style={{ fontSize: '60px' }} className="fas fa-link"></i>
+          <StyledIcon className="fas fa-link" />
         </StyledSection>
-        <StyledSection>
+        <StyledSection to="/projects">
           <h3>Open Source Projects</h3>
-          <i
-            style={{ fontSize: '60px' }}
-            className="fas fa-project-diagram"
-          ></i>
+          <StyledIcon className="fas fa-project-diagram" />
         </StyledSection>
-        <StyledSection>
+        <StyledSection to="/downloads">
           <h3>Downloads</h3>
-          <i style={{ fontSize: '60px' }} className="fas fa-download"></i>
+          <StyledIcon className="fas fa-download" />
         </StyledSection>
       </StyledSectionContainer>
     </>

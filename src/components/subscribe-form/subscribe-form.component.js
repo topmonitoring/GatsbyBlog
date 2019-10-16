@@ -31,7 +31,7 @@ const EmailSubscribeForm = () => {
   return (
     <StyledSubscribeContainer>
       <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
-        <h2>Subscribe to our newsletter!</h2>
+        <h2>Subscribe to the newsletter!</h2>
         <div>
           <StyledInput
             aria-label="input email field"

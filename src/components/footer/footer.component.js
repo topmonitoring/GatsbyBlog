@@ -19,8 +19,8 @@ const Footer = () => (
         <h3>ABOUT</h3>
         <span>
           This blog purpose is to educate users, allow programmers to discover
-          practical solutions, new technologies and share their knowledge with
-          each other.
+          practical solutions and new technologies in a fast and efficient whey.
+          And also share their knowledge with each other.
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>

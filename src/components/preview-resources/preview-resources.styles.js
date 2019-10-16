@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { getBoxShadow, getBackgroundForArticlePreview } from '../theme/colors'
+import { Link } from 'gatsby'
 
 export const StyledTitle = styled.h1`
   margin: auto;
   text-align: center;
 `
-export const StyledSection = styled.div`
+export const StyledSection = styled(Link)`
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -29,4 +31,7 @@ export const StyledSectionContainer = styled.div`
   align-content: center;
   width: 80vw;
   padding-bottom: 50px;
+`
+export const StyledIcon = styled.i`
+  font-size: 60px;
 `

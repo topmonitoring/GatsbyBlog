@@ -1,24 +1,23 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
+import Helmet from 'react-helmet'
+import get from 'lodash/get'
+import { graphql } from 'gatsby'
 
-const BooksPage = props => {
+const ProjectsPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
-
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
-      <div>Hello from Books Page</div>
+      <div>Hello from Projects Page</div>
     </Layout>
   )
 }
 
-export default BooksPage
+export default ProjectsPage
 
 export const pageQuery = graphql`
-  query BooksQuery {
+  query ProjectsQuery {
     site {
       siteMetadata {
         title

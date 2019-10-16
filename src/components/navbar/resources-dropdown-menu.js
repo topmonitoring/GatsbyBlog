@@ -28,14 +28,14 @@ const Resources = () => {
           <StyledLink to="/books">
             <i className="fas fa-book"></i> Books{' '}
           </StyledLink>
-          <StyledLink to="/books">
+          <StyledLink to="/links">
             <i className="fas fa-link"></i> Links
           </StyledLink>
-          <StyledLink to="/books">
+          <StyledLink to="/projects">
             {' '}
             <i className="fas fa-project-diagram"></i> Open Source Projects{' '}
           </StyledLink>
-          <StyledLink to="/books">
+          <StyledLink to="/downloads">
             <i className="fas fa-download"></i>
             Downloads{' '}
           </StyledLink>
