@@ -20,7 +20,9 @@ const FormComponent = () => {
   const [selectValue, setSelectValue] = useState('none selected')
 
   const handleSelectChange = e => {
+    e.persist()
     setSelectValue(event.target.value)
+    alert(selectValue)
   }
 
   const handleChange = e => {
