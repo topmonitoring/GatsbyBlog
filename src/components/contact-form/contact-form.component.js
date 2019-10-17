@@ -36,7 +36,7 @@ const FormComponent = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        selectValue,
+        ...{ about: selectValue },
         ...inputs,
       }),
     })
