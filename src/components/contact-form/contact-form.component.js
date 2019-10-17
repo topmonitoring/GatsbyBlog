@@ -21,7 +21,7 @@ const FormComponent = () => {
 
   const handleSelectChange = e => {
     e.persist()
-    setSelectValue(event.target.value)
+    setSelectValue(e.target.value)
     alert(selectValue)
   }
 
