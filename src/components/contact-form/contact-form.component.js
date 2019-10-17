@@ -20,6 +20,7 @@ const FormComponent = () => {
   const [selectValue, setSelectValue] = useState('none selected')
 
   const handleSelectChange = e => {
+    e.persist()
     setSelectValue(e.target.value)
   }
 
@@ -37,7 +38,6 @@ const FormComponent = () => {
       body: encode({
         'form-name': form.getAttribute('name'),
         about: selectValue,
-        ...inputs,
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
