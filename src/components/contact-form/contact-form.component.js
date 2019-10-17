@@ -38,6 +38,7 @@ const FormComponent = () => {
       body: encode({
         'form-name': form.getAttribute('name'),
         about: selectValue,
+        ...inputs,
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
@@ -82,7 +83,13 @@ const FormComponent = () => {
           required={true}
           placeholder={'Your e-mail'}
         />
-        <StyledSelectInput value={selectValue} onChange={handleSelectChange}>
+        <StyledSelectInput
+          aria-label="about selector"
+          name={'about'}
+          id={'about'}
+          value={selectValue}
+          onChange={handleSelectChange}
+        >
           <option value="none selected">What is your message about?</option>
           <option value="I want to Hire you for a project">
             I want to Hire you for a project
