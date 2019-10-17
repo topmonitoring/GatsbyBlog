@@ -20,9 +20,7 @@ const FormComponent = () => {
   const [selectValue, setSelectValue] = useState('none selected')
 
   const handleSelectChange = e => {
-    e.persist()
     setSelectValue(e.target.value)
-    alert(selectValue)
   }
 
   const handleChange = e => {
@@ -38,7 +36,7 @@ const FormComponent = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...selectValue,
+        selectValue,
         ...inputs,
       }),
     })
