@@ -17,6 +17,11 @@ function encode(data) {
 
 const FormComponent = () => {
   const [inputs, setInputs] = useState({})
+  const [selectValue, setSelectValue] = useState('none selected')
+
+  const handleSelectChange = e => {
+    setSelectValue(event.target.value)
+  }
 
   const handleChange = e => {
     e.persist()
@@ -31,6 +36,7 @@ const FormComponent = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
+        ...selectValue,
         ...inputs,
       }),
     })
@@ -76,17 +82,25 @@ const FormComponent = () => {
           required={true}
           placeholder={'Your e-mail'}
         />
-        <StyledSelectInput onChange={handleChange}>
-          <option value="Thanks">What is your message about?</option>
-          <option value="Thanks">I want to Hire you for a project</option>
-          <option value="Thanks">I want to contribute</option>
-          <option value="Thanks">Interview or media request</option>
-          <option value="Thanks">
+        <StyledSelectInput value={selectValue} onChange={handleSelectChange}>
+          <option value="none selected">What is your message about?</option>
+          <option value="I want to Hire you for a project">
+            I want to Hire you for a project
+          </option>
+          <option value="I want to contribute">I want to contribute</option>
+          <option value="Interview or media request">
+            Interview or media request
+          </option>
+          <option value="Looking for help to grow my buisness/audiance">
             Looking for help to grow my buisness/audiance
           </option>
-          <option value="Thanks">Looking for general advice</option>
-          <option value="Thanks">Just want to say Thank You</option>
-          <option value="Thanks">Other</option>
+          <option value="Looking for general advice">
+            Looking for general advice
+          </option>
+          <option value="Just want to say Thank You">
+            Just want to say Thank You
+          </option>
+          <option value="Other">Other</option>
         </StyledSelectInput>
         <StyledMassegeInput
           type="text"
