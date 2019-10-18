@@ -27,8 +27,6 @@ const ContactPage = props => {
           width: '50vw',
           margin: 'auto',
           textAlign: 'center',
-          fontSize: '18px',
-          padding: '20px',
         }}
       >
         <SocialMediaLinks />

@@ -48,6 +48,7 @@ export const StyledInput = styled(SearchBox)`
     flex-direction: row;
     input {
       margin: auto;
+      padding: 1rem;
       height: 30px;
       width: 400px;
       font-size: 15px;

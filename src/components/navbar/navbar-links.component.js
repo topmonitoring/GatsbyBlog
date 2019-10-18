@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Resources from './resources-dropdown-menu'
 import styled from 'styled-components'
-import theme from 'styled-theming'
+import { getGlobalForeground } from '../theme/colors'
 
 const NAV_ITEMS = ['About', 'Contact', 'Blog']
 
@@ -26,13 +26,8 @@ const NavbarLinks = ({ isFooter }) => (
 
 export default NavbarLinks
 
-const getForeground = theme('mode', {
-  light: 'black',
-  dark: 'white ',
-})
-
 const StyledNavLink = styled(Link)`
-  color: ${getForeground};
+  color: ${getGlobalForeground};
   text-transform: uppercase;
   font-weight: 600;
   border-bottom: 1px solid transparent;

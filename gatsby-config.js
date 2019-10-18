@@ -86,6 +86,65 @@ module.exports = {
         plugins: [`gatsby-remark-responsive-iframe`],
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allContentfulBlogPost } }) => {
+              return allContentfulBlogPost.edges.map(edge => {
+                return Object.assign({}, edge.node, {
+                  description: edge.node.body.childMarkdownRemark.excerpt,
+                  date: edge.node.publishDate,
+                  url: site.siteMetadata.siteUrl + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.slug,
+                  custom_elements: [
+                    {
+                      'content:encoded':
+                        edge.node.body.childMarkdownRemark.html,
+                    },
+                  ],
+                })
+              })
+            },
+            query: `
+              {
+                allContentfulBlogPost {
+                  edges {
+                    node {
+                      slug
+                      title
+                      publishDate
+                      body {
+                        childMarkdownRemark
+                        {
+                          excerpt
+                          html
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'Pure Water RSS Feed',
+          },
+        ],
+      },
+    },
     `gatsby-background-image`,
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
