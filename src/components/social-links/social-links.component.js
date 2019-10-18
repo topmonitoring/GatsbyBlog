@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import { SocialLinksContainer } from './social-links.styles'
 
 const SocialLinks = () => (
@@ -32,6 +32,9 @@ const SocialLinks = () => (
             />
             <SocialLink href={links.linkedinUrl} className="fab fa-linkedin" />
             <SocialLink href={links.githubUrl} className="fab fa-github" />
+            <Link to="/rss.xml">
+              <i className="fas fa-rss" alt="rss link" />
+            </Link>
           </SocialLinksContainer>
         </>
       )
