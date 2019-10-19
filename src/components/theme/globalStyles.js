@@ -1,9 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import {
-  getGlobalBackground,
-  getGlobalForeground,
-  getBackgroundForNavAndFooter,
-} from './colors'
+import { getGlobalBackground, getGlobalForeground } from './colors'
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -13,12 +9,6 @@ export const GlobalStyles = createGlobalStyle`
   src: url('/avenir-400.woff2') format('woff2');
   font-display: swap;
 }
-
-nav,footer{
-  background-color: ${getBackgroundForNavAndFooter};
-  color: ${getGlobalForeground};
-}
-
 
 body {
   background-color: ${getGlobalBackground};

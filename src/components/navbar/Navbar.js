@@ -52,7 +52,7 @@ const NavBar = styled(animated.nav)`
   height: 75px;
   width: 100%;
   font-size: 1.2rem;
-
+  background-color: ${getBackgroundForNavAndFooter};
   z-index: 1;
 `
 
