@@ -8,7 +8,6 @@ export const StyledFooter = styled.footer`
   color: ${getGlobalForeground};
   align-content: center;
   fill-opacity: '0.7';
-  background-color: ${getBackgroundForNavAndFooter};
 `
 export const StyledFooterEnd = styled.div`
   text-align: center;
