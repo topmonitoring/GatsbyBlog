@@ -5,12 +5,14 @@ function useTheme(getInitialTheme = { mode: 'dark' }) {
   const [theme, _setTheme] = useState(getInitialTheme)
 
   function getInitialTheme() {
-    const savedTheme = window.localStorage.getItem('theme')
+    const savedTheme =
+      typeof window !== 'undefined' && window.localStorage.getItem('theme')
     return savedTheme ? JSON.parse(savedTheme) : defaultTheme
   }
 
   useEffect(() => {
-    window.localStorage.setItem('theme', JSON.stringify(theme))
+    typeof window !== 'undefined' &&
+      window.localStorage.setItem('theme', JSON.stringify(theme))
   }, [theme])
 
   return {
@@ -18,11 +20,5 @@ function useTheme(getInitialTheme = { mode: 'dark' }) {
     setTheme: ({ setTheme, ...theme }) => _setTheme(theme),
   }
 }
-export default useTheme
 
-if(typeof window !== 'undefined'){
-  export default { mode: 'dark' }
-}
-else{
-  export default useTheme
-}
+export default useTheme
