@@ -15,8 +15,6 @@ const Template = ({ location, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        <SEO />
-        <GlobalStyles />
         <div
           style={{
             height: '100%',
@@ -24,6 +22,8 @@ const Template = ({ location, children }) => {
             overflow: 'hidden',
           }}
         >
+          <SEO />
+          <GlobalStyles />
           <Heder />
           {children}
           <Footer />
