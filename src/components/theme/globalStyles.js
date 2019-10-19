@@ -14,12 +14,11 @@ export const GlobalStyles = createGlobalStyle`
   font-display: swap;
 }
 
-nav{
+nav,footer{
   background-color: ${getBackgroundForNavAndFooter};
+  color: ${getGlobalForeground};
 }
-footer{
-  background-color: ${getBackgroundForNavAndFooter};
-}
+
 
 body {
   background-color: ${getGlobalBackground};

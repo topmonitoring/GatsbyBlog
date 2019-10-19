@@ -5,7 +5,6 @@ import {
 } from '../theme/colors'
 
 export const StyledFooter = styled.footer`
-  color: ${getGlobalForeground};
   align-content: center;
   fill-opacity: '0.7';
 `
