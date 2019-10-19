@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-import { getGlobalBackground, getGlobalForeground } from './colors'
+import {
+  getGlobalBackground,
+  getGlobalForeground,
+  getBackgroundForNavAndFooter,
+} from './colors'
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
@@ -10,6 +14,12 @@ export const GlobalStyles = createGlobalStyle`
   font-display: swap;
 }
 
+nav{
+  background-color: ${getBackgroundForNavAndFooter};
+}
+footer{
+  background-color: ${getBackgroundForNavAndFooter};
+}
 
 body {
   background-color: ${getGlobalBackground};

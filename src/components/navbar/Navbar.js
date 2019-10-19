@@ -8,8 +8,6 @@ import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
 import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
-import { ThemeProvider } from 'styled-components'
-import useTheme from '../theme/useTheme'
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -23,31 +21,28 @@ const Navbar = props => {
     delay: 800,
     config: config.wobbly,
   })
-  const theme = useTheme()
   return (
-    <ThemeProvider theme={theme}>
-      <>
-        <NavBar style={barAnimation}>
-          <FlexContainer>
-            <Logo />
-            <NavLinks style={linkAnimation}>
-              <NavbarLinks />
-            </NavLinks>
-            <ToggleMode />
-            <BurgerWrapper>
-              <BurgerMenu
-                navbarState={props.navbarState}
-                handleNavbar={props.handleNavbar}
-              />
-            </BurgerWrapper>
-          </FlexContainer>
-        </NavBar>
-        <CollapseMenu
-          navbarState={props.navbarState}
-          handleNavbar={props.handleNavbar}
-        />
-      </>
-    </ThemeProvider>
+    <>
+      <NavBar style={barAnimation}>
+        <FlexContainer>
+          <Logo />
+          <NavLinks style={linkAnimation}>
+            <NavbarLinks />
+          </NavLinks>
+          <ToggleMode />
+          <BurgerWrapper>
+            <BurgerMenu
+              navbarState={props.navbarState}
+              handleNavbar={props.handleNavbar}
+            />
+          </BurgerWrapper>
+        </FlexContainer>
+      </NavBar>
+      <CollapseMenu
+        navbarState={props.navbarState}
+        handleNavbar={props.handleNavbar}
+      />
+    </>
   )
 }
 
