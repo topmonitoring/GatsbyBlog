@@ -23,7 +23,6 @@
     "gatsby-source-filesystem": "^2.1.24",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.18",
-    "local-storage-fallback": "^4.1.1",
     "lodash": "^4.17.11",
     "react-autosuggest": "^9.4.3",
     "react-dom": "^16.8.6",
