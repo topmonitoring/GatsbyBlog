@@ -7,6 +7,7 @@ import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
+import theme from 'styled-theming'
 //import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
 
 const Navbar = props => {
