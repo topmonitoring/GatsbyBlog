@@ -17,17 +17,16 @@ const Template = ({ location, children }) => {
       <>
         <SEO />
         <GlobalStyles />
-        <div
+        {/*<div
           style={{
             height: '100%',
             width: '100%',
             overflow: 'hidden',
           }}
-        >
-          <Heder />
-          {children}
-          <Footer />
-        </div>
+        ></div> */}
+        <Heder />
+        {children}
+        <Footer />
       </>
     </ThemeProvider>
   )
