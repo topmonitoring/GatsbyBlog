@@ -7,7 +7,7 @@ import Logo from './Logo'
 import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
-import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
+//import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -48,6 +48,11 @@ const Navbar = props => {
 }
 
 export default Navbar
+
+const getBackgroundForNavAndFooter = theme('mode', {
+  light: '#D8DEE9  ',
+  dark: '#2d3436 ',
+})
 
 const NavBar = styled(animated.nav)`
   height: 75px;
