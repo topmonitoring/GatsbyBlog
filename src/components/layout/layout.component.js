@@ -24,9 +24,11 @@ const Template = ({ location, children }) => {
             overflow: 'hidden',
           }}
         >
-          <Heder />
-          {children}
-          <Footer />
+          <ThemeProvider theme={theme}>
+            <Heder />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </div>
       </ThemeProvider>
     </>
