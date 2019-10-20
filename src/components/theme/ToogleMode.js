@@ -8,7 +8,6 @@ export default function ToggleMode() {
       {theme => (
         <div
           style={{ margin: 'auto 0' }}
-          variant="primary"
           onClick={e =>
             theme.setTheme(
               theme.mode === 'dark'
