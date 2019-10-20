@@ -11,7 +11,7 @@ const Template = ({ location, children }) => {
   if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
     rootPath = __PATH_PREFIX__ + `/`
   }
-  const theme = useTheme()
+  const theme = useTheme(theme)
   return (
     <ThemeProvider theme={theme}>
       <>
