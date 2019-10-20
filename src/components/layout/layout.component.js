@@ -14,7 +14,7 @@ const Template = ({ location, children }) => {
   const theme = useTheme()
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <main>
         <SEO />
         <GlobalStyles />
         <div
@@ -28,7 +28,7 @@ const Template = ({ location, children }) => {
           {children}
           <Footer />
         </div>
-      </>
+      </main>
     </ThemeProvider>
   )
 }
