@@ -6,10 +6,9 @@ export const StyledPreview = styled.div`
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
   margin: auto;
-  width: 55vw;
-  background-color: ${getBackgroundForBlogPostsPreview};
+  width: 65vw;
+
   border-radius: 10px;
   @media screen and (max-width: 800px) {
     width: 80vw;

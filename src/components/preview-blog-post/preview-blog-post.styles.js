@@ -7,13 +7,14 @@ export const StyledPreviewImg = styled(Img)`
   width: 100%;
   height: 250px;
   grid-area: img;
+  border-radius: 10px 10px 0px 0px;
 `
 export const StyledDate = styled.div`
   grid-area: date;
 `
 export const StyledDiscription = styled.p`
   margin: 2px 10px;
-  font-size: 16px;
+  font-size: 17px;
   grid-area: discription;
   @media screen and (max-width: 800px) {
     font-size: 12px;
@@ -23,13 +24,15 @@ export const PreviewTitle = styled.h3`
   position: absolute;
   width: 70%;
   height: 30px;
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 200px;
   background-color: aqua;
   grid-area: 'title';
   clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);
   text-align: center;
   color: black;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
 `
 export const Tag = styled.p`
   width: 70px;
@@ -63,14 +66,15 @@ export const ArticleDisplayContainer = styled.article`
   height: 400px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  border-radius: 10px;
+
   margin: 15px;
   background-color: ${getBackgroundForArticlePreview};
   flex: 0 0 calc(50% - 33px);
   transition: all 0.4s ease-in-out;
   box-shadow: 10px 11px 21px -5px ${getBoxShadow};
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 10px 11px 21px -5px aqua;
   }
   @media screen and (max-width: 800px) {
