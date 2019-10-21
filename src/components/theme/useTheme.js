@@ -6,7 +6,7 @@ function useTheme(defaultTheme = { mode: 'dark' }) {
 
   function getInitialTheme() {
     const savedTheme = storage.getItem('theme')
-    return savedTheme ? JSON.parse(savedTheme) : getInitialTheme
+    return savedTheme ? JSON.parse(savedTheme) : defaultTheme
   }
 
   useEffect(() => {
