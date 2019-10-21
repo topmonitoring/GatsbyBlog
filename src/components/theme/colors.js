@@ -42,8 +42,8 @@ export const getBackgroundForBlogPostsPreview = theme('mode', {
 })
 
 export const getBackgroundForArticlePreview = theme('mode', {
-  light: lighterWhite, //'#E5E9F0'
-  dark: darkDark, //#3B4252
+  light: lighterWhite,
+  dark: darkDark,
 })
 export const getForegroundForDate = theme('mode', {
   light: darkblue,
