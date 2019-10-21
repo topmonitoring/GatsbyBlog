@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { getGlobalBackground, getGlobalForeground } from './colors'
+import { getGlobalBackground, getGlobalForeground } from '../theme/colors'
 
 export const GlobalStyles = createGlobalStyle`
 @font-face {
