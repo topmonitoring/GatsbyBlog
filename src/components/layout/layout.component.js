@@ -1,5 +1,5 @@
 import React from 'react'
-import { GlobalStyles } from './globalStyles.js'
+import { GlobalStyles } from '../theme/globalStyles'
 import Heder from '../heder/heder.component'
 import Footer from '../footer/footer.component'
 

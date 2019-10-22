@@ -1,29 +1,6 @@
 import style from 'styled-theming'
 import theme from 'styled-theming'
-
-const white = '#fff'
-const dark = '#000'
-const lightblue = 'aqua'
-const darkblue = 'blue'
-const greyIsh = 'rgba(0, 0, 0, 0.47)'
-const whiteIsh = 'rgb( 134, 135, 138)'
-const lightWhite = '#D8DEE9'
-const lightBlack = '#2d3436 '
-const darkDark = '#3B4252'
-const lighterWhite = '#E5E9F0'
-
-export const Colors = {
-  white,
-  dark,
-  lightblue,
-  darkblue,
-  greyIsh,
-  whiteIsh,
-  lightWhite,
-  lightBlack,
-  darkDark,
-  lighterWhite,
-}
+import { Colors } from './globalStyles'
 
 export const getGlobalBackground = theme('mode', {
   light: Colors.white,
