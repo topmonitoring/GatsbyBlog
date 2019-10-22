@@ -12,44 +12,57 @@ const lightBlack = '#2d3436 '
 const darkDark = '#3B4252'
 const lighterWhite = '#E5E9F0'
 
+export const Colors = {
+  white,
+  dark,
+  lightblue,
+  darkblue,
+  greyIsh,
+  whiteIsh,
+  lightWhite,
+  lightBlack,
+  darkDark,
+  lighterWhite,
+}
+
 export const getGlobalBackground = theme('mode', {
-  light: white,
-  dark: dark,
+  light: Colors.white,
+  dark: Colors.dark,
 })
 
 export const getGlobalForeground = theme('mode', {
-  light: dark,
-  dark: white,
+  light: Colors.dark,
+  dark: Colors.white,
 })
 
 export const getBackgroundForComments = theme('mode', {
-  light: lightWhite,
-  dark: lightBlack,
+  light: Colors.lightWhite,
+  dark: Colors.lightBlack,
 })
 export const getBackgroundForNavAndFooter = theme('mode', {
-  light: lightWhite,
-  dark: lightBlack,
+  light: Colors.lightWhite,
+  dark: Colors.lightBlack,
 })
 
 export const getBackgroundForBlogPost = theme('mode', {
-  light: lightWhite,
-  dark: darkDark,
+  light: Colors.lightWhite,
+  dark: Colors.darkDark,
 })
 
 export const getBackgroundForBlogPostsPreview = theme('mode', {
-  light: lightWhite,
+  light: Colors.lightWhite,
   dark: '#2E3440',
 })
 
 export const getBackgroundForArticlePreview = theme('mode', {
-  light: lighterWhite,
-  dark: darkDark,
+  light: Colors.lighterWhite,
+  dark: Colors.darkDark,
 })
 export const getForegroundForDate = theme('mode', {
-  light: darkblue,
-  dark: lightblue,
+  light: Colors.darkblue,
+  dark: Colors.lightblue,
 })
 export const getBoxShadow = theme('mode', {
-  light: greyIsh,
-  dark: whiteIsh,
+  light: Colors.greyIsh,
+  dark: Colors.whiteIsh,
 })

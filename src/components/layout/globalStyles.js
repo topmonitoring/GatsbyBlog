@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import { getGlobalBackground, getGlobalForeground } from '../theme/colors'
 
 export const GlobalStyles = createGlobalStyle`
+
 @font-face {
   font-family: 'Avenir';
   font-weight: 400;
