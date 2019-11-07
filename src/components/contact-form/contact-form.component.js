@@ -90,7 +90,7 @@ const FormComponent = () => {
           value={selectValue}
           onChange={handleSelectChange}
         >
-          <option value="none selected">What is your message about?</option>
+          <option value="none selected">How can i help you?</option>
           <option value="I want to Hire you for a project">
             I want to Hire you for a project
           </option>

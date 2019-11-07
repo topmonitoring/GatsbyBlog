@@ -75,13 +75,16 @@ const BurgerWrapper = styled.div`
 const NavLinks = styled(animated.div)`
   justify-self: end;
   list-style-type: none;
-  margin: auto 0;
+  margin: auto;
   -moz-column-count: 5;
   -moz-column-gap: 20px;
   -webkit-column-count: 5;
   -webkit-column-gap: 20px;
   column-count: 5;
   column-gap: 20px;
+  div {
+    text-align: center;
+  }
 
   @media (max-width: 768px) {
     display: none;

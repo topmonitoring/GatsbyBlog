@@ -69,6 +69,9 @@ const StyledDropdownMenu = styled.div`
   padding: 5px;
   border-radius: 5px;
   margin-top: 20px;
+  a {
+    text-align: start;
+  }
 `
 
 const StyledNavLink = styled.a`

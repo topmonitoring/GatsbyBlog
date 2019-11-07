@@ -8,6 +8,7 @@ import PreviewCourses from '../components/preview-courses/preview-courses.compon
 import Resources from '../components/preview-resources/preview-resources.component'
 import LatestBlogPosts from '../components/preview-latest-blog-posts/preview-latest-blog-posts.component'
 import EmailSubscribeForm from '../components/subscribe-form/subscribe-form.component'
+import SearchBlogPost from '../components/search-blog-post/search-blog-post.component'
 
 const RootIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')

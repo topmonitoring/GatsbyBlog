@@ -35,13 +35,16 @@ export const SeeAllBlogPosts = styled(Link)`
   margin: auto;
   display: flex;
   padding: 10px 30px;
-  width: 55px;
+  width: 65px;
+  text-align: center;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 100px;
   transition: all 0.4s ease-in-out;
+  border-radius: 40px;
   &:hover {
     transform: scale(1.1);
+    box-shadow: 0px 11px 30px 0px aqua;
   }
 `

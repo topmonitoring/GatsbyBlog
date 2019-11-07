@@ -72,10 +72,10 @@ export const ArticleDisplayContainer = styled.article`
   background-color: ${getBackgroundForArticlePreview};
   flex: 0 0 calc(50% - 33px);
   transition: all 0.4s ease-in-out;
-  box-shadow: 10px 11px 21px -5px ${getBoxShadow};
+  box-shadow: 0px 11px 20px 0px ${getBoxShadow};
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 10px 11px 21px -5px aqua;
+    box-shadow: 0px 11px 30px 0px aqua;
   }
   @media screen and (max-width: 800px) {
     flex: 0 0 calc(100% - 33px);
