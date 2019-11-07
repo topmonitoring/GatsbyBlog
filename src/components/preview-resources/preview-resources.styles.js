@@ -7,12 +7,13 @@ export const StyledTitle = styled.h1`
   text-align: center;
 `
 export const StyledSection = styled(Link)`
+  border-radius: 10%;
   text-decoration: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 250px;
+  height: 200px;
   width: 22%;
   background-color: ${getBackgroundForArticlePreview};
   display: flex;

@@ -74,5 +74,8 @@ const StyledInfo = styled.div`
   h2 {
     margin: 0px;
   }
+  @media screen and (max-width: 800px) {
+    font-size: 18px;
+  }
 `
 export default StyledBackgroundSection

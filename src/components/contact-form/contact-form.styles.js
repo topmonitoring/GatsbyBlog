@@ -13,7 +13,9 @@ export const StyledFormGrid = styled.div`
     'message message'
     'button button';
   @media screen and (max-width: 800px) {
-    width: 90%;
+    width: 90vw;
+    grid-gap: 10px;
+    padding: 5px;
   }
 `
 export const StyledSelectInput = styled.select`
@@ -21,6 +23,10 @@ export const StyledSelectInput = styled.select`
   font-size: 18px;
   width: 100%;
   padding: 1rem 10px;
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    padding: 0.5rem 5px;
+  }
 `
 
 export const StyledNameInput = styled.input`
@@ -28,12 +34,22 @@ export const StyledNameInput = styled.input`
   font-size: 18px;
   width: 100%-5px;
   padding: 1rem 5px;
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    padding: 0.5rem 5px;
+    width: 90%;
+  }
 `
 export const StyledEmailInput = styled.input`
   grid-area: email;
   font-size: 18px;
   width: 100%-5px;
   padding: 1rem 5px;
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    padding: 0.5rem 5px;
+    width: 90%;
+  }
 `
 export const StyledMassegeInput = styled.textarea`
   grid-area: message;
@@ -41,6 +57,10 @@ export const StyledMassegeInput = styled.textarea`
   height: 150px;
   width: 100%-10px;
   padding: 1rem 5px;
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    padding: 0.5rem 5px;
+  }
 `
 export const StyledSubmitButton = styled.button`
   grid-area: button;
@@ -51,5 +71,6 @@ export const StyledSubmitButton = styled.button`
   font-size: 18px;
   margin: auto;
   background-color: aqua;
+  color: white;
   cursor: pointer;
 `

@@ -3,7 +3,7 @@ import { animated } from 'react-spring'
 import { Link } from 'gatsby'
 
 export const AnimatedButton = styled(animated.div)`
-  margin: auto;
+  margin: 5px auto;
   background: rgb(144, 186, 245);
   color: black;
   font-size: 16px;
