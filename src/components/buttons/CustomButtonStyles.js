@@ -16,9 +16,11 @@ export const AnimatedButton = styled(animated.div)`
   cursor: pointer;
   border: none;
   outline: none;
+  transition: all 0.4s ease-in-out;
   &:hover {
     box-shadow: 0px 11px 30px 0px aqua;
     background: rgb(129, 164, 214);
+    transform: scale(1.1);
   }
 
   @media screen and (max-width: 800px) {

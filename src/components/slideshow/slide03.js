@@ -7,7 +7,7 @@ import {
   getBackgroundForNavAndFooter,
   getGlobalForeground,
 } from '../theme/colors'
-import CustomButton from '../buttons/CustomAnimatedButton'
+import CustomButton from '../buttons/CustomButton'
 
 const BackgroundSection = ({ className, children }) => (
   <StaticQuery
