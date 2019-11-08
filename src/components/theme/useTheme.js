@@ -3,16 +3,16 @@ import storage from 'local-storage-fallback'
 
 const useTheme = () => {
   const [theme, _setTheme] = useState(getInitialTheme)
+  const [DefoutTheme, _setDefoutTheme] = useState({ mode: 'light' })
 
   function getInitialTheme() {
     const savedTheme = storage.getItem('theme')
-    return savedTheme && savedTheme !== undefined
-      ? JSON.parse(savedTheme)
-      : null
+    return savedTheme ? JSON.parse(savedTheme) : DefoutTheme
   }
 
   useEffect(() => {
     storage.setItem('theme', JSON.stringify(theme))
+    _setDefoutTheme(JSON.parse(storage.getItem('theme')))
   }, [theme])
 
   return {
