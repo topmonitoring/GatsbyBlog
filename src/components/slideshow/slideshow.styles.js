@@ -8,7 +8,7 @@ const AutoplaySlider = withAutoplay(AwesomeSlider)
 export const StyledAwesomeSlider = styled(AutoplaySlider)`
   width: 100vw;
   height: 795px;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: -75px;
   background-repeat: no-repeat;
