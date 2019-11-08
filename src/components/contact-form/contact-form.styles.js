@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { getButtonColor } from '../theme/colors'
 export const StyledFormGrid = styled.div`
   margin: auto;
   width: 50%;
@@ -70,7 +70,13 @@ export const StyledSubmitButton = styled.button`
   padding: 1rem 5px;
   font-size: 18px;
   margin: auto;
-  background-color: aqua;
-  color: white;
+  background-color: ${getButtonColor};
+  color: black;
   cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  :hover {
+    transform: scale(1.1);
+    box-shadow: 0px 11px 30px 0px aqua;
+  }
 `
