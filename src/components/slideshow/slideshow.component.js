@@ -8,7 +8,7 @@ const Slideshow = () => (
   <StyledAwesomeSlider
     play={true}
     cancelOnInteraction={false} // should stop playing on user interaction
-    interval={6000}
+    interval={8000}
   >
     <div>
       <Slide1 />

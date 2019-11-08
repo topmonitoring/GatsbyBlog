@@ -27,7 +27,7 @@ const Footer = () => (
         <h3>SOCIAL MEDIA</h3>
         <SocialMediaLinks />
       </StyledFooterSocials>
-      <div className="links">
+      <div>
         <h3>PAGES</h3>
         <NavbarLinks isFooter={true} />
       </div>

@@ -31,10 +31,11 @@ const BackgroundSection = ({ className, children }) => (
           backgroundColor={`#040e18`}
         >
           <StyledInfo>
-            <h2>Responcive design</h2>
+            <h2>Master of SEO</h2>
             <span>
-              Learn phusics based animations, responcive design and design
-              patterns!
+              Scale your brand or service, by server side rendered content,wich
+              meeans all your page content is available to Google and other
+              search engines or crawlers.
             </span>
             <CustomButton to="/contact">See Blog Post</CustomButton>
           </StyledInfo>

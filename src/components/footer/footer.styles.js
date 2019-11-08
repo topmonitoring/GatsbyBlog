@@ -42,12 +42,12 @@ export const StyledFooterInfo = styled.div`
 `
 export const StyledFooterSocials = styled.div`
   grid-area: socials;
-
   h3 {
     font-family: 'Montserrat', sans-serif;
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1000px) {
     div {
+      flex-direction: column;
       width: 20px;
     }
   }

@@ -31,12 +31,12 @@ const BackgroundSection = ({ className, children }) => (
           backgroundColor={`#040e18`}
         >
           <StyledInfo>
-            <h2>Have Strong Backend</h2>
+            <h2>Master Responcive design</h2>
             <span>
-              Create effortless real-time GraphQL API with serverless business
-              logic and deploy it to any cloud.
+              Learn phusics based animations, responcive design,themeing, design
+              patterns and much much more!
             </span>
-            <CustomButton to="/contact">See the Article</CustomButton>
+            <CustomButton to="/contact">Go to Blog Post</CustomButton>
           </StyledInfo>
           {children}
         </BackgroundImage>

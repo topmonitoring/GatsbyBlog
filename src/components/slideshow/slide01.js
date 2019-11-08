@@ -31,12 +31,12 @@ const BackgroundSection = ({ className, children }) => (
           backgroundColor={`#040e18`}
         >
           <StyledInfo>
-            <h2>Meet faster, more secure web.</h2>
+            <h2>Maximize your business potential</h2>
             <span>
-              Maximize your business potential with the latest and innovative
+              Meet faster, more secure web with the latest and innovative
               technologies.
             </span>
-            <CustomButton to="/contact">Get free advice</CustomButton>
+            <CustomButton to="/contact">Learn how</CustomButton>
           </StyledInfo>
           {children}
         </BackgroundImage>
