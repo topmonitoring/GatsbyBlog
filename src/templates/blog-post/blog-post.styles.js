@@ -32,7 +32,7 @@ export const StyledDate = styled.div`
   margin: auto;
   font-weight: 200;
 `
-export const StyledContentBody = styled.div`
+export const StyledContentBody = styled.article`
   padding: 50px;
   img {
     width: 50%;

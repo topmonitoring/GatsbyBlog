@@ -14,6 +14,7 @@ import {
 import { DiscussionEmbed } from 'disqus-react'
 import SocialButtons from '../../components/share-buttons/share-buttons.component'
 import PrevNextButtons from '../../components/prev-next-buttons/prev-next-buttons.component'
+import ReadingProgress from 'react-reading-progress'
 
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
@@ -29,9 +30,9 @@ const BlogPostTemplate = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={`${post.title} | ${siteTitle}`} />
+      <ReadingProgress targetEl="#target-el" />
       <PostBagroundImg alt={post.title} fluid={post.heroImage.fluid} />
-
-      <BlogPostBody>
+      <BlogPostBody id="target-el">
         <StyledHeder>{post.title}</StyledHeder>
         <StyledDate>{post.publishDate}</StyledDate>
         <StyledContentBody
@@ -40,7 +41,6 @@ const BlogPostTemplate = props => {
           }}
         />
       </BlogPostBody>
-
       <SocialButtons link={fullURL} message={post.title} />
       <PrevNextButtons {...props.pageContext} />
       <StyledComentSection>

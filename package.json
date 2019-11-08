@@ -31,6 +31,7 @@
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.0",
     "react-instantsearch-dom": "^5.7.0",
+    "react-reading-progress": "^0.3.0",
     "react-social-sharing": "^3.0.1",
     "react-spring": "^8.0.27",
     "sharp": "^0.22.0",
