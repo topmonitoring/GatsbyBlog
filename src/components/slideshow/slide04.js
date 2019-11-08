@@ -13,7 +13,7 @@ const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query {
-        bgr: file(relativePath: { eq: "slide2.png" }) {
+        bgr: file(relativePath: { eq: "slide4.png" }) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 1920, maxHeight: 910) {
               ...GatsbyImageSharpFluid_withWebp
@@ -31,12 +31,12 @@ const BackgroundSection = ({ className, children }) => (
           backgroundColor={`#040e18`}
         >
           <StyledInfo>
-            <h2>Responcive design</h2>
+            <h2>Have Strong Backend</h2>
             <span>
-              Learn phusics based animations, responcive design and design
-              patterns!
+              Create effortless real-time GraphQL API with serverless business
+              logic and deploy it to any cloud.
             </span>
-            <CustomButton to="/contact">See Blog Post</CustomButton>
+            <CustomButton to="/contact">See the Article</CustomButton>
           </StyledInfo>
           {children}
         </BackgroundImage>

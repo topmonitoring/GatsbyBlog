@@ -7,6 +7,10 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post/blog-post.js')
+    const blogPostPreview = path.resolve(
+      './src/templates/blog-posts-preview/blog-posts-preview.component.js'
+    )
+    const tagTemplate = path.resolve('src/templates/tags/tags.js')
     resolve(
       graphql(
         `
@@ -17,6 +21,11 @@ exports.createPages = ({ graphql, actions }) => {
                   title
                   slug
                 }
+              }
+            }
+            tagsGroup: allContentfulBlogPost(limit: 2000) {
+              group(field: tags) {
+                fieldValue
               }
             }
           }
@@ -35,14 +44,24 @@ exports.createPages = ({ graphql, actions }) => {
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({
             path: i === 0 ? '/blog' : `/blog/${i + 1}`,
-            component: path.resolve(
-              './src/templates/blog-posts-preview/blog-posts-preview.component.js'
-            ),
+            component: blogPostPreview,
             context: {
               limit: postsPerPage,
               skip: i * postsPerPage,
               numPages,
               currentPage: i + 1,
+            },
+          })
+        })
+
+        const tags = result.data.tagsGroup.group
+        // Make tag pages
+        tags.forEach(tag => {
+          createPage({
+            path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+            component: tagTemplate,
+            context: {
+              tag: tag.fieldValue,
             },
           })
         })

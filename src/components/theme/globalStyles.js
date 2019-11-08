@@ -5,6 +5,8 @@ const white = '#fff'
 const dark = '#000'
 const lightblue = 'aqua'
 const darkblue = 'blue'
+const blueIsh = 'rgb(144, 186, 245)'
+const darkenBluIsh = 'rgb(129, 164, 214)'
 const greyIsh = 'rgba(0, 0, 0, 0.47)'
 const whiteIsh = 'rgb( 134, 135, 138)'
 const lightWhite = '#D8DEE9'
@@ -23,6 +25,8 @@ export const Colors = {
   lightBlack,
   darkDark,
   lighterWhite,
+  blueIsh,
+  darkenBluIsh,
 }
 
 const getGlobalBackground = theme('mode', {

@@ -13,7 +13,7 @@ const LatestBlogPosts = () => (
       query {
         allContentfulBlogPost(
           sort: { fields: [publishDate], order: DESC }
-          limit: 6
+          limit: 3
         ) {
           edges {
             node {

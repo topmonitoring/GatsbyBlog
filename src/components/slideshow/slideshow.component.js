@@ -3,6 +3,7 @@ import { StyledAwesomeSlider } from './slideshow.styles'
 import Slide1 from './slide01'
 import Slide2 from './slide02'
 import Slide3 from './slide03'
+import Slide4 from './slide04'
 const Slideshow = () => (
   <StyledAwesomeSlider
     play={true}
@@ -17,6 +18,9 @@ const Slideshow = () => (
     </div>
     <div>
       <Slide3 />
+    </div>
+    <div>
+      <Slide4 />
     </div>
   </StyledAwesomeSlider>
 )

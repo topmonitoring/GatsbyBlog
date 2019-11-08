@@ -43,3 +43,7 @@ export const getBoxShadow = theme('mode', {
   light: Colors.greyIsh,
   dark: Colors.whiteIsh,
 })
+export const getButtonColor = theme('mode', {
+  light: Colors.blueIsh,
+  dark: Colors.darkenBluIsh,
+})
