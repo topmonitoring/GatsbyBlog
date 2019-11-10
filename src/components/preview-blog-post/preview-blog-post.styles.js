@@ -68,9 +68,9 @@ export const ArticleDisplayContainer = styled.article`
   flex-direction: column;
   border-radius: 10px;
 
-  margin: 15px;
+  margin: 20px;
   background-color: ${getBackgroundForArticlePreview};
-  flex: 0 0 calc(50% - 33px);
+  flex: 0 0 calc(50% - 43px);
   transition: all 0.4s ease-in-out;
   box-shadow: 0px 11px 20px 0px ${getBoxShadow};
   &:hover {
