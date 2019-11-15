@@ -34,10 +34,18 @@ export const StyledDate = styled.div`
 `
 export const StyledContentBody = styled.article`
   padding: 50px;
+  align-content: center;
+  h1 {
+    font-size: 30px;
+    color: ${getForegroundForDate};
+  }
   img {
     width: 50%;
     height: 50%;
     margin-left: 25%;
+  }
+  a {
+    border-bottom: 3px solid #4799eb;
   }
   @media screen and (max-width: 800px) {
     padding: 10px;

@@ -15,6 +15,7 @@ import { DiscussionEmbed } from 'disqus-react'
 import SocialButtons from '../../components/share-buttons/share-buttons.component'
 import PrevNextButtons from '../../components/prev-next-buttons/prev-next-buttons.component'
 import ReadingProgress from 'react-reading-progress'
+import EmailSubscribeForm from '../../components/subscribe-form/subscribe-form.component'
 
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
@@ -43,6 +44,7 @@ const BlogPostTemplate = props => {
       </BlogPostBody>
       <SocialButtons link={fullURL} message={post.title} />
       <PrevNextButtons {...props.pageContext} />
+      <EmailSubscribeForm />
       <StyledComentSection>
         <DiscussionEmbed {...disqusConfig} />
       </StyledComentSection>

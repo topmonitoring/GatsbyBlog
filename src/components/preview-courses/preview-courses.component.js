@@ -17,7 +17,7 @@ const PreviewCourses = () => (
               courseName
               coursePicture {
                 fluid(maxWidth: 400, maxHeight: 300, resizingBehavior: SCALE) {
-                  ...GatsbyContentfulFluid_tracedSVG
+                  ...GatsbyContentfulFluid
                 }
               }
             }
