@@ -46,6 +46,10 @@ export const StyledContentBody = styled.article`
   }
   a {
     border-bottom: 3px solid #4799eb;
+    text-decoration: none;
+    :hover {
+      color: #4799eb;
+    }
   }
   @media screen and (max-width: 800px) {
     padding: 10px;
