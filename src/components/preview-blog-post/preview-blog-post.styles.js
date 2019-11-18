@@ -27,10 +27,11 @@ export const PreviewTitle = styled.h3`
   font-size: 17px;
   margin-top: 200px;
   background-color: aqua;
+  color: black;
   grid-area: 'title';
   clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);
   text-align: center;
-  color: black;
+
   transition: all 0.4s ease-in-out;
   border-radius: 5px;
 `

@@ -7,8 +7,7 @@ import {
 } from '../../components/theme/colors'
 
 export const PostBagroundImg = styled(Img)`
-  height: 60vh;
-  max-height: 900px;
+  height: 70vh;
   width: 100%;
   z-index: -1000;
 `
@@ -24,6 +23,7 @@ export const BlogPostBody = styled.div`
 export const StyledHeder = styled.h1`
   text-align: center;
   margin: auto;
+  font-size: 50px;
   font-weight: 900;
 `
 export const StyledDate = styled.div`
@@ -34,9 +34,12 @@ export const StyledDate = styled.div`
 `
 export const StyledContentBody = styled.article`
   padding: 50px;
+  font-weight: 450;
   align-content: center;
+  font-size: 18px;
   h1 {
-    font-size: 30px;
+    font-size: 35px;
+    text-align: center;
     color: ${getForegroundForDate};
   }
   img {

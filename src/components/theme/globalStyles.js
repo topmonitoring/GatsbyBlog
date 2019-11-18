@@ -42,6 +42,22 @@ const getGlobalForeground = theme('mode', {
 export const GlobalStyles = createGlobalStyle`
 
 @font-face {
+  font-family: 'Emberly';
+  font-weight: 100 900; 
+  font-style: normal;
+  src: url('/Emberly Variable Regular-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CrimsonPro-Roman';
+  font-weight: 100 900; 
+  font-style: normal;
+  src: url('/CrimsonPro-Roman-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Avenir';
   font-weight: 400;
   font-style: normal;
@@ -52,10 +68,14 @@ export const GlobalStyles = createGlobalStyle`
 body {
   background-color: ${getGlobalBackground};
   color: ${getGlobalForeground};
-  font-size: 1em;
-  font-family: 'Avenir', Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  font-family: 'CrimsonPro-Roman', Tahoma, Arial, Helvetica, sans-serif;
   line-height: 1.65;
   margin: 0px;
+}
+
+h1{
+  font-family: 'Emberly', Tahoma, Arial, Helvetica, sans-serif;
 }
 
 a {
