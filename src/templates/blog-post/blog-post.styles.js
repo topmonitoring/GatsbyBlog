@@ -19,11 +19,12 @@ export const BlogPostBody = styled.div`
   background: ${getBackgroundForBlogPost};
   z-index: 1000;
   max-width: 1080px;
+  border-radius: 10px;
 `
 export const StyledHeder = styled.h1`
   text-align: center;
   margin: auto;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 900;
 `
 export const StyledDate = styled.div`
@@ -34,13 +35,16 @@ export const StyledDate = styled.div`
 `
 export const StyledContentBody = styled.article`
   padding: 50px;
-  font-weight: 450;
+  font-weight: 300;
   align-content: center;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 30px;
+  strong {
+    font-weight: 900;
+  }
   h1 {
     font-size: 35px;
     text-align: center;
-    color: ${getForegroundForDate};
   }
   img {
     width: 50%;

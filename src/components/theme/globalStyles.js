@@ -58,6 +58,15 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 @font-face {
+  font-family: 'Roslindale';
+  font-weight: 100 900; 
+  font-style: normal;
+  src: url('/RoslindaleVariableDisplay-VF-Edu.ttf') format('truetype');
+  font-display: swap;
+}
+
+
+@font-face {
   font-family: 'Avenir';
   font-weight: 400;
   font-style: normal;
