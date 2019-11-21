@@ -42,6 +42,13 @@ export const StyledContentBody = styled.article`
   strong {
     font-weight: 900;
   }
+  blockquote {
+    line-height: 44px;
+    max-width: 660px;
+    margin: 58px 0 58px 10px;
+    padding: 10px 0 10px 10px;
+    border-left: 5px solid;
+  }
   h1 {
     font-size: 35px;
     text-align: center;

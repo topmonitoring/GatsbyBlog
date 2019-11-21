@@ -58,10 +58,10 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 @font-face {
-  font-family: 'Roslindale';
+  font-family: 'CrimsonPro-italic';
   font-weight: 100 900; 
   font-style: normal;
-  src: url('/RoslindaleVariableDisplay-VF-Edu.ttf') format('truetype');
+  src: url('/CrimsonPro-italic-VF.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -82,7 +82,9 @@ body {
   line-height: 1.65;
   margin: 0px;
 }
-
+blockquote{
+  font-family: 'CrimsonPro-italic', Tahoma, Arial, Helvetica, sans-serif;
+}
 h1{
   font-family: 'Emberly', Tahoma, Arial, Helvetica, sans-serif;
 }
