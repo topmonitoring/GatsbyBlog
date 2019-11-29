@@ -65,15 +65,6 @@ export const GlobalStyles = createGlobalStyle`
   font-display: swap;
 }
 
-
-@font-face {
-  font-family: 'Avenir';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/avenir-400.woff2') format('woff2');
-  font-display: swap;
-}
-
 body {
   background-color: ${getGlobalBackground};
   color: ${getGlobalForeground};
@@ -85,7 +76,7 @@ body {
 blockquote{
   font-family: 'CrimsonPro-italic', Tahoma, Arial, Helvetica, sans-serif;
 }
-h1{
+h1,h2{
   font-family: 'Emberly', Tahoma, Arial, Helvetica, sans-serif;
 }
 

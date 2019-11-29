@@ -58,6 +58,7 @@ module.exports = {
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
+    'gatsby-plugin-netlify-cache',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
