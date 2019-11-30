@@ -65,7 +65,11 @@ function SEO({ description, lang, meta, title, keywords }) {
         },
       ].concat(meta)}
     >
-      <script src="https://kit.fontawesome.com/e29a0bf6b9.js"></script>
+      <script
+        data-search-pseudo-elements
+        defer
+        src="https://kit.fontawesome.com/e29a0bf6b9.js"
+      ></script>
     </Helmet>
   )
 }

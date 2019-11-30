@@ -37,6 +37,7 @@ export const PreviewTitle = styled.h3`
 `
 export const Tag = styled.p`
   width: 70px;
+  height: 18px;
   font-size: 14px;
   text-align: center;
   text-decoration: none;
@@ -65,6 +66,7 @@ export const ArticleInnerGridContainer = styled.div`
 
 export const ArticleDisplayContainer = styled.article`
   height: 400px;
+  min-width: 365px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
