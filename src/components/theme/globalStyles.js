@@ -50,6 +50,14 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 @font-face {
+  font-family: 'Emberly-Italic';
+  font-weight: 100 900; 
+  font-style: normal;
+  src: url('/Emberly Variable italic-VF.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'CrimsonPro-Roman';
   font-weight: 100 900; 
   font-style: normal;
@@ -76,8 +84,11 @@ body {
 blockquote{
   font-family: 'CrimsonPro-italic', Tahoma, Arial, Helvetica, sans-serif;
 }
-h1,h2{
+h1{
   font-family: 'Emberly', Tahoma, Arial, Helvetica, sans-serif;
+}
+h2{
+  font-family: 'Emberly-Italic', Tahoma, Arial, Helvetica, sans-serif;
 }
 
 a {

@@ -20,6 +20,19 @@ export const BlogPostBody = styled.div`
   z-index: 1000;
   max-width: 1080px;
   border-radius: 10px;
+  article {
+    :first-letter {
+      font-family: Georgia, serif;
+      float: left;
+      font-size: 7.125em;
+      font-weight: bold;
+      line-height: 0.65;
+      margin: 0;
+      padding: 0.05em 0.1em 0 0;
+      -webkit-initial-letter: 3 2;
+      initial-letter: 3 2;
+    }
+  }
 `
 export const StyledHeder = styled.h1`
   text-align: center;
@@ -28,11 +41,22 @@ export const StyledHeder = styled.h1`
   font-weight: 900;
 `
 export const StyledDate = styled.div`
-  text-align: center;
   color: ${getForegroundForDate};
-  margin: auto;
   font-weight: 200;
+  margin: auto;
+  margin-right: 5px;
 `
+export const StyledReadTime = styled.div`
+  font-weight: 500;
+  margin: auto;
+  margin-left: 5px;
+`
+export const StyledContainer = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+`
+
 export const StyledContentBody = styled.article`
   padding: 50px;
   font-weight: 300;
@@ -52,6 +76,13 @@ export const StyledContentBody = styled.article`
   h1 {
     font-size: 35px;
     text-align: center;
+    font-weight: 800;
+  }
+  h2 {
+    text-decoration: underline;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    font-size: 40px;
   }
   img {
     width: 50%;
@@ -65,6 +96,7 @@ export const StyledContentBody = styled.article`
       color: #4799eb;
     }
   }
+
   @media screen and (max-width: 800px) {
     padding: 10px;
     img {

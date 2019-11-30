@@ -10,6 +10,8 @@ import {
   StyledDate,
   StyledContentBody,
   StyledComentSection,
+  StyledReadTime,
+  StyledContainer,
 } from './blog-post.styles'
 import { DiscussionEmbed } from 'disqus-react'
 import SocialButtons from '../../components/share-buttons/share-buttons.component'
@@ -27,6 +29,19 @@ const BlogPostTemplate = props => {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: { identifier: slug, title: post.title, url: fullURL },
   }
+  var cont = post.body.childMarkdownRemark.html
+  cont = cont.replace(/<[^>]*>/g, ' ')
+  cont = cont.replace(/\s+/g, ' ')
+  cont = cont.trim()
+  var n = cont.split(' ').length
+
+  var Holetime = n / 200
+  var minTime = Math.floor(Holetime)
+  var secTime = (Holetime % 1) * 0.6
+  if (secTime >= 0.3) {
+    minTime += 1
+  }
+  const ReadTime = minTime + ' min read'
 
   return (
     <Layout location={props.location}>
@@ -35,7 +50,11 @@ const BlogPostTemplate = props => {
       <PostBagroundImg alt={post.title} fluid={post.heroImage.fluid} />
       <BlogPostBody id="target-el">
         <StyledHeder>{post.title}</StyledHeder>
-        <StyledDate>{post.publishDate}</StyledDate>
+        <StyledContainer>
+          <StyledDate>{post.publishDate}</StyledDate>/
+          <StyledReadTime>{ReadTime}</StyledReadTime>
+        </StyledContainer>
+
         <StyledContentBody
           dangerouslySetInnerHTML={{
             __html: post.body.childMarkdownRemark.html,
