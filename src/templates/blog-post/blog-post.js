@@ -29,15 +29,15 @@ const BlogPostTemplate = props => {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: { identifier: slug, title: post.title, url: fullURL },
   }
-  var cont = post.body.childMarkdownRemark.html
+  let cont = post.body.childMarkdownRemark.html
   cont = cont.replace(/<[^>]*>/g, ' ')
   cont = cont.replace(/\s+/g, ' ')
   cont = cont.trim()
-  var n = cont.split(' ').length
+  const n = cont.split(' ').length
 
-  var Holetime = n / 200
-  var minTime = Math.floor(Holetime)
-  var secTime = (Holetime % 1) * 0.6
+  let Holetime = n / 200
+  let minTime = Math.floor(Holetime)
+  let secTime = (Holetime % 1) * 0.6
   if (secTime >= 0.3) {
     minTime += 1
   }

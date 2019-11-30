@@ -4,6 +4,7 @@ import {
   getBackgroundForBlogPost,
   getBackgroundForNavAndFooter,
   getGlobalForeground,
+  getBackgroundForSearchBoxHover,
 } from '../theme/colors'
 import { SearchBox, Hits, Highlight } from 'react-instantsearch-dom'
 
@@ -87,7 +88,7 @@ export const StyledSearchResult = styled.div`
   margin: 2px auto;
   padding: 0px 5px;
   :hover {
-    background-color: ${getBackgroundForBlogPost};
+    background-color: ${getBackgroundForSearchBoxHover};
   }
   @media screen and (max-width: 800px) {
     width: 80vw;

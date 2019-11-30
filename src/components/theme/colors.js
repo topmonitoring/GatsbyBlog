@@ -26,6 +26,11 @@ export const getBackgroundForBlogPost = theme('mode', {
   dark: Colors.darkDark,
 })
 
+export const getBackgroundForSearchBoxHover = theme('mode', {
+  light: 'white',
+  dark: Colors.darkDark,
+})
+
 export const getBackgroundForBlogPostsPreview = theme('mode', {
   light: Colors.lightWhite,
   dark: '#2E3440',
