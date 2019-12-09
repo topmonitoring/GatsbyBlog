@@ -85,9 +85,9 @@ export const StyledContentBody = styled.article`
     font-size: 40px;
   }
   img {
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
+    width: 70%;
+    height: 70%;
+    margin-left: 15%;
   }
   a {
     border-bottom: 3px solid #4799eb;

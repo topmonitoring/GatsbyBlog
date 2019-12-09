@@ -70,7 +70,6 @@ export const ArticleDisplayContainer = styled.article`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-
   margin: 20px;
   background-color: ${getBackgroundForArticlePreview};
   flex: 0 0 calc(50% - 43px);
@@ -83,5 +82,6 @@ export const ArticleDisplayContainer = styled.article`
   @media screen and (max-width: 800px) {
     flex: 0 0 calc(100% - 33px);
     font-size: 12px;
+    min-width: 250px;
   }
 `
