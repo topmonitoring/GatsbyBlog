@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import {
-  StyledSubscribeContainer,
   StyledSubscribeForm,
   StyledInput,
   StyledButton,
   SubscribeInfo,
 } from './subscribe-form.styles'
+
+import StyledSubscribeContainer from './subscribe-baground'
 
 const EmailSubscribeForm = () => {
   const [name, setName] = useState('')

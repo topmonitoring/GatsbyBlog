@@ -1,26 +1,14 @@
 import styled from 'styled-components'
 import { getBackgroundForArticlePreview } from '../theme/colors'
 
-export const StyledSubscribeContainer = styled.div`
-  width: 100%;
-  padding: 50px;
-  background-color: ${getBackgroundForArticlePreview};
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  @media screen and (max-width: 800px) {
-    padding: 20px 0px;
-    flex-direction: column;
-  }
-`
 export const SubscribeInfo = styled.div`
   width: 250px;
   padding: 0px 30px;
   display: flex;
   flex-direction: column;
   align-content: center;
+  background-color: ${getBackgroundForArticlePreview};
+  border-radius: 10px;
   @media screen and (max-width: 800px) {
     width: 60vw;
     margin: auto;
