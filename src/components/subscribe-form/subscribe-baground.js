@@ -9,11 +9,11 @@ const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query {
-        bgr: allFile(filter: { name: { eq: "subscribebaground" } }) {
+        bgr: allFile(filter: { name: { eq: "subscribebaground2" } }) {
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 2040, maxHeight: 501) {
+                fluid(maxWidth: 2000, maxHeight: 501) {
                   ...GatsbyImageSharpFluid
                 }
               }
