@@ -36,6 +36,7 @@
     "react-social-sharing": "^3.0.1",
     "react-spring": "^8.0.27",
     "sharp": "^0.22.0",
+    "social-media-icons-react": "^1.0.10",
     "styled-components": "^4.4.0",
     "styled-theming": "^2.2.0"
   },
