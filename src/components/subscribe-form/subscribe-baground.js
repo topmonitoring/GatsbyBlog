@@ -42,7 +42,6 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  z-index: -10;
   @media screen and (max-width: 800px) {
     padding: 20px 0px;
     flex-direction: column;
