@@ -36,7 +36,9 @@ const BackgroundSection = ({ className, children }) => (
               Learn phusics based animations, responcive design,themeing, design
               patterns and much much more!
             </span>
-            <CustomButton to="/contact">Go to Blog Post</CustomButton>
+            <CustomButton to="/blog/physics-based-animation-with-react-spring">
+              Go to Blog Post
+            </CustomButton>
           </StyledInfo>
           {children}
         </BackgroundImage>

@@ -37,7 +37,9 @@ const BackgroundSection = ({ className, children }) => (
               meeans all your page content is available to Google and other
               search engines or crawlers.
             </span>
-            <CustomButton to="/contact">See Blog Post</CustomButton>
+            <CustomButton to="/blog/how-pre-rendering-content-improves-seo">
+              See Blog Post
+            </CustomButton>
           </StyledInfo>
           {children}
         </BackgroundImage>

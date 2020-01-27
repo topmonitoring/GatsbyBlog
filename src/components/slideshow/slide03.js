@@ -36,7 +36,9 @@ const BackgroundSection = ({ className, children }) => (
               Create effortless real-time GraphQL API with serverless business
               logic and deploy it to any cloud.
             </span>
-            <CustomButton to="/contact">See the Article</CustomButton>
+            <CustomButton to="/blog/effortless-real-time-graphql-api-with-hasura">
+              See the Article
+            </CustomButton>
           </StyledInfo>
           {children}
         </BackgroundImage>

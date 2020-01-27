@@ -44,13 +44,15 @@ const queries = [
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://pure-water.netlify.com`,
-    title: `Pure Water`,
-    description: `Hi there!!! My name is Dobrin Dobrev and I am a web developer, freelancer, and open source contributor. This is my personal site where you can see my latest projects, skills and what I'm up to. If you are starting a business and need some help with your website don't hesitate to contact me. I specialize in creating static websites which are super fast and easy to use with amazing designs, SEO friendly, work great on mobile and come with  FREE HOSTING by Netlify.`,
+    siteUrl: `https://piratecactus.com`,
+    title: `Pirate Cactus`,
+    description: `Wellcome to Pitere Cactus, web development and antrepenurial heven for anyone who wants to inprove ,share or sharpen there programming skills.`,
     author: `@iamdobri`,
     keywords: [
-      'Dobrin',
-      'Dobrin Dobrev',
+      'pirate',
+      'piratecactus',
+      'Pirate Cactus',
+      'blog',
       'developer',
       'freelancer',
       'programmer',
@@ -141,7 +143,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Pure Water RSS Feed',
+            title: 'Pirate Cactus RSS Feed',
           },
         ],
       },
