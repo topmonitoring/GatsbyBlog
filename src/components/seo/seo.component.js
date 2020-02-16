@@ -64,20 +64,14 @@ function SEO({ description, lang, meta, title, keywords }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    >
-      <script
-        data-search-pseudo-elements
-        defer
-        src="https://kit.fontawesome.com/e29a0bf6b9.js"
-      ></script>
-    </Helmet>
+    ></Helmet>
   )
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  description: `my personal website`,
+  description: `welcome to piratecactus`,
 }
 
 export default SEO

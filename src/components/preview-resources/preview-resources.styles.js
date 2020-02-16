@@ -40,6 +40,3 @@ export const StyledSectionContainer = styled.div`
     flex-direction: column;
   }
 `
-export const StyledIcon = styled.i`
-  font-size: 60px;
-`
