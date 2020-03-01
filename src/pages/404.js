@@ -10,6 +10,8 @@ const NotFound = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
+      <h1>404</h1>
+      <h1>PAGE NOT FOUND</h1>
     </Layout>
   )
 }

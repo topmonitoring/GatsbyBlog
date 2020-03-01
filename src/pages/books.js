@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
 import styled from 'styled-components'
+import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
 
 const BooksPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -24,46 +25,48 @@ const BooksPage = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
-      <StyledTitle>{pageTitle}</StyledTitle>
-      <PickGrid>
-        <StyledPick
-          dangerouslySetInnerHTML={{
-            __html: audioblePick,
-          }}
-        />
+      <StyledSection>
+        <StyledTitle>{pageTitle}</StyledTitle>
+        <PickGrid>
+          <StyledPick
+            dangerouslySetInnerHTML={{
+              __html: audioblePick,
+            }}
+          />
+          <StyledDiscription
+            dangerouslySetInnerHTML={{
+              __html: pageInfo,
+            }}
+          />
+        </PickGrid>
+        <BooksGrid>
+          {books.map(({ title, imgLink, description, amazonLink }) => {
+            return (
+              <Book key={title}>
+                <h3>{title}</h3>
+                <StyledBookImg
+                  dangerouslySetInnerHTML={{
+                    __html: imgLink.childMarkdownRemark.html,
+                  }}
+                />
+                <StyledBookContent
+                  dangerouslySetInnerHTML={{
+                    __html: description.childMarkdownRemark.html,
+                  }}
+                />
+                <a href={amazonLink} target="blank">
+                  <LinkToAmazonButton>Get it on Amazon</LinkToAmazonButton>
+                </a>
+              </Book>
+            )
+          })}
+        </BooksGrid>
         <StyledDiscription
           dangerouslySetInnerHTML={{
-            __html: pageInfo,
+            __html: pageDisclaimer,
           }}
         />
-      </PickGrid>
-      <BooksGrid>
-        {books.map(({ title, imgLink, description, amazonLink }) => {
-          return (
-            <Book key={title}>
-              <h3>{title}</h3>
-              <StyledBookImg
-                dangerouslySetInnerHTML={{
-                  __html: imgLink.childMarkdownRemark.html,
-                }}
-              />
-              <StyledBookContent
-                dangerouslySetInnerHTML={{
-                  __html: description.childMarkdownRemark.html,
-                }}
-              />
-              <a href={amazonLink} target="blank">
-                <LinkToAmazonButton>Get it on Amazon</LinkToAmazonButton>
-              </a>
-            </Book>
-          )
-        })}
-      </BooksGrid>
-      <StyledDiscription
-        dangerouslySetInnerHTML={{
-          __html: pageDisclaimer,
-        }}
-      />
+      </StyledSection>
     </Layout>
   )
 }
@@ -119,7 +122,7 @@ const StyledTitle = styled.h1`
 const StyledDiscription = styled.div`
   text-align: left;
   margin: 50px auto;
-  width: 60%;
+  width: 90%;
   @media screen and (max-width: 800px) {
     flex-direction: column;
     width: 85%;
@@ -127,7 +130,7 @@ const StyledDiscription = styled.div`
 `
 const BooksGrid = styled.div`
   text-align: center;
-  width: 70%;
+  width: 90%;
   display: grid;
   flex-direction: row;
   margin: auto;
@@ -159,7 +162,7 @@ const LinkToAmazonButton = styled.button`
 `
 const PickGrid = styled.div`
   text-align: center;
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -169,7 +172,7 @@ const PickGrid = styled.div`
   }
 `
 const StyledPick = styled.div`
-  margin: 50px auto;
+  margin: 50px;
 `
 const StyledBookContent = styled.div`
   text-align: center;
@@ -188,5 +191,18 @@ const StyledBookImg = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     width: 85%;
+  }
+`
+const StyledSection = styled.div`
+  width: 60%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: ${getBackgroundForBlogPostsPreview};
+  border-radius: 10px;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    width: 90vw;
   }
 `
