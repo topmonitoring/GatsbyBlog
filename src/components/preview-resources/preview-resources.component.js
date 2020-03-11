@@ -19,9 +19,6 @@ const Resources = () => {
         <StyledSection to="/projects">
           <h3>Open Source Projects</h3>
         </StyledSection>
-        <StyledSection to="/downloads">
-          <h3>Downloads</h3>
-        </StyledSection>
       </StyledSectionContainer>
     </>
   )

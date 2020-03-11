@@ -25,20 +25,9 @@ const Resources = () => {
       </StyledNavLink>
       {isOpen ? (
         <StyledDropdownMenu>
-          <StyledLink to="/books">
-            <i className="fas fa-book"></i> Books{' '}
-          </StyledLink>
-          <StyledLink to="/links">
-            <i className="fas fa-link"></i> Links
-          </StyledLink>
-          <StyledLink to="/projects">
-            {' '}
-            <i className="fas fa-project-diagram"></i> Open Source Projects{' '}
-          </StyledLink>
-          <StyledLink to="/downloads">
-            <i className="fas fa-download"></i>
-            Downloads{' '}
-          </StyledLink>
+          <StyledLink to="/books">Books</StyledLink>
+          <StyledLink to="/links">Links</StyledLink>
+          <StyledLink to="/projects">Open Source Projects</StyledLink>
         </StyledDropdownMenu>
       ) : null}
     </div>

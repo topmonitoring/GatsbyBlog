@@ -43,7 +43,7 @@ const BooksPage = props => {
           {books.map(({ title, imgLink, description, amazonLink }) => {
             return (
               <Book key={title}>
-                <h3>{title}</h3>
+                <StyledBookTitle>{title}</StyledBookTitle>
                 <StyledBookImg
                   dangerouslySetInnerHTML={{
                     __html: imgLink.childMarkdownRemark.html,
@@ -187,6 +187,13 @@ const StyledBookContent = styled.div`
 const StyledBookImg = styled.div`
   text-align: center;
   margin: 20px auto;
+  a {
+    img {
+      width: 160px;
+      height: 250px;
+      margin: auto;
+    }
+  }
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -205,4 +212,7 @@ const StyledSection = styled.div`
     flex-direction: column;
     width: 90vw;
   }
+`
+const StyledBookTitle = styled.h3`
+  height: 40px;
 `

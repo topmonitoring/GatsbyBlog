@@ -14,7 +14,7 @@ export const StyledSection = styled(Link)`
   flex-direction: column;
   text-align: center;
   height: 200px;
-  width: 22%;
+  width: 25%;
   background-color: ${getBackgroundForArticlePreview};
   display: flex;
   margin: auto;
