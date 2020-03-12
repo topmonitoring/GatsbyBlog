@@ -8,16 +8,16 @@ import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
 
 const LinksPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
+  const linksContent = get(
+    props,
+    'data.contentfulLinksPage.linksContent.childMarkdownRemark.html'
+  )
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
-      <StyledSection>
-        <h3>Ui/UX</h3>
-        <h3>javascript</h3>
-        <h3>variable fonts</h3>
-        <h3>tools</h3>
-        <h3>free books</h3>
-      </StyledSection>
+      <StyledSection
+        dangerouslySetInnerHTML={{ __html: linksContent }}
+      ></StyledSection>
     </Layout>
   )
 }
@@ -29,6 +29,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    contentfulLinksPage {
+      linksContent {
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }
@@ -45,5 +52,13 @@ const StyledSection = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     width: 90vw;
+  }
+
+  a {
+    border-bottom: 3px solid #4799eb;
+    text-decoration: none;
+    :hover {
+      color: #4799eb;
+    }
   }
 `
