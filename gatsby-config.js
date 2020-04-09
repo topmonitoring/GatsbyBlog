@@ -61,6 +61,7 @@ module.exports = {
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-plugin-netlify-cache',
+    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
