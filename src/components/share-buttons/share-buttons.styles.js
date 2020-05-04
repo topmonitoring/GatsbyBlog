@@ -4,6 +4,7 @@ export const SocialLinksContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 1;
   left: 0;
   top: 35%;
 
