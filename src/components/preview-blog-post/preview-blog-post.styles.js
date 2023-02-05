@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import { getBackgroundForArticlePreview, getBoxShadow } from '../theme/colors'
 
-export const StyledPreviewImg = styled(Img)`
+export const StyledPreviewImg = styled(GatsbyImage)`
   display: block;
   width: 100%;
   height: 250px;

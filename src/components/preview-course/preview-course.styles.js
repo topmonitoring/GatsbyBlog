@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { animated } from 'react-spring'
 import BackgroundImage from 'gatsby-background-image'
 
+
 export const AnimatedCard = styled(animated.div)`
   flex-direction: row;
   width: 400px;

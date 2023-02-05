@@ -11,7 +11,7 @@ const PrevNextButtons = ({ previous, next }) => {
       {previous && (
         <StyledArrow>
           Read Previous:
-          <Link to={`blog/${previous.slug}`}>&#8249;-{previous.title} </Link>
+          <Link to={`blog/${previous.slug}`}>&#8249;-{previous.title}</Link>
         </StyledArrow>
       )}
       {next && (

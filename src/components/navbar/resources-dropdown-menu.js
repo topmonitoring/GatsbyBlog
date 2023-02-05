@@ -14,7 +14,12 @@ const Resources = () => {
     document.removeEventListener('click', showMenu)
   }
   useEffect(() => {
-    isOpen ? document.addEventListener('click', showMenu) : null
+    const listener=()=>{
+      isOpen ? document.addEventListener('click', showMenu) : null
+    };
+    return()=>{                                             
+      document.removeEventListener('click', listener) //we need this to prevent double mounting component listener @react18 version and above
+    }
   }, [isOpen])
 
   return (

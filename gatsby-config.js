@@ -1,3 +1,5 @@
+const { cloneWith } = require('lodash')
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -10,9 +12,11 @@ const contentfulConfig = {
 
 const { spaceId, accessToken } = contentfulConfig
 
+
+
 if (!spaceId || !accessToken) {
   throw new Error(
-    'Contentful spaceId and the access token need to be provided.'
+    'Contentful spaceId and the access token need to be provided.'+process.env.ALGOLIA_API_KEY
   )
 }
 
@@ -60,7 +64,6 @@ module.exports = {
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
-    'gatsby-plugin-netlify-cache',
     'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',
@@ -153,6 +156,8 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
+    'gatsby-plugin-netlify',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import { getBackgroundForBlogPostsPreview } from '../theme/colors'
 
 export const StyledAboutSection = styled.div`
@@ -27,7 +27,7 @@ export const StyledAboutInfo = styled.div`
     padding: 5px;
   }
 `
-export const StyledImg = styled(Img)`
+export const StyledImg = styled(GatsbyImage)`
   height: 600px;
   width: 90%;
   margin: auto;

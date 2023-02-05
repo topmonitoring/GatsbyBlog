@@ -1,7 +1,6 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-
 import BackgroundImage from 'gatsby-background-image'
 import {
   getBackgroundForNavAndFooter,
@@ -9,25 +8,22 @@ import {
 } from '../theme/colors'
 import CustomButton from '../buttons/CustomButton'
 
-const BackgroundSection = ({ className, children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        bgr: file(relativePath: { eq: "slide00.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 1920, maxHeight: 910) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+const BackgroundSection = ({ className, children }) => {
+  const imageData=useStaticQuery(graphql`
+    {
+      bgr: file(relativePath: {eq: "slide00.png"}) {
+        childImageSharp {
+          fluid(quality: 100, maxWidth: 1920, maxHeight: 910) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-    `}
-    render={data => {
-      const imageData = data.bgr.childImageSharp.fluid
+    }
+    `)
       return (
         <BackgroundImage
           className={className}
-          fluid={imageData}
+          fluid={imageData.bgr.childImageSharp.fluid}
           backgroundColor={`#040e18`}
         >
           <StyledInfo>
@@ -43,9 +39,7 @@ const BackgroundSection = ({ className, children }) => (
           {children}
         </BackgroundImage>
       )
-    }}
-  />
-)
+    }
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100vw;

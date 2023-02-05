@@ -34,35 +34,30 @@ const PostsPreview = props => {
 export default PostsPreview
 
 export const pageQuery = graphql`
-  query GetBlogPostsForPagePAGEQUERY($skip: Int!, $limit: Int!) {
-    site {
-      siteMetadata {
-        title
-      }
+query GetBlogPostsForPagePAGEQUERY($skip: Int!, $limit: Int!) {
+  site {
+    siteMetadata {
+      title
     }
-    allContentfulBlogPost(
-      sort: { fields: [publishDate], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM DD, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 600, maxHeight: 300, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          body {
-            childMarkdownRemark {
-              excerpt
-            }
+  }
+  allContentfulBlogPost(sort: {publishDate: DESC}, limit: $limit, skip: $skip) {
+    edges {
+      node {
+        title
+        slug
+        publishDate(formatString: "MMMM DD, YYYY")
+        tags
+        heroImage {
+          gatsbyImageData
+        }
+        body {
+          childMarkdownRemark {
+            excerpt
           }
         }
       }
     }
   }
+}
+
 `

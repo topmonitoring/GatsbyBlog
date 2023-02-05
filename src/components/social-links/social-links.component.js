@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { SocialLinksContainer } from './social-links.styles'
-import { SocialMediaIconsReact } from 'social-media-icons-react'
+import { ReactSocialMediaIcons } from 'react-social-media-icons'
 
 const SocialLinks = () => (
   <StaticQuery
@@ -49,7 +49,7 @@ const SocialLinks = () => (
 export default SocialLinks
 
 const SocialIcon = ({ href, iconName }) => (
-  <SocialMediaIconsReact
+  <ReactSocialMediaIcons
     borderColor="rgba(0,0,0,0.25)"
     iconColor="rgba(255,255,255,1)"
     backgroundColor="rgba(144, 186, 245,1)"

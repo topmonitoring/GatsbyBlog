@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image"
 import {
   getBackgroundForComments,
   getBackgroundForBlogPost,
   getForegroundForDate,
 } from '../../components/theme/colors'
 
-export const PostBagroundImg = styled(Img)`
+export const PostBagroundImg = styled(GatsbyImage)`
   height: 70vh;
   width: 100%;
   z-index: -1000;

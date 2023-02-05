@@ -14,21 +14,21 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(
         `
-          {
-            allContentfulBlogPost(limit: 2000) {
-              edges {
-                node {
-                  title
-                  slug
-                }
-              }
-            }
-            tagsGroup: allContentfulBlogPost(limit: 2000) {
-              group(field: tags) {
-                fieldValue
+        {
+          allContentfulBlogPost(limit: 2000) {
+            edges {
+              node {
+                title
+                slug
               }
             }
           }
+          tagsGroup: allContentfulBlogPost(limit: 2000) {
+            group(field: {tags: SELECT}) {
+              fieldValue
+            }
+          }
+        }
         `
       ).then(result => {
         if (result.errors) {

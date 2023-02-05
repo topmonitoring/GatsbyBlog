@@ -3,22 +3,20 @@ import {
   AnimatedCardContainer,
   PreviewCoursesTitle,
 } from './preview-courses.styles'
-import { StaticQuery, graphql } from 'gatsby'
+import {StaticQuery, graphql } from 'gatsby'
 import PreviewCourse from '../preview-course/preview-course.component'
 
 const PreviewCourses = () => (
   <StaticQuery
     query={graphql`
-      query {
-        allContentfulCourses {
-          edges {
-            node {
-              animation
-              courseName
-              coursePicture {
-                fluid(maxWidth: 400, maxHeight: 300, resizingBehavior: SCALE) {
-                  ...GatsbyContentfulFluid
-                }
+    query {
+      allContentfulCourses {
+        edges {
+          node {
+            animation
+            courseName
+            coursePicture {
+              gatsbyImageData
               }
             }
           }
@@ -32,7 +30,7 @@ const PreviewCourses = () => (
           <PreviewCoursesTitle>Courses</PreviewCoursesTitle>
           <AnimatedCardContainer>
             {courses.map(({ node }) => (
-              <PreviewCourse key={node.courseName} node={{ ...node }} />
+              <PreviewCourse key={node.courseName} node={{ /*...node*/ }} />
             ))}
           </AnimatedCardContainer>
         </>

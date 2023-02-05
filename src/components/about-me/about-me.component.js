@@ -1,5 +1,6 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import {getImage} from 'gatsby-plugin-image'
 import {
   StyledAboutSection,
   StyledAboutInfo,
@@ -8,43 +9,34 @@ import {
   StyledTitle,
 } from './about-me.styles'
 
-const About = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        person: contentfulPerson {
-          name
-          aboutAuthor {
-            childMarkdownRemark {
-              html
-            }
-          }
-          heroImage: image {
-            fluid(maxWidth: 1024, maxHeight: 1920, background: "rgb:000000") {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
+const About = () => {
+    const  person  = useStaticQuery(
+    graphql`
+    query {
+      contentfulPerson {
+        name
+        aboutAuthor {
+          childMarkdownRemark {
+            html
           }
         }
+        image {
+          gatsbyImage(width: 1920, height: 1080)
+        }
       }
-    `}
-    render={data => {
-      const author = data.person
+    }
+    `)
       return (
         <>
           <StyledAboutSection>
             <StyledTitle>About The Author</StyledTitle>
-            <StyledName>{author.name}</StyledName>
-            <StyledImg alt={author.name} fluid={author.heroImage.fluid} />
-            <StyledAboutInfo
-              dangerouslySetInnerHTML={{
-                __html: author.aboutAuthor.childMarkdownRemark.html,
-              }}
-            />
+            <StyledName>{person.contentfulPerson.name}</StyledName>
+            <StyledImg alt={person.contentfulPerson.name} image={getImage(person.contentfulPerson.image)} />
+            <StyledAboutInfo dangerouslySetInnerHTML={{ __html: person.contentfulPerson.aboutAuthor.childMarkdownRemark.html }}/>
           </StyledAboutSection>
         </>
-      )
-    }}
-  />
-)
+     )
+}
+  
+    export default About;
 
-export default About

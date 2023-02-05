@@ -11,10 +11,7 @@ const LatestBlogPosts = () => (
   <StaticQuery
     query={graphql`
       query {
-        allContentfulBlogPost(
-          sort: { fields: [publishDate], order: DESC }
-          limit: 3
-        ) {
+        allContentfulBlogPost(limit: 3, sort: {publishDate: DESC}) {
           edges {
             node {
               title
@@ -22,9 +19,7 @@ const LatestBlogPosts = () => (
               publishDate(formatString: "MMMM DD, YYYY")
               tags
               heroImage {
-                fluid(maxWidth: 600, maxHeight: 300, resizingBehavior: SCALE) {
-                  ...GatsbyContentfulFluid_tracedSVG
-                }
+                gatsbyImageData(width: 400, height: 400)
               }
               body {
                 childMarkdownRemark {

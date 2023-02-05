@@ -33,11 +33,11 @@ const Tags = ({ pageContext, data }) => {
 export default Tags
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($tag: String){
     allContentfulBlogPost(
       limit: 2000
-      sort: { fields: [tags], order: DESC }
-      filter: { tags: { in: [$tag] } }
+      sort: {tags: DESC}
+      filter: {tags: {in: [$tag]}}
     ) {
       totalCount
       edges {
