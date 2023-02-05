@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import BackgroundImage from 'gatsby-background-image'
+import {getImage,GatsbyImage} from 'gatsby-plugin-image'
 import {
   getBackgroundForNavAndFooter,
   getGlobalForeground,
@@ -13,19 +13,19 @@ const BackgroundSection = ({ className, children }) => {
     {
       bgr: file(relativePath: {eq: "slide00.png"}) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1920, maxHeight: 910) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(quality: 100, width: 1920, height: 910)
         }
       }
     }
     `)
       return (
-        <BackgroundImage
+        <>
+        <GatsbyImage
           className={className}
-          fluid={imageData.bgr.childImageSharp.fluid}
+          image={getImage(imageData.bgr)}
           backgroundColor={`#040e18`}
-        >
+          alt="slide1"
+        />
           <StyledInfo>
             <h2>Welcome to Pirete Cactus!!!</h2>
             <span>
@@ -37,7 +37,7 @@ const BackgroundSection = ({ className, children }) => {
             </CustomButton>
           </StyledInfo>
           {children}
-        </BackgroundImage>
+        </>
       )
     }
 
