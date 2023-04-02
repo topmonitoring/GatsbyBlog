@@ -11,7 +11,7 @@ import CustomButton from '../buttons/CustomButton'
 const BackgroundSection = ({ className, children }) => {
   const imageData=useStaticQuery(graphql`
     {
-      bgr: file(relativePath: {eq: "slide00.png"}) {
+      bgr: file(name: {eq: "slide00"}) {
         childImageSharp {
           gatsbyImageData(quality: 100, width: 1920, height: 910)
         }
@@ -24,7 +24,7 @@ const BackgroundSection = ({ className, children }) => {
           className={className}
           image={getImage(imageData.bgr)}
           backgroundColor={`#040e18`}
-          alt="slide1"
+          alt="slide00"
         />
           <StyledInfo>
             <h2>Welcome to Pirete Cactus!!!</h2>

@@ -1,36 +1,32 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-
-import BackgroundImage from 'gatsby-background-image'
+import {getImage,GatsbyImage} from 'gatsby-plugin-image'
 import {
   getBackgroundForNavAndFooter,
   getGlobalForeground,
 } from '../theme/colors'
 import CustomButton from '../buttons/CustomButton'
 
-const BackgroundSection = ({ className, children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        bgr: file(relativePath: { eq: "slide4.png" }) {
-          childImageSharp {
-            fluid(quality: 100, maxWidth: 1920, maxHeight: 910) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
+const BackgroundSection = ({ className, children }) => {
+  const imageData=useStaticQuery(graphql`
+    {
+      bgr: file(name: {eq: "slide4"}) {
+        childImageSharp {
+          gatsbyImageData(quality: 100, width: 1920, height: 910)
         }
       }
-    `}
-    render={data => {
-      const imageData = data.bgr.childImageSharp.fluid
+    }
+    `)
       return (
-        <BackgroundImage
+        <>
+        <GatsbyImage
           className={className}
-          fluid={imageData}
+          image={getImage(imageData.bgr)}
           backgroundColor={`#040e18`}
-        >
-          <StyledInfo>
+          alt="slide04"
+        />
+           <StyledInfo>
             <h2>Master Responcive design</h2>
             <span>
               Learn phusics based animations, responcive design,themeing, design
@@ -41,11 +37,9 @@ const BackgroundSection = ({ className, children }) => (
             </CustomButton>
           </StyledInfo>
           {children}
-        </BackgroundImage>
+        </>
       )
-    }}
-  />
-)
+    }
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100vw;

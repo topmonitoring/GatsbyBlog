@@ -1,11 +1,10 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { SocialLinksContainer } from './social-links.styles'
 import { ReactSocialMediaIcons } from 'react-social-media-icons'
 
-const SocialLinks = () => (
-  <StaticQuery
-    query={graphql`
+const SocialLinks = () => {
+  const data =useStaticQuery(graphql`
       query {
         site {
           siteMetadata {
@@ -24,8 +23,8 @@ const SocialLinks = () => (
           }
         }
       }
-    `}
-    render={data => {
+    `)
+    
       const links = data.allContentfulPerson.edges[0].node
       return (
         <>
@@ -42,9 +41,9 @@ const SocialLinks = () => (
           </SocialLinksContainer>
         </>
       )
-    }}
-  />
-)
+    }
+  
+
 
 export default SocialLinks
 

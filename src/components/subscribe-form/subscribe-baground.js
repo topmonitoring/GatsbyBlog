@@ -1,50 +1,32 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import styled from 'styled-components'
-import { getBackgroundForArticlePreview } from '../theme/colors'
+import{StyledBackgroundSection,StyledHeroContent} from "./subscribe-form.styles"
+import {StaticImage} from 'gatsby-plugin-image'
 
-import BackgroundImage from 'gatsby-background-image'
+const BackgroundSection = ({ className, children }) => {
+return ( 
+    <StyledBackgroundSection>
+    <StaticImage className={className} src="../../assets/subscribebaground2.png"
+     alt="subscribe form"
+     layout='fullWidth' 
+     formats={["auto", "webp", "avif"]} 
+     style={{gridArea: "1/1"}}/>
+    <StyledHeroContent style={{
+          gridArea: "1/1",
+          position: "relative",
+          placeItems: "center",
+          display: "grid",
+        }}>
+      {children}
+    </StyledHeroContent>
+    </StyledBackgroundSection>
+    
+  )
+}
 
-const BackgroundSection = ({ className, children }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        bgr: allFile(filter: { name: { eq: "subscribebaground2" } }) {
-          edges {
-            node {
-              childImageSharp {
-                fluid(maxWidth: 2000, maxHeight: 501) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const imageData = data.bgr.edges[0].node.childImageSharp.fluid
-      return (
-        <BackgroundImage className={className} fluid={imageData}>
-          {children}
-        </BackgroundImage>
-      )
-    }}
-  />
-)
+export default BackgroundSection
 
-const StyledBackgroundSection = styled(BackgroundSection)`
-  width: 100%;
-  padding: 50px;
-  background-color: ${getBackgroundForArticlePreview};
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  @media screen and (max-width: 800px) {
-    padding: 20px 0px;
-    flex-direction: column;
-  }
-`
-export default StyledBackgroundSection
+
+
+
+
+

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { animated } from 'react-spring'
-import BackgroundImage from 'gatsby-background-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 
 
 export const AnimatedCard = styled(animated.div)`
@@ -16,7 +16,7 @@ export const AnimatedCard = styled(animated.div)`
     animation: transform;
   }
 `
-export const Bgr = styled(BackgroundImage)`
+export const Bgr = styled(GatsbyImage)`
   width: 100%;
   height: 100%;
   background-size: cover;

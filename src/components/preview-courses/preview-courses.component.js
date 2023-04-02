@@ -3,12 +3,11 @@ import {
   AnimatedCardContainer,
   PreviewCoursesTitle,
 } from './preview-courses.styles'
-import {StaticQuery, graphql } from 'gatsby'
+import {useStaticQuery, graphql } from 'gatsby'
 import PreviewCourse from '../preview-course/preview-course.component'
 
-const PreviewCourses = () => (
-  <StaticQuery
-    query={graphql`
+const PreviewCourses = () => {
+  const data =useStaticQuery(graphql`
     query {
       allContentfulCourses {
         edges {
@@ -22,9 +21,8 @@ const PreviewCourses = () => (
           }
         }
       }
-    `}
-    render={data => {
-      const courses = data.allContentfulCourses.edges
+    `)
+    const courses=data.allContentfulCourses.edges
       return (
         <>
           <PreviewCoursesTitle>Courses</PreviewCoursesTitle>
@@ -35,8 +33,8 @@ const PreviewCourses = () => (
           </AnimatedCardContainer>
         </>
       )
-    }}
-  />
-)
+    }
+ 
+
 
 export default PreviewCourses

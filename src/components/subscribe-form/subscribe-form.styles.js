@@ -1,6 +1,25 @@
 import styled from 'styled-components'
 import { getBackgroundForArticlePreview } from '../theme/colors'
 
+export const StyledHeroContent=styled.div`
+  grid-area: 1/1;
+  position: relative;
+  display:grid;
+  align-items:center;
+`
+
+export const StyledBackgroundSection = styled.div`
+  width: 100%;
+  background-color: transparent;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  @media screen and (max-width: 800px) {
+    padding: 20px 0px;
+    flex-direction: column;
+  }
+`
+
 export const SubscribeInfo = styled.div`
   width: 250px;
   padding: 0px 30px;
@@ -17,6 +36,7 @@ export const SubscribeInfo = styled.div`
 export const StyledSubscribeForm = styled.form`
   display: flex;
   flex-direction: column;
+  //width: 500px;
   padding: 0px 30px;
   @media screen and (max-width: 800px) {
     width: 60vw;

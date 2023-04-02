@@ -152,7 +152,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-background-image`,
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',

@@ -1,7 +1,7 @@
 import React from 'react'
 import { AnimatedCard, Bgr, CardTagName } from './preview-course.styles'
 import { useSpring } from 'react-spring'
-//import { getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
 
 const interp = i => r =>
   `translate3d(0, ${15 * Math.sin(r + (i * 2 * Math.PI) / 1.6)}px, 0)`
@@ -18,9 +18,8 @@ const PreviewCourse = ({ node }) => {
         transform: radians.interpolate(interp(node.animation)),
       }}
     >
-      <Bgr alt="" image={node.coursePicture.fluid}>
-        <CardTagName>{node.courseName}</CardTagName>
-      </Bgr>
+      <Bgr alt="" image={getImage(node.coursePicture)}/>
+      <CardTagName>{node.courseName}</CardTagName>
     </AnimatedCard>
   )
 }

@@ -1,15 +1,14 @@
 import React from 'react'
 import ArticlePreview from '../preview-blog-post/preview-blog-post.component'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import {
   StyledLatestBlogPostsGrid,
   PreviewLatestBlogPostsTitle,
   SeeAllBlogPosts,
 } from './preview-latest-blog-posts.styles'
 
-const LatestBlogPosts = () => (
-  <StaticQuery
-    query={graphql`
+const LatestBlogPosts = () => {
+  const data=useStaticQuery(graphql`
       query {
         allContentfulBlogPost(limit: 3, sort: {publishDate: DESC}) {
           edges {
@@ -30,8 +29,7 @@ const LatestBlogPosts = () => (
           }
         }
       }
-    `}
-    render={data => {
+    `)
       const posts = data.allContentfulBlogPost.edges
       return (
         <>
@@ -47,8 +45,7 @@ const LatestBlogPosts = () => (
           <SeeAllBlogPosts to="/blog">See All</SeeAllBlogPosts>
         </>
       )
-    }}
-  />
-)
+    }
+
 
 export default LatestBlogPosts
