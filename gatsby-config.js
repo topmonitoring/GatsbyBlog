@@ -24,6 +24,7 @@ const MyQuery = `{
   allContentfulBlogPost {
     edges {
       node {
+        id
         slug
         title
         publishDate
