@@ -6,6 +6,7 @@ import Layout from '../components/layout/layout.component'
 import styled from 'styled-components'
 import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
 import BooksColection from '../collections/booksCollection/booksCollection.component'
+import {GatsbyImage,getImage} from "gatsby-plugin-image"
 
 const BooksPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -18,9 +19,9 @@ const BooksPage = props => {
     props,
     'data.contentfulBooksPage.disclaimer.childMarkdownRemark.html'
   )
-  const audioblePick = get(
+  const audiobleLogo = get(
     props,
-    'data.contentfulBooksPage.audioblePick.childMarkdownRemark.html'
+    'data.contentfulBooksPage.audiobleLogo'
   )
   const books = get(props, 'data.contentfulBooksPage.books')
   return (
@@ -29,11 +30,7 @@ const BooksPage = props => {
       <StyledSection>
         <StyledTitle>{pageTitle}</StyledTitle>
         <PickGrid>
-          <StyledPick
-            dangerouslySetInnerHTML={{
-              __html: audioblePick,
-            }}
-          />
+        <StyledAudiobleLogo image={getImage(audiobleLogo) }  />
           <StyledDiscription
             dangerouslySetInnerHTML={{
               __html: pageInfo,
@@ -67,12 +64,9 @@ export const pageQuery = graphql`
           html
         }
       }
-      audioblePick {
-        childMarkdownRemark {
-          html
-        }
-      }
-
+      audiobleLogo {
+        gatsbyImage(width:200,height:200)
+    }
       books {
         title
         img{
@@ -97,6 +91,13 @@ const StyledTitle = styled.h1`
   text-align: center;
   margin: auto;
 `
+const StyledAudiobleLogo=styled(GatsbyImage)`
+align-self: center;
+width: 250px;
+height: 250px;
+margin-top: 40px;
+`
+
 const StyledDiscription = styled.div`
   text-align: left;
   margin: 50px auto;
@@ -110,7 +111,7 @@ const PickGrid = styled.div`
   text-align: center;
   width: 90%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: auto;
   @media screen and (max-width: 800px) {
     flex-direction: column;

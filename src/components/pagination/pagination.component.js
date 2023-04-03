@@ -1,12 +1,11 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { StyledNav, StyledLink } from './pagination.styles'
 
 const Pagination = ({ currentPage, numPages }) => {
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage =
-    currentPage - 1 === 1 ? '/blog' : (currentPage - 1).toString()
-  const nextPage = `/blog/${currentPage + 1}`
+  const [prevPage, setPrevPage] = useState(currentPage - 1 === 1 ? '/blog' : (currentPage - 1).toString())
+  const [nextPage,setNextPage] = useState(`/blog/${currentPage + 1}`)
 
   return (
     <StyledNav>

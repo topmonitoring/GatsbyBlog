@@ -18,6 +18,7 @@ export const StyledBookImg = styled(GatsbyImage)`
   @media screen and (max-width: 800px) {
     flex-direction: column;
     width: 85%;
+    height: 400px;
   }
 `
 export const StyledBookTitle = styled.h3`
