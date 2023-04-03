@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
 import styled from 'styled-components'
 import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
+import BooksColection from '../collections/booksCollection/booksCollection.component'
 
 const BooksPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -39,28 +40,7 @@ const BooksPage = props => {
             }}
           />
         </PickGrid>
-        <BooksGrid>
-          {books.map(({ title, imgLink, description, amazonLink }) => {
-            return (
-              <Book key={title}>
-                <StyledBookTitle>{title}</StyledBookTitle>
-                <StyledBookImg
-                  dangerouslySetInnerHTML={{
-                    __html: imgLink.childMarkdownRemark.html,
-                  }}
-                />
-                <StyledBookContent
-                  dangerouslySetInnerHTML={{
-                    __html: description.childMarkdownRemark.html,
-                  }}
-                />
-                <a href={amazonLink} target="blank">
-                  <LinkToAmazonButton>Get it on Amazon</LinkToAmazonButton>
-                </a>
-              </Book>
-            )
-          })}
-        </BooksGrid>
+        <BooksColection books={books}/>
         <StyledDiscription
           dangerouslySetInnerHTML={{
             __html: pageDisclaimer,
@@ -95,10 +75,8 @@ export const pageQuery = graphql`
 
       books {
         title
-        imgLink {
-          childMarkdownRemark {
-            html
-          }
+        img{
+          gatsbyImage(width: 160, height: 250)
         }
         amazonLink
         description {
@@ -128,38 +106,6 @@ const StyledDiscription = styled.div`
     width: 85%;
   }
 `
-const BooksGrid = styled.div`
-  text-align: center;
-  width: 90%;
-  display: grid;
-  flex-direction: row;
-  margin: auto;
-  grid-template-areas: 'book book';
-  @media screen and (max-width: 800px) {
-    grid-template-areas:
-      'book'
-      'book';
-    width: 80%;
-  }
-`
-const Book = styled.div`
-  text-align: center;
-  margin: 10px auto;
-  width: 100%;
-
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    grid-template-areas: 'book';
-  }
-`
-const LinkToAmazonButton = styled.button`
-  text-align: center;
-  width: 60%;
-  height: 40px;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-`
 const PickGrid = styled.div`
   text-align: center;
   width: 90%;
@@ -174,32 +120,6 @@ const PickGrid = styled.div`
 const StyledPick = styled.div`
   margin: 50px;
 `
-const StyledBookContent = styled.div`
-  text-align: center;
-  margin: 20px auto;
-  width: 60%;
-  height: 180px;
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
-    width: 85%;
-  }
-`
-const StyledBookImg = styled.div`
-  text-align: center;
-  margin: 20px auto;
-  a {
-    img {
-      width: 160px;
-      height: 250px;
-      margin: auto;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    flex-direction: column;
-    width: 85%;
-  }
-`
 const StyledSection = styled.div`
   width: 60%;
   margin: 10px auto;
@@ -213,6 +133,4 @@ const StyledSection = styled.div`
     width: 90vw;
   }
 `
-const StyledBookTitle = styled.h3`
-  height: 40px;
-`
+
