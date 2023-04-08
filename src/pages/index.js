@@ -17,7 +17,7 @@ const RootIndex = props => {
       <Helmet title={siteTitle} />
       <Slideshow />
       <LatestBlogPosts />
-      {/* <PreviewCourses />*/}
+      {/*<PreviewCourses />*/}
       <Resources />
       <EmailSubscribeForm />
     </Layout>

@@ -28,7 +28,7 @@ const PreviewCourses = () => {
           <PreviewCoursesTitle>Courses</PreviewCoursesTitle>
           <AnimatedCardContainer>
             {courses.map(({ node }) => (
-              <PreviewCourse key={node.courseName} node={{ /*...node*/ }} />
+              <PreviewCourse key={node.courseName} node={node} />
             ))}
           </AnimatedCardContainer>
         </>

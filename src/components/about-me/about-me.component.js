@@ -7,6 +7,8 @@ import {
   StyledImg,
   StyledName,
   StyledTitle,
+  StyledAboutGrid,
+  StyledAboutMeInfo
 } from './about-me.styles'
 
 const About = () => {
@@ -15,13 +17,18 @@ const About = () => {
     query {
       contentfulPerson {
         name
+        aboutInfo {
+          childMarkdownRemark {
+            html
+          }
+        }
         aboutAuthor {
           childMarkdownRemark {
             html
           }
         }
         image {
-          gatsbyImage(width: 1920, height: 1080)
+          gatsbyImage(width: 500, height: 500)
         }
       }
     }
@@ -30,8 +37,10 @@ const About = () => {
         <>
           <StyledAboutSection>
             <StyledTitle>About The Author</StyledTitle>
-            <StyledName>{person.contentfulPerson.name}</StyledName>
+            <StyledAboutGrid>
+            <StyledAboutMeInfo dangerouslySetInnerHTML={{ __html: person.contentfulPerson.aboutInfo.childMarkdownRemark.html }}/>
             <StyledImg alt={person.contentfulPerson.name} image={getImage(person.contentfulPerson.image)} />
+            </StyledAboutGrid>
             <StyledAboutInfo dangerouslySetInnerHTML={{ __html: person.contentfulPerson.aboutAuthor.childMarkdownRemark.html }}/>
           </StyledAboutSection>
         </>

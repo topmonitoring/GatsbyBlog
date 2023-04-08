@@ -30,7 +30,7 @@ const BooksPage = props => {
       <StyledSection>
         <StyledTitle>{pageTitle}</StyledTitle>
         <PickGrid>
-        <StyledAudiobleLogo image={getImage(audiobleLogo) }  />
+        <StyledAudiobleLogo image={getImage(audiobleLogo)} alt="audioble logo"  />
           <StyledDiscription
             dangerouslySetInnerHTML={{
               __html: pageInfo,

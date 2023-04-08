@@ -7,7 +7,7 @@ export const AnimatedCard = styled(animated.div)`
   flex-direction: row;
   width: 400px;
   height: 250px;
-  background: aqua;
+  background: aliceblue;
   margin: 5px;
   cursor: pointer;
   will-change: transform;

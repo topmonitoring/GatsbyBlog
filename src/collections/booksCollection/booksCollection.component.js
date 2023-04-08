@@ -9,7 +9,7 @@ return(
       return (
         <Book key={index}>
           <StyledBookTitle>{title}</StyledBookTitle>
-          <StyledBookImg image={getImage(img)}  />
+          <StyledBookImg image={getImage(img)} alt={title}/>
           <StyledBookContent
             dangerouslySetInnerHTML={{
               __html: description.childMarkdownRemark.html,
