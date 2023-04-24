@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import { getBackgroundForArticlePreview } from '../theme/colors'
 
 export const StyledHeroContent=styled.div`
-  grid-area: 1/1;
   position: relative;
-  display:grid;
-  align-items:center;
+  display:flex;
+  flex-direction: row;
 `
 
 export const StyledBackgroundSection = styled.div`
@@ -21,8 +20,8 @@ export const StyledBackgroundSection = styled.div`
 `
 
 export const SubscribeInfo = styled.div`
-  width: 250px;
-  padding: 0px 30px;
+  width: 550px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -54,7 +53,7 @@ export const StyledInput = styled.input`
   }
 `
 export const StyledButton = styled.button`
-  width: 150px;
+  margin: 5px 0px;
   padding: 1rem 1.5rem;
   border: none;
   background-image: none;
@@ -68,5 +67,6 @@ export const StyledButton = styled.button`
   }
   @media screen and (max-width: 800px) {
     margin: auto;
+    width: auto;
   }
 `

@@ -18,7 +18,7 @@ export const BlogPostBody = styled.div`
   margin-top: -100px;
   background: ${getBackgroundForBlogPost};
   z-index: 1000;
-  max-width: 1080px;
+  max-width: 800px;
   border-radius: 10px;
   article {
     :first-letter {

@@ -7,7 +7,7 @@ import Slide3 from './slide03'
 import Slide4 from './slide04'
 const Slideshow = () => (
   <StyledAwesomeSlider
-    play={true}
+    play={false}
     cancelOnInteraction={false} // should stop playing on user interaction
     interval={10000}
   >

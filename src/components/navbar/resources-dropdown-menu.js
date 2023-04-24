@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import {
   getBackgroundForNavAndFooter,
-  getBackgroundForBlogPost,
+  getGlobalBackground
 } from '../theme/colors'
 
 const Resources = () => {
@@ -47,7 +47,7 @@ const StyledLink = styled(Link)`
   padding: 10px;
   text-decoration: none;
   &:hover {
-    background-color: ${getBackgroundForBlogPost};
+    background-color: ${getGlobalBackground};
     color: aqua;
   }
   i {
@@ -55,6 +55,8 @@ const StyledLink = styled(Link)`
   }
 `
 const StyledDropdownMenu = styled.div`
+border-style: ridge;
+border-color:black;
   width: 250px;
   position: absolute;
   display: flex;

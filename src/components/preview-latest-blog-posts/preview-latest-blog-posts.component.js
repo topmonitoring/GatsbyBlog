@@ -18,7 +18,7 @@ const LatestBlogPosts = () => {
               publishDate(formatString: "MMMM DD, YYYY")
               tags
               heroImage {
-                gatsbyImageData(width: 400, height: 400)
+                gatsbyImageData
               }
               body {
                 childMarkdownRemark {

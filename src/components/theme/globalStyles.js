@@ -30,7 +30,7 @@ export const Colors = {
 }
 
 const getGlobalBackground = theme('mode', {
-  light: Colors.white,
+  light: `#E3EDFC`,
   dark: Colors.dark,
 })
 

@@ -39,11 +39,10 @@ const EmailSubscribeForm = () => {
   return (
     <StyledSubscribeContainer>
       <SubscribeInfo>
-        <h2>Never miss a story!</h2>
-        <span>
-          Get all new blog posts directly in your inbox.No spam and easy
-          unsubscribe.
-        </span>
+        <h1>Ahoy there, mate!</h1>
+        <p>
+        Don't miss out on all the treasure trove of programming knowledge we have in store for you. Join our crew by filling out the form below with your best email address, and let's set sail on this programming adventure together!
+        </p>
       </SubscribeInfo>
       <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
         <StyledInput

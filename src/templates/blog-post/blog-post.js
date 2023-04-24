@@ -56,11 +56,10 @@ const BlogPostTemplate = props => {
         <StyledContentBody dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html}}/>
       </BlogPostBody>
       <SocialButtons link={fullURL} message={post.title} />
-      <PrevNextButtons {...props.pageContext} />
-      <EmailSubscribeForm />
       <StyledComentSection>
         <DiscussionEmbed {...disqusConfig} />
       </StyledComentSection>
+      <EmailSubscribeForm />
     </Layout>
   )
 }

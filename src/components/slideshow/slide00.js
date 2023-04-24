@@ -11,7 +11,7 @@ import CustomButton from '../buttons/CustomButton'
 const BackgroundSection = ({ className, children }) => {
   const imageData=useStaticQuery(graphql`
     {
-      bgr: file(name: {eq: "slide00"}) {
+      bgr: file(name: {eq: "slide0001"}) {
         childImageSharp {
           gatsbyImageData(quality: 100, width: 1920, height: 910)
         }
@@ -46,7 +46,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
   height: 90vh;
   position: absolute;
   left: 0px;
-  top: -75px;
+  top: 75px;
   background-repeat: no-repeat;
   margin-bottom: -75px;
 `
