@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeConsumer } from 'styled-components'
-import Button from './Button'
+import Button from './SunAndMoon'
 
 export default function ToggleMode() {
   return (

@@ -41,6 +41,7 @@
     "react-headroom": "^3.2.1",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.38.3",
+    "react-responsive-modal": "^6.4.1",
     "react-social-media-icons": "^10.0.4",
     "react-social-sharing": "^3.3.0",
     "react-spring": "^8.0.27",

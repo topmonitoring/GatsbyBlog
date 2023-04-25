@@ -8,6 +8,8 @@ import BurgerMenu from './BurgerMenu'
 import CollapseMenu from './CollapseMenu'
 import NavbarLinks from './navbar-links.component'
 import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
+import SearchButton from '../search-blog-post/search-button.component'
+import SearchBlogPost from '../search-blog-post/search-blog-post.component'
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -29,6 +31,9 @@ const Navbar = props => {
           <NavLinks style={linkAnimation}>
             <NavbarLinks />
           </NavLinks>
+          <SearchButton>
+            <SearchBlogPost/>
+          </SearchButton>
           <ToggleMode />
           <BurgerWrapper>
             <BurgerMenu
