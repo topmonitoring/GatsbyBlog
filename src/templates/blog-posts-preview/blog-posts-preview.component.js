@@ -5,7 +5,6 @@ import { StyledPreview } from './blog-posts-preview.styles'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Layout from '../../components/layout/layout.component'
-import SearchBlogPost from '../../components/search-blog-post/search-blog-post.component'
 import Pagination from '../../components/pagination/pagination.component'
 
 const PostsPreview = props => {
@@ -15,9 +14,6 @@ const PostsPreview = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
-
-      <SearchBlogPost style={{ position: 'absolute', marginTop: '200px' }} />
-
       <StyledPreview>
         {posts.map(({ node }) => {
           return <ArticlePreview article={node} key={node.slug} />
