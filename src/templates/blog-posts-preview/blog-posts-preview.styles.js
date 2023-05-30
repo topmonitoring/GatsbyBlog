@@ -14,3 +14,12 @@ export const StyledPreview = styled.div`
     width: 80vw;
   }
 `
+export const StyledHeding = styled.h1`
+  text-align: center;
+`
+export const StyledInfo = styled.p`
+  text-align: center;
+  align-content: center;
+  width: 400px;
+  margin: auto;
+`

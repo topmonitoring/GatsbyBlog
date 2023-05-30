@@ -28,23 +28,3 @@ export const PreviewLatestBlogPostsTitle = styled.h1`
   text-align: center;
   font-weight: 800;
 `
-export const SeeAllBlogPosts = styled(Link)`
-  text-align: center;
-  background-color: #dd0505;
-  color: white;
-  margin: auto;
-  display: flex;
-  padding: 10px 30px;
-  width: 65px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 100px;
-  transition: all 0.4s ease-in-out;
-  border-radius: 40px;
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 11px 30px 0px aqua;
-  }
-`

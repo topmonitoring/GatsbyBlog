@@ -31,7 +31,10 @@ const getDispleyDark = theme('mode', {
       padding: 0
     },
     closeIcon: {
-      fill: "#fff"
+      fill: "#fff",
+      width: "50px",
+      height: "50px",
+      padding: "25px"
     }
   };
 

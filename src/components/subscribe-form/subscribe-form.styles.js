@@ -9,10 +9,12 @@ export const StyledHeroContent=styled.div`
 
 export const StyledBackgroundSection = styled.div`
   width: 100%;
+  height: 600px;
   background-color: transparent;
   margin-top: 30px;
   margin-bottom: 30px;
   display: grid;
+  text-align: center;
   @media screen and (max-width: 800px) {
     padding: 20px 0px;
     flex-direction: column;
@@ -45,7 +47,7 @@ export const StyledSubscribeForm = styled.form`
 `
 export const StyledInput = styled.input`
   width: 350px;
-  margin: 5px 0px;
+  margin: 5px auto;
   padding: 1rem 1.5rem;
   border: none;
   @media screen and (max-width: 800px) {
@@ -53,7 +55,8 @@ export const StyledInput = styled.input`
   }
 `
 export const StyledButton = styled.button`
-  margin: 5px 0px;
+  width: 200px;
+  margin: 5px auto;
   padding: 1rem 1.5rem;
   border: none;
   background-image: none;

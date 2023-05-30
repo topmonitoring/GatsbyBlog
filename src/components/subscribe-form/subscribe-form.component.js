@@ -39,12 +39,11 @@ const EmailSubscribeForm = () => {
   return (
     <StyledSubscribeContainer>
       <SubscribeInfo>
-        <h1>Ahoy there, mate!</h1>
+        <h1>JOIN THE CREW</h1>
         <p>
         Don't miss out on all the treasure trove of programming knowledge we have in store for you. Join our crew by filling out the form below with your best email address, and let's set sail on this programming adventure together!
         </p>
-      </SubscribeInfo>
-      <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
+        <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
         <StyledInput
           aria-label="input name"
           placeholder="First Name"
@@ -61,6 +60,7 @@ const EmailSubscribeForm = () => {
         />
         <StyledButton type="submit">Subscribe</StyledButton>
       </StyledSubscribeForm>
+      </SubscribeInfo> 
     </StyledSubscribeContainer>
   )
 }

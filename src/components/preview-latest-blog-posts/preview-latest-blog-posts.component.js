@@ -3,9 +3,9 @@ import ArticlePreview from '../preview-blog-post/preview-blog-post.component'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import {
   StyledLatestBlogPostsGrid,
-  PreviewLatestBlogPostsTitle,
-  SeeAllBlogPosts,
+  PreviewLatestBlogPostsTitle
 } from './preview-latest-blog-posts.styles'
+import CustomButton from '../buttons/CustomButton';
 
 const LatestBlogPosts = () => {
   const data=useStaticQuery(graphql`
@@ -42,7 +42,7 @@ const LatestBlogPosts = () => {
             })}
           </StyledLatestBlogPostsGrid>
 
-          <SeeAllBlogPosts to="/blog">See All</SeeAllBlogPosts>
+          <CustomButton to="/blog">See All</CustomButton>
         </>
       )
     }

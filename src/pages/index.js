@@ -8,6 +8,7 @@ import Resources from '../components/preview-resources/preview-resources.compone
 import LatestBlogPosts from '../components/preview-latest-blog-posts/preview-latest-blog-posts.component'
 import EmailSubscribeForm from '../components/subscribe-form/subscribe-form.component'
 import Slideshow from '../components/slideshow/slideshow.component'
+import VideoBaground from '../components/video-bgr/videobgr.component'
 
 const RootIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -15,7 +16,8 @@ const RootIndex = props => {
   return (
     <Layout location={props.location}>
       <Helmet title={siteTitle} />
-      <Slideshow />
+      <VideoBaground/>
+      {/*<Slideshow />*/}
       <LatestBlogPosts />
       {/*<PreviewCourses />*/}
       <Resources />

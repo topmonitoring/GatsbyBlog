@@ -108,7 +108,7 @@ export const StyledContentBody = styled.article`
 `
 
 export const StyledComentSection = styled.div`
-  width: 80vw;
+  width: 50vw;
   margin: 50px auto;
   padding: 50px;
   background: ${getBackgroundForComments};

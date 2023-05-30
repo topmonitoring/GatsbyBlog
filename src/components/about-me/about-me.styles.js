@@ -3,7 +3,7 @@ import {GatsbyImage} from 'gatsby-plugin-image'
 import { getBackgroundForBlogPostsPreview } from '../theme/colors'
 
 export const StyledAboutSection = styled.div`
-  width: 60%;
+  width: 50%;
   margin: 10px auto;
   display: flex;
   flex-direction: column;
