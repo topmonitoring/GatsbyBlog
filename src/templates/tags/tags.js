@@ -16,7 +16,7 @@ const Tags = (props) => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
 
   return (
-      <Layout location={location}>
+      <Layout location={props.location}>
       <Helmet title={siteTitle} />
       <StyledHeding>Make a coffe and chill</StyledHeding>
       <StyledInfo>There are lots of information in here, what matters most is what you do with it. We encourage readers to practice while consuming information to increase retainability and have somting to show and go back to.</StyledInfo>
