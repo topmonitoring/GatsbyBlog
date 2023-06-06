@@ -5,7 +5,7 @@ import {StaticImage} from 'gatsby-plugin-image'
 const BackgroundSection = ({ className, children }) => {
 return ( 
     <StyledBackgroundSection>
-    <StaticImage className={className} src="../../assets/subscribebaground3.png"
+    <StaticImage className={className} src="../../../static/assets/subscribebaground3.png"
      alt="subscribe form"
      layout='fullWidth' 
      formats={["auto", "webp", "avif"]} 

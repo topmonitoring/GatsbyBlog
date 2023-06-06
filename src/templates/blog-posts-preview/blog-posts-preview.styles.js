@@ -20,6 +20,6 @@ export const StyledHeding = styled.h1`
 export const StyledInfo = styled.p`
   text-align: center;
   align-content: center;
-  width: 400px;
+  width: 800px;
   margin: auto;
 `

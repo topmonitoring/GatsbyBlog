@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { getBoxShadow, getBackgroundForArticlePreview } from '../theme/colors'
+import { getBoxShadow, getBackgroundForArticlePreview,getGlobalForeground } from '../theme/colors'
 import { Link } from 'gatsby'
 
 export const StyledTitle = styled.h1`
@@ -20,6 +20,10 @@ export const StyledSection = styled(Link)`
   margin: auto;
   box-shadow: 0px 11px 20px 0px ${getBoxShadow};
   transition: all 0.4s ease-in-out;
+  svg{
+    fill:${getGlobalForeground};
+    margin: 10px auto;
+  }
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0px 11px 30px 0px aqua;

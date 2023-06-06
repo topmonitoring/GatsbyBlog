@@ -31,9 +31,9 @@ export const PreviewTitle = styled.h3`
   grid-area: 'title';
   clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);
   text-align: center;
-
   transition: all 0.4s ease-in-out;
   border-radius: 5px;
+  
 `
 export const Tag = styled.p`
   width: 70px;
@@ -78,6 +78,11 @@ export const ArticleDisplayContainer = styled.article`
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0px 11px 30px 0px aqua;
+    h3 {
+    width:100%;
+    clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100% ,0 100%, 5% 50%);
+    color: dimgray;
+  }
   }
   @media screen and (max-width: 800px) {
     flex: 0 0 calc(100% - 33px);
