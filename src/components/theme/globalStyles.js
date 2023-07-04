@@ -41,54 +41,16 @@ const getGlobalForeground = theme('mode', {
 
 export const GlobalStyles = createGlobalStyle`
 
-@font-face {
-  font-family: 'Emberly';
-  font-weight: 100 900; 
-  font-style: normal;
-  src: url('/Emberly Variable Regular-VF.ttf') format('truetype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Emberly-Italic';
-  font-weight: 100 900; 
-  font-style: normal;
-  src: url('/Emberly Variable italic-VF.ttf') format('truetype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CrimsonPro-Roman';
-  font-weight: 100 900; 
-  font-style: normal;
-  src: url('/CrimsonPro-Roman-VF.ttf') format('truetype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CrimsonPro-italic';
-  font-weight: 100 900; 
-  font-style: normal;
-  src: url('/CrimsonPro-italic-VF.ttf') format('truetype');
-  font-display: swap;
-}
-
 body {
   background-color: ${getGlobalBackground};
   color: ${getGlobalForeground};
-  font-size: 1.1em;
-  font-family: 'CrimsonPro-Roman', Tahoma, Arial, Helvetica, sans-serif;
-  line-height: 1.65;
+  font-size: 0.9em;
+  font-family: "Open Sans", sans-serif;
   margin: 0px;
 }
-blockquote{
-  font-family: 'CrimsonPro-italic', Tahoma, Arial, Helvetica, sans-serif;
-}
+
 h1{
-  font-family: 'Emberly', Tahoma, Arial, Helvetica, sans-serif;
-}
-h2{
-  font-family: 'Emberly-Italic', Tahoma, Arial, Helvetica, sans-serif;
+  
 }
 
 a {
