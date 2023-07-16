@@ -95,6 +95,9 @@ export const StyledContentBody = styled.article`
       color: #4799eb;
     }
   }
+  li{
+    margin-top: 20px;
+  }
 
   @media screen and (max-width: 800px) {
     padding: 10px;
