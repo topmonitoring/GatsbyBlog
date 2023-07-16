@@ -81,8 +81,7 @@ export const StyledContentBody = styled.article`
   h2 {
     text-decoration: underline;
     font-weight: 100;
-    letter-spacing: 0.2em;
-    font-size: 40px;
+    font-size: 30px;
   }
   img {
     width: 70%;
