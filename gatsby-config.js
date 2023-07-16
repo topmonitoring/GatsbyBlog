@@ -109,7 +109,7 @@ module.exports = {
           options: {
             theme: 'Abyss' // Or install your favorite theme from GitHub
           },
-          resolve: `gatsby-remark-responsive-iframe`,
+          //resolve: `gatsby-remark-responsive-iframe`,
         }]
       },
     },
