@@ -41,7 +41,7 @@ export const StyledSubscribeForm = styled.form`
   padding: 0px 30px;
   @media screen and (max-width: 800px) {
     width: 60vw;
-    padding: 0px 30px;
+    padding: 0px;
     margin: auto;
   }
 `

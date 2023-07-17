@@ -39,6 +39,10 @@ export const StyledHeder = styled.h1`
   margin: auto;
   font-size: 80px;
   font-weight: 900;
+
+  @media screen and (max-width: 800px) {
+    font-size: 60px;
+  }
 `
 export const StyledDate = styled.div`
   color: ${getForegroundForDate};
