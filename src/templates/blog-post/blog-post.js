@@ -23,7 +23,7 @@ const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
   const slug = get(props, 'data.contentfulBlogPost.slug')
   const siteTitle = get(props, 'data.site.siteMetadata.title')
-  const baseURL = 'https://pure-water.netlify.com/'
+  const baseURL = 'https://piratecactus.com/'
   const fullURL = baseURL + slug
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
