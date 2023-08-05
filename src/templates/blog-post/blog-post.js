@@ -24,7 +24,7 @@ const BlogPostTemplate = props => {
   const slug = get(props, 'data.contentfulBlogPost.slug')
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const baseURL = 'https://piratecactus.com/'
-  const fullURL = baseURL + slug
+  const fullURL = baseURL +'blog/'+ slug
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: { identifier: slug, title: post.title, url: fullURL },
