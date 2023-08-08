@@ -113,7 +113,12 @@ export const ArticleDisplayContainer = styled(({ variant = "normal", ...props })
     color: dimgray;
   }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1870px) {
+    flex: 0 0 calc(50% - 66px);
+    font-size: 12px;
+    min-width: 250px;
+  }
+  @media screen and (max-width: 1250px) {
     flex: 0 0 calc(100% - 33px);
     font-size: 12px;
     min-width: 250px;

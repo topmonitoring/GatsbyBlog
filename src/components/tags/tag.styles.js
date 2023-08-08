@@ -2,12 +2,16 @@ import styled from "styled-components";
 import { Link } from 'gatsby'
 
 export const StyledTag=styled(Link)`
+-webkit-flex: 30px 1;
+text-align: center;
 background-color: turquoise;
 text-decoration: none;
 padding: 5px;
 border-radius: 3px;
 width: fit-content;
-margin: 3px;
+margin: 5px;
+height: 20px;
+max-width: fit-content;
 cursor: pointer;
 &:hover {
     transform: translateY(-5px);
@@ -15,13 +19,16 @@ cursor: pointer;
   }
 `
 export const StyledGoldenTag=styled(Link)`
+-webkit-flex: 30px 1;
+text-align: center;
 background-color: gold;
 color: black;
 text-decoration: none;
 padding: 5px;
 border-radius: 3px;
 width: fit-content;
-margin: 3px;
+max-width: fit-content;
+margin: 5px;
 cursor: pointer;
 &:hover {
     transform: translateY(-5px);
@@ -30,7 +37,13 @@ cursor: pointer;
 `
 
 export const TagContainer=styled.div`
-display: flex;
-flex-direction: row;
-justify-content: center;
+display: -webkit-flex;
+-webkit-flex-direction: row;
+-webkit-flex-wrap: wrap;
+width: 600px;
+height: auto;
+margin:auto;
+@media screen and (max-width: 1000px) {
+      max-width: 400px;
+    }
 `

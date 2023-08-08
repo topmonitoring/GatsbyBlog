@@ -9,7 +9,6 @@ export const StyledPreview = styled.div`
   margin: auto;
   width: 65vw;
   border-radius: 10px;
-
   @media screen and (max-width: 800px) {
     width: 80vw;
   }
