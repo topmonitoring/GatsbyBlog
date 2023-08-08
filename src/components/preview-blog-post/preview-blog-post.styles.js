@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled,{css} from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getBackgroundForArticlePreview, getBoxShadow } from '../theme/colors'
+import React from 'react'
 
 export const StyledPreviewImg = styled(GatsbyImage)`
   display: block;
@@ -23,10 +24,9 @@ export const StyledDiscription = styled.p`
 export const PreviewTitle = styled.h3`
   position: absolute;
   width: 70%;
-  height: 30px;
+  height: 50px;
   font-size: 17px;
-  margin-top: 200px;
-  background-color: aqua;
+  margin-top: 190px;
   color: black;
   grid-area: 'title';
   clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);
@@ -64,20 +64,49 @@ export const ArticleInnerGridContainer = styled.div`
     'tag tag date';
 `
 
-export const ArticleDisplayContainer = styled.article`
+const normalVariantArticle = css`
+  background-color: ${getBackgroundForArticlePreview};
+
+  h3{
+    background-color: aqua;
+  }
+  &:hover {
+    box-shadow: 0px 11px 30px 0px aqua;
+  }
+`;
+
+const goldVariantArticle = css`
+  background-color: gold;
+  p,div{
+    color: black;
+  }
+  h3{
+    background-color: gold;
+  }
+  
+  &:hover {
+    box-shadow: 0px 11px 30px 0px gold;
+  }
+`;
+
+const articleVariants = {
+  normal: normalVariantArticle,
+  gold: goldVariantArticle,
+};
+
+export const ArticleDisplayContainer = styled(({ variant = "normal", ...props }) => <article {...props} />)`
   height: 400px;
   min-width: 365px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   margin: 20px;
-  background-color: ${getBackgroundForArticlePreview};
   flex: 0 0 calc(20% - 40px);
   transition: all 0.4s ease-in-out;
   box-shadow: 0px 11px 20px 0px ${getBoxShadow};
+  ${({ variant }) => articleVariants[variant]}
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 11px 30px 0px aqua;
     h3 {
     width:100%;
     clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100% ,0 100%, 5% 50%);
@@ -89,4 +118,5 @@ export const ArticleDisplayContainer = styled.article`
     font-size: 12px;
     min-width: 250px;
   }
+  
 `

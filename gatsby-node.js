@@ -39,7 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
         const posts = result.data.allContentfulBlogPost.edges
 
         // Create paginated index
-        const postsPerPage = 9
+        const postsPerPage = 12
         const numPages = Math.ceil(posts.length / postsPerPage)
         Array.from({ length: numPages }).forEach((_, i) => {
           createPage({

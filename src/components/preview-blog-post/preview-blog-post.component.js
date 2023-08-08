@@ -13,8 +13,10 @@ import {
   TagContainer,
 } from './preview-blog-post.styles'
 
+function checkIsGold(article){if(article.tags && article.tags.includes('gold')){  return 'gold' }else  return 'normal'};
+
 const ArticlePreview = ({ article }) => (
-  <ArticleDisplayContainer>
+  <ArticleDisplayContainer variant={checkIsGold(article)}>
     <Link to={`/blog/${article.slug}`} style={{ textDecoration: 'none' }}>
       <ArticleInnerGridContainer>
         <StyledPreviewImg alt="" image={getImage(article.heroImage)} />
@@ -32,4 +34,5 @@ const ArticlePreview = ({ article }) => (
     </Link>
   </ArticleDisplayContainer>
 )
+
 export default ArticlePreview
