@@ -11,7 +11,7 @@ const Resources = () => {
       <StyledTitle>Free resources</StyledTitle>
       <StyledSectionContainer>
         <StyledSection to="/books">
-        <h3>Books</h3>
+        <h1>Books</h1>
         <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
@@ -23,7 +23,7 @@ const Resources = () => {
         </svg>
         </StyledSection>
         <StyledSection to="/links">
-        <h3>Links</h3>
+        <h1>Links</h1>
         <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
@@ -40,7 +40,7 @@ const Resources = () => {
         </svg>
         </StyledSection>
         <StyledSection to="/projects">
-          <h3>Open Source Projects</h3>
+          <h1>Open Source Projects</h1>
           <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlSpace="preserve"

@@ -27,7 +27,8 @@ const VideoBaground = () => {
       <HederTextContainer>
       <h1>Welcome to Pirate Cactus</h1>
       <p>This blog's purpose is to educate users and allow programmers, business owners, and entrepreneurs to discover practical solutions and new technologies in a fast and efficient manner</p>
-      <CustomButton to='/blog/welcome/'>Learn more</CustomButton>
+      <br/>
+      <CustomButton to='/blog/welcome/'>Start here</CustomButton>
       </HederTextContainer>
       
       </HederOverlay>

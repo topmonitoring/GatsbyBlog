@@ -70,7 +70,7 @@ border-color:black;
   }
 `
 
-const StyledNavLink = styled.a`
+const StyledNavLink = styled.div`
   text-transform: uppercase;
   font-weight: 600;
   border-bottom: 1px solid transparent;

@@ -21,7 +21,7 @@ export const StyledDiscription = styled.p`
     font-size: 12px;
   }
 `
-export const PreviewTitle = styled.h3`
+export const PreviewTitle = styled.h1`
   position: absolute;
   width: 70%;
   height: 50px;
@@ -67,7 +67,7 @@ export const ArticleInnerGridContainer = styled.div`
 const normalVariantArticle = css`
   background-color: ${getBackgroundForArticlePreview};
 
-  h3{
+  h1{
     background-color: aqua;
   }
   &:hover {
@@ -80,7 +80,7 @@ const goldVariantArticle = css`
   p,div{
     color: black;
   }
-  h3{
+  h1{
     background-color: gold;
   }
   
@@ -107,7 +107,7 @@ export const ArticleDisplayContainer = styled(({ variant = "normal", ...props })
   ${({ variant }) => articleVariants[variant]}
   &:hover {
     transform: translateY(-5px);
-    h3 {
+    h1 {
     width:100%;
     clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100% ,0 100%, 5% 50%);
     color: dimgray;
