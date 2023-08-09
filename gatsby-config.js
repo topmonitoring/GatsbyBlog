@@ -71,11 +71,12 @@ module.exports = {
       options: {
         mode: "async",
         enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
-        web: [
-          { 
-            name: `Open Sans`,
-            file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap`,
+        custom: [
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: ["Open Sans", "sans-serif"],
+            /* Path to the font CSS file inside the "static" folder with @font-face definition */
+            file: "/fonts/OpenSans-VariableFont_wdth,wght.ttf",
           },
         ],
       },
