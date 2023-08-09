@@ -15,7 +15,6 @@ export const StyledFooterEnd = styled.div`
   margin: auto;
   font-size: 16px;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
 `
 export const StyledFooterGrid = styled.div`
   margin: auto;
@@ -35,16 +34,9 @@ export const StyledFooterGrid = styled.div`
 `
 export const StyledFooterInfo = styled.div`
   grid-area: info;
-
-  h3 {
-    font-family: 'Montserrat', sans-serif;
-  }
 `
 export const StyledFooterSocials = styled.div`
   grid-area: socials;
-  h3 {
-    font-family: 'Montserrat', sans-serif;
-  }
   @media screen and (max-width: 1000px) {
     div {
       flex-direction: column;
@@ -54,8 +46,4 @@ export const StyledFooterSocials = styled.div`
 `
 export const StyledFooterLinks = styled.div`
   grid-area: links;
-
-  h3 {
-    font-family: 'Montserrat', sans-serif;
-  }
 `

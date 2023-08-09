@@ -16,7 +16,7 @@ const Footer = () => (
   <StyledFooter>
     <StyledFooterGrid>
       <StyledFooterInfo>
-        <h3>ABOUT</h3>
+        <h1>ABOUT</h1>
         <span>
           This blog purpose is to educate users, allow programmers to discover
           practical solutions and new technologies in a fast and efficient whey.
@@ -24,11 +24,11 @@ const Footer = () => (
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>
-        <h3>SOCIAL MEDIA</h3>
+        <h1>SOCIAL MEDIA</h1>
         <SocialMediaLinks />
       </StyledFooterSocials>
       <div>
-        <h3>PAGES</h3>
+        <h1>PAGES</h1>
         <NavbarLinks isFooter={true} />
       </div>
     </StyledFooterGrid>
