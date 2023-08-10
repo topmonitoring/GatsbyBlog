@@ -79,7 +79,14 @@ module.exports = {
         display: `standalone`,
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+          workboxConfig: {
+            globPatterns: ['**static/favicons/pirate-logo.png*']
+          }
+      }
+    },
     'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',
