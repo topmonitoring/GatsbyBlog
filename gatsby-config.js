@@ -79,14 +79,7 @@ module.exports = {
         display: `standalone`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-          workboxConfig: {
-            globPatterns: ['**/icon-path*']
-          }
-      }
-    },
+    'gatsby-plugin-offline',
     'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',
