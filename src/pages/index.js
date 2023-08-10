@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
 import PreviewCourses from '../components/preview-courses/preview-courses.component'
 import Resources from '../components/preview-resources/preview-resources.component'
@@ -9,13 +8,17 @@ import LatestBlogPosts from '../components/preview-latest-blog-posts/preview-lat
 import EmailSubscribeForm from '../components/subscribe-form/subscribe-form.component'
 import Slideshow from '../components/slideshow/slideshow.component'
 import VideoBaground from '../components/video-bgr/videobgr.component'
+import { SEO } from '../components/seo/seo.component'
+
+export const Head = () => (
+  <SEO />
+)
 
 const RootIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
 
   return (
     <Layout location={props.location}>
-      <Helmet title={siteTitle} />
       <VideoBaground/>
       {/*<Slideshow />*/}
       <LatestBlogPosts />
@@ -27,6 +30,8 @@ const RootIndex = props => {
 }
 
 export default RootIndex
+
+
 
 export const pageQuery = graphql`
   query HomeQuery {

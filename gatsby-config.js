@@ -53,34 +53,41 @@ module.exports = {
     title: `Pirate Cactus`,
     description: `Wellcome to Pitere Cactus, web development and antrepenurial heven for anyone who wants to inprove ,share or sharpen there programming skills.`,
     author: `@iamdobri`,
+    image: `/pirate-logo.png`,
     keywords: [
-      'pirate',
+      'pirate cactus',
       'piratecactus',
       'Pirate Cactus',
       'blog',
       'developer',
-      'freelancer',
+      'buisiness',
       'programmer',
     ],
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
-    'gatsby-plugin-preload-fonts',
     {
-      resolve: `gatsby-omni-font-loader`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        mode: "async",
-        enableListener: true,
-        custom: [
-          {
-            /* Exact name of the font as defied in @font-face CSS rule */
-            name: ["Open Sans", "sans-serif"],
-            /* Path to the font CSS file inside the "static" folder with @font-face definition */
-            file: "/fonts/OpenSans-VariableFont_wdth,wght.ttf",
-          },
-        ],
+        name: `Pirate Cactus`,
+        short_name: `Pirate Cactus`,
+        start_url: `/`,
+        icon: `static/pirate-logo.png`,
+        cache_busting_mode: 'none',
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+          workboxConfig: {
+            globPatterns: ['static/pirate-logo.png']
+          }
+      }
+    },
+    'gatsby-plugin-preload-fonts',
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
@@ -175,7 +182,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
     'gatsby-plugin-netlify',

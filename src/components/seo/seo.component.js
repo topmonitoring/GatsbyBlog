@@ -1,77 +1,31 @@
 import React from 'react'
-import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useSiteMetadata } from "./use-site-metadata"
 
-function SEO({ description, lang, meta, title, keywords }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            keywords
-          }
-        }
-      }
-    `
-  )
+export const SEO = ({ title, description, pathname, children }) => {
+  const { title: defaultTitle, description: defaultDescription, siteUrl, author, keywords,image} = useSiteMetadata()
 
-  const metaDescription = description || site.siteMetadata.description
+  const seo={
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image}`,
+    //url: `${siteUrl}${pathname || ``}`,
+  }
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      // title={title}
-      // titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          name: `keywords`,
-          content: site.siteMetadata.keywords.join(', '),
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    ></Helmet>
+    <>
+    <html lang="en" />
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    <meta name="og:title" content={seo.title} />
+    <meta name="og:description" content={seo.description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="og:type" content={'website'} />
+    <meta name="twitter:image" content={seo.image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={author} />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <link rel="icon" content={seo.image} />
+    {children}
+    </>
   )
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: `welcome to piratecactus`,
-}
-
-export default SEO

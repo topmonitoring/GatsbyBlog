@@ -1,12 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
 import styled from 'styled-components'
 import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
 import BooksColection from '../collections/booksCollection/booksCollection.component'
 import {GatsbyImage,getImage} from "gatsby-plugin-image"
+import { SEO } from '../components/seo/seo.component'
+
+export const Head = () => (
+  <SEO title="books page"/>
+)
 
 const BooksPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -26,7 +30,6 @@ const BooksPage = props => {
   const books = get(props, 'data.contentfulBooksPage.books')
   return (
     <Layout location={props.location}>
-      <Helmet title={siteTitle} />
       <StyledSection>
         <StyledTitle>{pageTitle}</StyledTitle>
         <PickGrid>

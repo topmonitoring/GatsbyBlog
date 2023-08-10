@@ -25,7 +25,7 @@ const Resources = () => {
   return (
     <div>
       <StyledNavLink onClick={showMenu}>
-        Resources {isOpen ? <>&#9650;</> : <>&#9660;</>}{' '}
+        RESOURCES {isOpen ? <>&#9650;</> : <>&#9660;</>}{' '}
         {/*returns up and down arrow strings*/}
       </StyledNavLink>
       {isOpen ? (
@@ -72,6 +72,8 @@ border-color:black;
 
 const StyledNavLink = styled.div`
   text-transform: uppercase;
+  //font-size: 1.4rem;
+  //line-height: 2;
   font-weight: 600;
   border-bottom: 1px solid transparent;
   margin: 0px;

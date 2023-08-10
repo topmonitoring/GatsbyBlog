@@ -59,7 +59,7 @@ const NavLinks = styled.ul`
     transition: all 300ms linear 0s;
   }
 
-  a {
+  a,div {
     font-size: 1.4rem;
     line-height: 2;
     color: ${getGlobalForeground};

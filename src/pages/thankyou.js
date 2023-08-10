@@ -1,15 +1,18 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout/layout.component'
+import { SEO } from '../components/seo/seo.component'
+
+export const Head = () => (
+  <SEO />
+)
 
 const NotFound = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
 
   return (
     <Layout location={props.location}>
-      <Helmet title={siteTitle} />
       <h1>Thanks for your interest</h1>
       <h1>I will contact you shortly</h1>
     </Layout>

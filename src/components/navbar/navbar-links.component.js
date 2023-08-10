@@ -28,6 +28,7 @@ export default NavbarLinks
 
 const StyledNavLink = styled(Link)`
   color: ${getGlobalForeground};
+  min-width: 50px;
   text-transform: uppercase;
   font-weight: 600;
   border-bottom: 1px solid transparent;
