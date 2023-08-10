@@ -24,7 +24,6 @@ export const SEO = ({ title, description, pathname, children }) => {
     <meta name="twitter:creator" content={author} />
     <meta name="twitter:title" content={seo.title} />
     <meta name="twitter:description" content={seo.description} />
-    <link rel="icon" content={seo.image} />
     {children}
     </>
   )
