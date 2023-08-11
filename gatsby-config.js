@@ -53,7 +53,7 @@ module.exports = {
     title: `Pirate Cactus`,
     description: `Wellcome to Pitere Cactus, web development and antrepenurial heven for anyone who wants to inprove ,share or sharpen there programming skills.`,
     author: `@iamdobri`,
-    image: `/favicons/pirate-logo.png`,
+    image: `/favicons/pirate.png`,
     keywords: [
       'pirate cactus',
       'piratecactus',
@@ -72,7 +72,15 @@ module.exports = {
         name: `Pirate Cactus`,
         short_name: `Pirate Cactus`,
         start_url: `/`,
-        icon: `static/favicons/pirate-logo.png`,
+        icon: `static/favicons/pirate.png`,
+        icons: [
+          {
+            "src": "static/favicons/pirate.png",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "any maskable"
+          }
+        ],
         cache_busting_mode: 'none',
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
@@ -83,7 +91,7 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
           workboxConfig: {
-            globPatterns: ['**static/favicons/pirate-logo.png*']
+            globPatterns: ['static/favicons/pirate.png']
           }
       }
     },
