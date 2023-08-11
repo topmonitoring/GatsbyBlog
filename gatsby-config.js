@@ -75,8 +75,7 @@ module.exports = {
         icon: `static/favicons/pirate.png`,
         icons: [
           {
-            "src": "static/favicons/maskable_icon_x512",
-            "sizes": "512x512",
+            "src": "static/favicons/maskable_icon_x512.png",
             "type": "image/png",
             "purpose": "any maskable"
           }
