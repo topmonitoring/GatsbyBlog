@@ -1,6 +1,6 @@
 import styled,{css} from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
-import { getBackgroundForArticlePreview, getBoxShadow } from '../theme/colors'
+import { getBackgroundForArticlePreview, getBoxShadow,getGlobalBackground } from '../theme/colors'
 import React from 'react'
 
 export const StyledPreviewImg = styled(GatsbyImage)`
@@ -36,7 +36,7 @@ export const PreviewTitle = styled.h1`
   
 `
 export const Tag = styled.p`
-  width: 70px;
+  width: fit-content;
   height: 18px;
   font-size: 14px;
   text-align: center;
@@ -46,6 +46,7 @@ export const Tag = styled.p`
   border-radius: 2px;
   border: 1px solid #a0a0a0;
   margin: 2px;
+  background-color: grey;
 `
 export const TagContainer = styled.div`
   display: flex;

@@ -7,7 +7,7 @@ import {
 } from '../../components/theme/colors'
 
 export const PostBagroundImg = styled(GatsbyImage)`
-  height: 70vh;
+  height: 80vh;
   width: 100%;
   z-index: -1000;
 `
@@ -15,7 +15,7 @@ export const PostBagroundImg = styled(GatsbyImage)`
 export const BlogPostBody = styled.div`
   padding: 40px;
   margin: 0 auto;
-  margin-top: -100px;
+  margin-top: -200px;
   background: ${getBackgroundForBlogPost};
   z-index: 1000;
   max-width: 800px;
