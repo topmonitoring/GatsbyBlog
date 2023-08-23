@@ -44,15 +44,16 @@ export const Tag = styled.p`
   padding: 0.33333rem 0.5rem;
   line-height: 1;
   border-radius: 2px;
-  border: 1px solid #a0a0a0;
+  border: 1px solid black;
   margin: 2px;
-  background-color: grey;
+  background-color: aqua;
 `
 export const TagContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin: 3px;
   grid-area: tag;
+  color: black;
 `
 
 export const ArticleInnerGridContainer = styled.div`
@@ -80,6 +81,7 @@ const goldVariantArticle = css`
   background-color: gold;
   p,div{
     color: black;
+    background-color: gold;
   }
   h1{
     background-color: gold;
