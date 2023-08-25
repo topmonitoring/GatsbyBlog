@@ -1,6 +1,6 @@
 import styled,{css} from 'styled-components'
 import { GatsbyImage } from "gatsby-plugin-image"
-import { getBackgroundForArticlePreview, getBoxShadow,getGlobalBackground } from '../theme/colors'
+import { getBackgroundForArticlePreview, getBoxShadow } from '../theme/colors'
 import React from 'react'
 
 export const StyledPreviewImg = styled(GatsbyImage)`
@@ -12,6 +12,7 @@ export const StyledPreviewImg = styled(GatsbyImage)`
 `
 export const StyledDate = styled.div`
   grid-area: date;
+  margin: auto;
 `
 export const StyledDiscription = styled.p`
   margin: 2px 10px;
@@ -47,6 +48,7 @@ export const Tag = styled.p`
   border: 1px solid black;
   margin: 2px;
   background-color: aqua;
+  border-radius: 5px;
 `
 export const TagContainer = styled.div`
   display: flex;
@@ -79,12 +81,11 @@ const normalVariantArticle = css`
 
 const goldVariantArticle = css`
   background-color: gold;
-  p,div{
-    color: black;
+  p,h1{
     background-color: gold;
   }
-  h1{
-    background-color: gold;
+  div{
+    color: black;
   }
   
   &:hover {

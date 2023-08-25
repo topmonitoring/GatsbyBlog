@@ -6,7 +6,7 @@ export const StyledTag=styled(Link)`
 text-align: center;
 background-color: turquoise;
 text-decoration: none;
-padding: 5px;
+padding: 10px;
 border-radius: 3px;
 width: fit-content;
 margin: 5px;
@@ -24,7 +24,7 @@ text-align: center;
 background-color: gold;
 color: black;
 text-decoration: none;
-padding: 5px;
+padding: 10px;
 border-radius: 3px;
 width: fit-content;
 max-width: fit-content;
