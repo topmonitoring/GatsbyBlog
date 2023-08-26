@@ -14,7 +14,6 @@ export const Head = () => (
 
 const PostsPreview = props => {
   const posts = get(props, 'data.allContentfulBlogPost.edges')
-  const siteTitle = get(props, 'data.site.siteMetadata.title')
 
   return (
     <Layout location={props.location}>
@@ -38,11 +37,6 @@ export default PostsPreview
 
 export const pageQuery = graphql`
 query GetBlogPostsForPagePAGEQUERY($skip: Int!, $limit: Int!) {
-  site {
-    siteMetadata {
-      title
-    }
-  }
   allContentfulBlogPost(sort: {publishDate: DESC}, limit: $limit, skip: $skip) {
     edges {
       node {

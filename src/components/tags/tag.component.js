@@ -10,7 +10,7 @@ const TagLabel= () =>(
 <StyledTag to="/tags/design/">design</StyledTag>
 <StyledTag to="/tags/business/">business</StyledTag>
 <StyledTag to="/tags/seo/">SEO</StyledTag>
-<StyledTag to="/tags/AI/">AI</StyledTag>
+<StyledTag to="/tags/ai/">AI</StyledTag>
 <StyledTag to="/tags/self-development/">self development</StyledTag>
     </TagContainer>
 )
