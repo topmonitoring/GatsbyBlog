@@ -15,6 +15,7 @@ max-width: fit-content;
 cursor: pointer;
 &:hover {
     transform: translateY(-5px);
+    transition-duration: 0.6s;
     box-shadow: 0px 11px 30px 0px aqua;
   }
 `
@@ -32,6 +33,7 @@ margin: 5px;
 cursor: pointer;
 &:hover {
     transform: translateY(-5px);
+    transition-duration: 0.6s;
     box-shadow: 0px 11px 30px 0px gold;
   }
 `
