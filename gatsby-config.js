@@ -72,7 +72,7 @@ module.exports = {
         name: `Pirate Cactus`,
         short_name: `Pirate Cactus`,
         start_url: `/`,
-        icon: `static/favicons/pirate.png`,
+        icon: `static/favicons/logo3.png`,
         icons: [
           {
             "src": "static/favicons/maskable_icon_x512.png",
