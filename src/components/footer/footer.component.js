@@ -18,9 +18,14 @@ const Footer = () => (
       <StyledFooterInfo>
         <h1>ABOUT</h1>
         <span>
-          This blog purpose is to educate users, allow programmers to discover
-          practical solutions and new technologies in a fast and efficient whey.
-          And also share their knowledge with each other.
+        My Name is
+        <b>
+        <a href="https://github.com/topmonitoring" target="blank">
+          <strong> Dobrin Dobrev</strong>
+        </a>
+      </b> and the mission of my life is to make education avilable to anyone who needs it by helping them achive their optimal 
+        physical and mental potential, fostering a healthier life and a brighter future 
+        for both themselves and humanity as a whole.
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>

@@ -5,6 +5,12 @@ export const StyledHeroContent=styled.div`
   position: relative;
   display:flex;
   flex-direction: row;
+  h1{
+    text-decoration: underline;
+  }
+  p{
+    padding: 5px;
+  }
 `
 
 export const StyledBackgroundSection = styled.div`
@@ -46,7 +52,7 @@ export const StyledSubscribeForm = styled.form`
   }
 `
 export const StyledInput = styled.input`
-  width: 350px;
+  width: 250px;
   margin: 5px auto;
   padding: 1rem 1.5rem;
   border: none;

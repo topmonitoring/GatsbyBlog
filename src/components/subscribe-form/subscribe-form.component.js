@@ -39,21 +39,24 @@ const EmailSubscribeForm = () => {
   return (
     <StyledSubscribeContainer>
       <SubscribeInfo>
-        <h1>JOIN THE CREW</h1>
+        <h1>Boost Your Performance</h1>
         <p>
-        Don't miss out on all the treasure trove of programming knowledge we have in store for you. Join our crew by filling out the form below with your best email address, and let's set sail on this programming adventure together!
+        
+
+
+Gain a competitive edge by receiving high-quality information directly to your inbox. Sharpen your expertise, embrace challenges, and always remember that you're not merely working- you're sculpting a digital tomorrow! 
         </p>
         <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
         <StyledInput
           aria-label="input name"
-          placeholder="First Name"
+          placeholder="first name"
           name="name"
           type="text"
           onChange={handleNameChange}
         />
         <StyledInput
           aria-label="input email"
-          placeholder="Email address"
+          placeholder="email address"
           name="email"
           type="text"
           onChange={handleEmailChange}

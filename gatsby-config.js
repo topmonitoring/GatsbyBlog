@@ -53,7 +53,7 @@ module.exports = {
     title: `Pirate Cactus`,
     description: `Wellcome to Pitere Cactus, web development and antrepenurial heven for anyone who wants to inprove ,share or sharpen there programming skills.`,
     author: `@iamdobri`,
-    image: `/favicons/pirate.png`,
+    image: `/favicons/logo3.png`,
     keywords: [
       'pirate cactus',
       'piratecactus',
