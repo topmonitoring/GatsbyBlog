@@ -17,6 +17,17 @@ export const StyledVideo = styled.div`
     }
   }
 `;
+
+export const ButtonContainer = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+div{
+  margin: 5px;
+}
+`
+
 export const HederOverlay = styled.div`
   height: 65vh;
   position: absolute;
