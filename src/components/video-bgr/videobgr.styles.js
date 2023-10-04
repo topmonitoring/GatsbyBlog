@@ -11,11 +11,12 @@ export const StyledVideo = styled.div`
   video {
     width: 100%;
     height: auto;
-    @media (max-aspect-ratio: 16/9) {
-      width: auto;
+  }
+  @media screen and (max-width: 1000px) {
+    video{
       height: 100%;
     }
-  }
+    }
 `;
 
 export const ButtonContainer = styled.div`
@@ -26,6 +27,9 @@ justify-content: center;
 div{
   margin: 5px;
 }
+@media screen and (max-width: 600px) {
+  flex-direction: column;
+    }
 `
 
 export const HederOverlay = styled.div`
@@ -59,6 +63,8 @@ export const HederTextContainer = styled.div`
     margin: auto;
     font-size: large;
   }
-  
+  @media screen and (max-width: 1040px) {
+      margin: 10px auto;
+    }
 `;
 

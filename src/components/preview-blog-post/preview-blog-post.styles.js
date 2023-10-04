@@ -101,6 +101,7 @@ const articleVariants = {
 export const ArticleDisplayContainer = styled(({ variant = "normal", ...props }) => <article {...props} />)`
   height: 400px;
   min-width: 365px;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -117,13 +118,23 @@ export const ArticleDisplayContainer = styled(({ variant = "normal", ...props })
     color: dimgray;
   }
   }
+  @media screen and (max-width: 3200px) {
+    flex: 0 0 calc(25% - 100px);
+    font-size: 12px;
+    min-width: 350px;
+  }
+  @media screen and (max-width: 2550px) {
+    flex: 0 0 calc(33% - 40px);
+    font-size: 12px;
+    min-width: 250px;
+  }
   @media screen and (max-width: 1870px) {
-    flex: 0 0 calc(50% - 66px);
+    flex: 0 0 calc(50% - 40px);
     font-size: 12px;
     min-width: 250px;
   }
   @media screen and (max-width: 1250px) {
-    flex: 0 0 calc(100% - 33px);
+    flex: 0 0 calc(100%);
     font-size: 12px;
     min-width: 250px;
   }

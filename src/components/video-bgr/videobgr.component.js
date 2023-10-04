@@ -27,7 +27,7 @@ const VideoBaground = () => {
       <HederTextContainer>
       <h1>You are as big as your Goals,</h1>
       <h1> How big are yours?</h1>
-      <p> The mission of this blog is to empower individuals in achieving their optimal physical and mental potential, fostering a healthier life and a brighter future for both themselves and humanity as a whole—all at absolutely no cost.</p>
+      <p> The mission of this blog is to empower individuals in achieving their optimal physical and mental potential, fostering a healthier life and a brighter future for both themselves and humanity as a whole.</p>
       <br/>
       <ButtonContainer>
       <CustomButton to='/blog/welcome/'>Start Wining</CustomButton>

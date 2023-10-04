@@ -7,7 +7,7 @@ import {
 } from '../../components/theme/colors'
 
 export const PostBagroundImg = styled(GatsbyImage)`
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   z-index: -1000;
 `
@@ -37,7 +37,7 @@ export const BlogPostBody = styled.div`
 export const StyledHeder = styled.h1`
   text-align: center;
   margin: auto;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: 900;
 
   @media screen and (max-width: 800px) {
