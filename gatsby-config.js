@@ -28,6 +28,9 @@ const MyQuery = `{
         slug
         title
         publishDate
+        internal {
+          contentDigest
+        }
         body {
           childMarkdownRemark
           {
