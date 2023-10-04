@@ -137,6 +137,7 @@ export const ArticleDisplayContainer = styled(({ variant = "normal", ...props })
     flex: 0 0 calc(100%);
     font-size: 12px;
     min-width: 250px;
+    margin:20px 0px;
   }
   
 `

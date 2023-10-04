@@ -42,9 +42,10 @@ export const TagContainer=styled.div`
 display: -webkit-flex;
 -webkit-flex-direction: row;
 -webkit-flex-wrap: wrap;
-width: 600px;
+max-width: 600px;
 height: auto;
-margin:auto;
+margin: auto;
+justify-content: center;
 @media screen and (max-width: 1000px) {
       max-width: 400px;
     }

@@ -17,6 +17,6 @@ export const StyledHeding = styled.h1`
 export const StyledInfo = styled.p`
   text-align: center;
   align-content: center;
-  width: 800px;
+  max-width: 800px;
   margin: auto;
 `
