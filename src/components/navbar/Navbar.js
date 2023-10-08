@@ -10,7 +10,7 @@ import NavbarLinks from './navbar-links.component'
 import { getBackgroundForNavAndFooter } from '../../components/theme/colors'
 import SearchButton from '../search-blog-post/search-button.component'
 import SearchBlogPost from '../search-blog-post/search-blog-post.component'
-import Icon from "../../../static/assets/logo2.svg";
+import { StaticImage } from "gatsby-plugin-image"
 
 const Navbar = props => {
   const barAnimation = useSpring({
@@ -29,7 +29,7 @@ const Navbar = props => {
       <NavBar style={barAnimation}>
         <FlexContainer>
         <Link to="/" style={{margin:"auto 0px"}}>
-          <Icon style={{width:"50px",height:"50px"}}></Icon>
+          <StaticImage src="../../../static/assets/logo3.png" alt="logo image" style={{width:"50px",height:"50px"}}/>
           </Link>
           <NavLinks style={linkAnimation}>
             <NavbarLinks />

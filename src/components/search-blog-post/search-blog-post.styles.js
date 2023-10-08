@@ -30,7 +30,7 @@ export const StyledSearchLogo = styled.div`
 `
 
 export const StyledHighlightTitle = styled(Highlight)`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   @media screen and (max-width: 800px) {
     font-size: 16px;
@@ -69,7 +69,7 @@ export const StyledInput = styled(SearchBox)`
 `
 
 export const StyledResultsContainer = styled.div`
-  width: 620px;
+  width: 700px;
   position: absolute;
   z-index: 9999;
   background-color: ${getBackgroundForNavAndFooter};
@@ -86,7 +86,8 @@ export const StyledResultsContainer = styled.div`
 export const StyledSearchResult = styled.div`
   width: 600px;
   margin: 2px auto;
-  padding: 0px 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
   :hover {
     background-color: ${getBackgroundForSearchBoxHover};
   }
