@@ -24,7 +24,7 @@ const ContactPage = props => {
       >
         Contact me
       </h1>
-      <h2 style={{ textAlign:"center", width: '80vw',margin:"auto" }}>If you find this blog usefull or you need some help with you're buisness, project, or client. Do not hasitate to drop me a line</h2>
+      <p style={{ textAlign:"center", width: '80vw',margin:"auto" }}>If you find this blog usefull or you need some help with you're buisness, project, or client. Do not hasitate to drop me a line</p>
       <hr style={{ width: '80vw' }} />
       <div
         style={{

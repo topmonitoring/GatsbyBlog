@@ -37,7 +37,7 @@ export const StyledNameInput = styled.input`
   @media screen and (max-width: 800px) {
     font-size: 14px;
     padding: 0.5rem 5px;
-    width: 90%;
+    width: 94%;
   }
 `
 export const StyledEmailInput = styled.input`
@@ -48,7 +48,7 @@ export const StyledEmailInput = styled.input`
   @media screen and (max-width: 800px) {
     font-size: 14px;
     padding: 0.5rem 5px;
-    width: 90%;
+    width: 94%;
   }
 `
 export const StyledMassegeInput = styled.textarea`
