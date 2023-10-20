@@ -17,7 +17,7 @@ const ProjectsPage = props => {
       <StyledSection>
         <div>
           You can find all my projects on my portfolio website{' '}
-          <a href="https://dobrindobrev.io">dobrindobbrev.io</a>
+          <a href="https://dobrindobrev.com">dobrindobrev.com</a>
         </div>
         <div>
           or on my github profile{' '}
