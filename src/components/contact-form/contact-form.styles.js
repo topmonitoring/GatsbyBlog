@@ -20,6 +20,7 @@ export const StyledFormGrid = styled.div`
 `
 export const StyledSelectInput = styled.select`
   grid-area: select;
+  cursor: pointer;
   font-size: 18px;
   width: 100%;
   padding: 1rem 10px;

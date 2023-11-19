@@ -14,7 +14,7 @@ export const StyledSection = styled(Link)`
   flex-direction: column;
   text-align: center;
   height: 200px;
-  width: 25%;
+  width: 30%;
   background-color: ${getBackgroundForArticlePreview};
   display: flex;
   margin: auto;
@@ -38,7 +38,7 @@ export const StyledSectionContainer = styled.div`
   margin: 20px auto;
   flex-direction: row;
   align-content: center;
-  width: 80vw;
+  width: 65vw;
   padding-bottom: 50px;
   @media screen and (max-width: 800px) {
     flex-direction: column;

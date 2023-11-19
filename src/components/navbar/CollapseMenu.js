@@ -63,7 +63,7 @@ const NavLinks = styled.ul`
     font-size: 1.4rem;
     line-height: 2;
     color: ${getGlobalForeground};
-    text-transform: uppercase;
+    //text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
     text-align: start;

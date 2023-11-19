@@ -19,7 +19,7 @@ const RootIndex = props => {
 
   return (
     <Layout location={props.location}>
-      <AnauncmentBanner/>
+      {/*<AnauncmentBanner/>*/}
       <VideoBaground/>
       {/*<Slideshow />*/}
       <LatestBlogPosts />

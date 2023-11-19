@@ -41,7 +41,7 @@ export const StrongWord = styled.b`
 export const HederOverlay = styled.div`
   height: 65vh;
   position: absolute;
-  top: 110px;
+  top: 80px;
   left: 0;
   width: 100vw;
   z-index: 0.5;
@@ -53,7 +53,7 @@ export const HederOverlay = styled.div`
 export const StyledLine =styled.hr`
 margin: 0;
 height: 5px;
-background-color: ${getGlobalForeground};
+background-color: rgb(102, 155, 188);
 border: none;
 `
 
@@ -75,7 +75,7 @@ export const HederTextContainer = styled.div`
     margin: auto;
   }
   h2{
-    font-size: 20px;
+    font-size: 25px;
   }
   @media screen and (max-width: 1040px) {
       margin: 10px auto;

@@ -135,7 +135,10 @@ module.exports = {
         plugins: [{
           resolve: `gatsby-remark-vscode`,
           options: {
-            theme: 'Abyss' // Or install your favorite theme from GitHub
+            theme: {
+              default: 'Solarized Light',
+              dark: 'Monokai Dimmed'
+            } // Or install your favorite theme from GitHub
           },
           //resolve: `gatsby-remark-responsive-iframe`,
         }]

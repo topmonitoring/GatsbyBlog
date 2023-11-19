@@ -27,7 +27,7 @@ const VideoBaground = () => {
       <HederTextContainer>
       <h1>Attention is the new<StrongWord> world currency</StrongWord></h1>
       <h2>Are you geting yours?</h2>
-      <p>We help companies grow, offer more value, and make life better for individuals, leading to healthier, brighter future for humanity one person at a time.We believe in action, better world is out there, all you need to do is choose it.</p>
+      <p>Drive more traffic to your business by creating more pleasant and visually appealing websites. Boost your marketing with AI tools. Learn valuable information about your ideal customer. </p>
       <br/>
       <ButtonContainer>
       <CustomButton to='/blog/welcome/'>Learn How</CustomButton>

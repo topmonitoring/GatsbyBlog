@@ -18,14 +18,12 @@ const Footer = () => (
       <StyledFooterInfo>
         <h1>ABOUT</h1>
         <span>
-        My Name is
+        Hi ,There I am
         <b>
         <a href="https://github.com/topmonitoring" target="blank">
           <strong> Dobrin Dobrev</strong>
         </a>
-      </b> and the mission of my life is to make education avilable to anyone who needs it by helping them achive their optimal 
-        physical and mental potential, fostering a healthier life and a brighter future 
-        for both themselves and humanity as a whole.
+      </b> and the mission of this blog is: To help companies and individuals grow , offer more value, and make life better, healthier and brighter for everyone.We believe in action, better world is out there, all you need to do is choose it.
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>

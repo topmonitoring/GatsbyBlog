@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 export const AnauncmentBannerBody =styled.div`
 position: relative;
+color:white;
 width: 100%;
 padding: 5px;
 background-color: rgb(193, 18, 31);

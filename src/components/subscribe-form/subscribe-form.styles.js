@@ -28,6 +28,7 @@ export const StyledBackgroundSection = styled.div`
   @media screen and (max-width: 800px) {
     padding: 20px 0px;
     flex-direction: column;
+    height: fit-content;
   }
 `
 
@@ -64,6 +65,9 @@ export const StyledInputContainer = styled.div`
   padding: 5px;
   background-color: white;
   border-radius: 40px;
+  svg{
+    padding: 2px;
+  }
   @media screen and (max-width: 800px) {
     width: 60vw;
     margin: auto;

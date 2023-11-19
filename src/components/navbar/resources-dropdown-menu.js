@@ -25,14 +25,14 @@ const Resources = () => {
   return (
     <div>
       <StyledNavLink onClick={showMenu}>
-        RESOURCES {isOpen ? <>&#9650;</> : <>&#9660;</>}{' '}
+        Resources {isOpen ? <>&#9650;</> : <>&#9660;</>}{' '}
         {/*returns up and down arrow strings*/}
       </StyledNavLink>
       {isOpen ? (
         <StyledDropdownMenu>
           <StyledLink to="/books">Books</StyledLink>
           <StyledLink to="/links">Links</StyledLink>
-          <StyledLink to="/projects">Open Source Projects</StyledLink>
+          <StyledLink to="/projects">Projects</StyledLink>
         </StyledDropdownMenu>
       ) : null}
     </div>
@@ -71,10 +71,10 @@ border-color:black;
 `
 
 const StyledNavLink = styled.div`
-  text-transform: uppercase;
+  //text-transform: uppercase;
   //font-size: 1.4rem;
   //line-height: 2;
-  font-weight: 600;
+  //font-weight: 600;
   border-bottom: 1px solid transparent;
   margin: 0px;
   transition: all 300ms linear 0s;
