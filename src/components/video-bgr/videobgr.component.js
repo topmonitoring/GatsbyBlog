@@ -1,6 +1,6 @@
 import React from 'react';
 import Video from '../../../static/pexels-abhijit-rout-8125427 (2160p).mp4'
-import { StyledVideo, HederOverlay,StyledLine,HederTextContainer,ButtonContainer } from './videobgr.styles';
+import { StyledVideo, HederOverlay,StyledLine,HederTextContainer,ButtonContainer,StrongWord } from './videobgr.styles';
 import CustomButton from '../buttons/CustomButton';
 
 const VideoBaground = () => {
@@ -25,13 +25,12 @@ const VideoBaground = () => {
       </StyledVideo>
       <HederOverlay>
       <HederTextContainer>
-      <h1>You are as big as your Goals,</h1>
-      <h1>How big are yours?</h1>
-      <p>The mission of this blog is to empower individuals to achieve their optimal physical and mental potential, by learning skills like programming, social development, and design. The end goal is a healthier life and brighter future for both themselves and humanity as a whole.</p>
+      <h1>Attention is the new<StrongWord> world currency</StrongWord></h1>
+      <h2>Are you geting yours?</h2>
+      <p>We help companies grow, offer more value, and make life better for individuals, leading to healthier, brighter future for humanity one person at a time.We believe in action, better world is out there, all you need to do is choose it.</p>
       <br/>
       <ButtonContainer>
-      <CustomButton to='/blog/welcome/'>Start Wining</CustomButton>
-      <CustomButton to='/blog/from-dreams-to-deeds/'>I don't have goals</CustomButton>
+      <CustomButton to='/blog/welcome/'>Learn How</CustomButton>
       </ButtonContainer>
       </HederTextContainer>
       

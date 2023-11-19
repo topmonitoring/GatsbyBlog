@@ -40,7 +40,7 @@ const Resources = () => {
         </svg>
         </StyledSection>
         <StyledSection to="/projects">
-          <h1>Open Source Projects</h1>
+          <h1>Projects</h1>
           <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlSpace="preserve"

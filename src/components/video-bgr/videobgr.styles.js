@@ -32,10 +32,16 @@ div{
     }
 `
 
+export const StrongWord = styled.b`
+  //font-size:50px;
+  color: rgb(102, 155, 188);
+  
+`;
+
 export const HederOverlay = styled.div`
   height: 65vh;
   position: absolute;
-  top: 80px;
+  top: 110px;
   left: 0;
   width: 100vw;
   z-index: 0.5;
@@ -56,12 +62,20 @@ export const HederTextContainer = styled.div`
   z-index: 1;
   max-width: 960px;
   color: whitesmoke;
-  margin: 15rem auto;
+  margin: 10rem auto;
   text-align: center;
   p{
-    max-width: 600px;
+    max-width: 550px;
     margin: auto;
     font-size: large;
+  }
+  h1{
+    font-size:55px;
+    max-width: 550px;
+    margin: auto;
+  }
+  h2{
+    font-size: 20px;
   }
   @media screen and (max-width: 1040px) {
       margin: 10px auto;

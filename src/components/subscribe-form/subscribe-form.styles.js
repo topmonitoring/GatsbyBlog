@@ -6,10 +6,14 @@ export const StyledHeroContent=styled.div`
   display:flex;
   flex-direction: row;
   h1{
-    text-decoration: underline;
+    font-size: 40px;
   }
   p{
-    padding: 5px;
+    text-align: start;
+    padding: 0px 45px;
+  }
+  span{
+    
   }
 `
 
@@ -28,11 +32,11 @@ export const StyledBackgroundSection = styled.div`
 `
 
 export const SubscribeInfo = styled.div`
+  //color:black;
   width: 550px;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  align-content: center;
   background-color: ${getBackgroundForArticlePreview};
   border-radius: 10px;
   @media screen and (max-width: 800px) {
@@ -40,6 +44,32 @@ export const SubscribeInfo = styled.div`
     margin: auto;
   }
 `
+export const StyledFutures = styled.div`
+display: flex;
+flex-direction: column;
+padding: 30px 5px;
+ span{
+    padding: 0px 45px;
+    text-align: justify;
+    font-size: larger;
+    font-weight: 800;
+  }
+    
+`
+
+export const StyledInputContainer = styled.div`
+  display: flex;
+  height: 35px;
+  flex-direction: row;
+  padding: 5px;
+  background-color: white;
+  border-radius: 40px;
+  @media screen and (max-width: 800px) {
+    width: 60vw;
+    margin: auto;
+  }
+`
+
 export const StyledSubscribeForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -52,9 +82,9 @@ export const StyledSubscribeForm = styled.form`
   }
 `
 export const StyledInput = styled.input`
-  width: 250px;
+  width: 450px;
   margin: 5px auto;
-  padding: 1rem 1.5rem;
+  padding: 10px;
   border: none;
   @media screen and (max-width: 800px) {
     width: 80%;
@@ -62,14 +92,15 @@ export const StyledInput = styled.input`
 `
 export const StyledButton = styled.button`
   width: 200px;
-  margin: 5px auto;
-  padding: 1rem 1.5rem;
+  height: 100%;
+  margin: auto;
+  padding: 1px;
   border: none;
   background-image: none;
   background-color: #dd0505;
   color: white;
-  letter-spacing: 1px;
   transition: all 0.1s linear;
+  border-radius: 40px;
   &:hover {
     cursor: pointer;
     filter: brightness(85%);

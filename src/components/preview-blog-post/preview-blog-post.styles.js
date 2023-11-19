@@ -28,7 +28,7 @@ export const PreviewTitle = styled.h1`
   height: 50px;
   font-size: 17px;
   margin-top: 190px;
-  color: black;
+  color: white;
   grid-area: 'title';
   clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0 100%, 0 0);
   text-align: center;
@@ -38,6 +38,7 @@ export const PreviewTitle = styled.h1`
 `
 export const Tag = styled.p`
   width: fit-content;
+  color: white;
   height: 18px;
   font-size: 14px;
   text-align: center;
@@ -47,7 +48,7 @@ export const Tag = styled.p`
   border-radius: 2px;
   border: 1px solid black;
   margin: 2px;
-  background-color: aqua;
+  background-color: rgb(102, 155, 188);
   border-radius: 5px;
 `
 export const TagContainer = styled.div`
@@ -72,10 +73,10 @@ const normalVariantArticle = css`
   background-color: ${getBackgroundForArticlePreview};
 
   h1{
-    background-color: aqua;
+    background-color: rgb(102, 155, 188);
   }
   &:hover {
-    box-shadow: 0px 11px 30px 0px aqua;
+    box-shadow: 0px 11px 30px 0px rgb(102, 155, 188);
   }
 `;
 
@@ -115,7 +116,7 @@ export const ArticleDisplayContainer = styled(({ variant = "normal", ...props })
     h1 {
     width:100%;
     clip-path: polygon(0 0, 100% 0, 95% 50%, 100% 100% ,0 100%, 5% 50%);
-    color: dimgray;
+    //color: dimgray;
   }
   }
   @media screen and (max-width: 3200px) {

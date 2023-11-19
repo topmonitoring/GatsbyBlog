@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 export const StyledTag=styled(Link)`
 -webkit-flex: 30px 1;
 text-align: center;
-background-color: turquoise;
+background-color: rgb(102, 155, 188);
 text-decoration: none;
 padding: 10px;
 border-radius: 3px;
@@ -16,7 +16,7 @@ cursor: pointer;
 &:hover {
     transform: translateY(-5px);
     transition-duration: 0.6s;
-    box-shadow: 0px 11px 30px 0px aqua;
+    box-shadow: 0px 11px 30px 0px rgb(102, 155, 188);
   }
 `
 export const StyledGoldenTag=styled(Link)`

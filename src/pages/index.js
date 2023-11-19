@@ -9,16 +9,17 @@ import EmailSubscribeForm from '../components/subscribe-form/subscribe-form.comp
 import Slideshow from '../components/slideshow/slideshow.component'
 import VideoBaground from '../components/video-bgr/videobgr.component'
 import { SEO } from '../components/seo/seo.component'
+import AnauncmentBanner from '../components/anouncment-banner/anouncment-banner.component'
 
 export const Head = () => (
   <SEO />
 )
-
 const RootIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
 
   return (
     <Layout location={props.location}>
+      <AnauncmentBanner/>
       <VideoBaground/>
       {/*<Slideshow />*/}
       <LatestBlogPosts />
@@ -30,7 +31,6 @@ const RootIndex = props => {
 }
 
 export default RootIndex
-
 
 
 export const pageQuery = graphql`

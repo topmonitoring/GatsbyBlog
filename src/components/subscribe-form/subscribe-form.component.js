@@ -5,6 +5,8 @@ import {
   StyledInput,
   StyledButton,
   SubscribeInfo,
+  StyledInputContainer,
+  StyledFutures
 } from './subscribe-form.styles'
 
 import StyledSubscribeContainer from './subscribe-baground'
@@ -39,29 +41,29 @@ const EmailSubscribeForm = () => {
   return (
     <StyledSubscribeContainer>
       <SubscribeInfo>
-        <h1>Boost Your Performance</h1>
+        <h1>Gain a competitive edge</h1>
         <p>
         
 
 
-Gain a competitive edge by receiving high-quality information directly to your inbox. Sharpen your expertise, embrace challenges, and always remember that you're not merely working- you're sculpting a digital tomorrow! 
+Receve high-quality information directly to your inbox. Sharpen your expertise, embrace challenges, and always remember that you're not merely working- you're sculpting a digital tomorrow! 
         </p>
+        <StyledFutures>
+        <span>✅ Weekly email newsletters</span>
+        <span>✅ Highest quality exsipiance proven information</span>
+        <span>✅ Acess to free ebooks</span>          
+        </StyledFutures>
         <StyledSubscribeForm onSubmit={handleSubmit} aria-label="subscribe form">
-        <StyledInput
-          aria-label="input name"
-          placeholder="first name"
-          name="name"
-          type="text"
-          onChange={handleNameChange}
-        />
+        <StyledInputContainer>
         <StyledInput
           aria-label="input email"
-          placeholder="email address"
+          placeholder="Enter your email"
           name="email"
           type="text"
           onChange={handleEmailChange}
         />
         <StyledButton type="submit">Subscribe</StyledButton>
+        </StyledInputContainer>
       </StyledSubscribeForm>
       </SubscribeInfo> 
     </StyledSubscribeContainer>

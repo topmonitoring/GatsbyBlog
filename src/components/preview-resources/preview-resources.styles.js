@@ -7,7 +7,7 @@ export const StyledTitle = styled.h1`
   text-align: center;
 `
 export const StyledSection = styled(Link)`
-  border-radius: 10%;
+  border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
   display: flex;
@@ -26,7 +26,7 @@ export const StyledSection = styled(Link)`
   }
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 11px 30px 0px aqua;
+    box-shadow: 0px 11px 30px 0px rgb(102, 155, 188);
   }
   @media screen and (max-width: 800px) {
     width: 70vw;

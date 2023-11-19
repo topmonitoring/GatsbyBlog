@@ -38,7 +38,6 @@ const StyledNavLink = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    color: aqua;
-    border-bottom: 1px solid aqua;
+    color: rgb(102, 155, 188);
   }
 `

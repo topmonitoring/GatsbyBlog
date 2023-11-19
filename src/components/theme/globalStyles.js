@@ -9,7 +9,7 @@ const blueIsh = 'rgb(144, 186, 245)'
 const darkenBluIsh = 'rgb(129, 164, 214)'
 const greyIsh = 'rgba(0, 0, 0, 0.47)'
 const whiteIsh = 'rgb( 134, 135, 138)'
-const lightWhite = '#D8DEE9'
+const lightWhite = '#eee8d5'
 const lightBlack = '#2d3436 '
 const darkDark = '#3B4252'
 const lighterWhite = '#E5E9F0'
@@ -30,7 +30,7 @@ export const Colors = {
 }
 
 const getGlobalBackground = theme('mode', {
-  light: `#E3EDFC`,
+  light: `#fdf0d5`,
   dark: `#101217`,
 })
 

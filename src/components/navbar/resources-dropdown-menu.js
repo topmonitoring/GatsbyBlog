@@ -48,7 +48,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   &:hover {
     background-color: ${getGlobalBackground};
-    color: aqua;
+    color: rgb(102, 155, 188);
   }
   i {
     float: right;

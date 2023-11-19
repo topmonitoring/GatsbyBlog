@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 export const AnimatedButton = styled(animated.div)`
   margin: 5px auto;
-  background: rgb(144, 186, 245);
+  background: linear-gradient(0deg, rgb(0, 48, 73) 0%, rgb(102, 155, 188) 100%);
   color: black;
   font-size: 16px;
   font-weight: 600;
@@ -16,10 +16,9 @@ export const AnimatedButton = styled(animated.div)`
   cursor: pointer;
   border: none;
   outline: none;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease-in-out;
   &:hover {
-    box-shadow: 0px 11px 30px 0px aqua;
-    background: rgb(129, 164, 214);
+    box-shadow: 0px 11px 30px 0px rgb(102, 155, 188);
     transform: scale(1.1);
   }
 
