@@ -50,6 +50,7 @@ export const Tag = styled.p`
   margin: 2px;
   background-color: rgb(102, 155, 188);
   border-radius: 5px;
+  
 `
 export const TagContainer = styled.div`
   display: flex;

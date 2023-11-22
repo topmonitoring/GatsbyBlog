@@ -29,7 +29,7 @@ const Navbar = props => {
       <NavBar style={barAnimation}>
         <FlexContainer>
         <Link to="/" style={{margin:"auto 0px"}}>
-          <StaticImage src="../../../static/assets/logo3.png" alt="logo image" style={{width:"50px",height:"50px"}}/>
+          <StaticImage src="../../../static/favicons/logo1.png" alt="logo image" style={{width:"50px",height:"50px"}}/>
           </Link>
           <NavLinks style={linkAnimation}>
             <NavbarLinks />
@@ -68,7 +68,7 @@ const FlexContainer = styled.div`
   max-width: 120rem;
   display: flex;
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   justify-content: space-between;
   height: 5rem;
 `
@@ -81,15 +81,15 @@ const BurgerWrapper = styled.div`
   }
 `
 const NavLinks = styled(animated.div)`
-  justify-self: end;
+  //justify-self: end;
   list-style-type: none;
   margin: auto;
-  -moz-column-count: 5;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 5;
+  -moz-column-count: 6;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 6;
   -webkit-column-gap: 20px;
-  column-count: 5;
-  column-gap: 20px;
+  column-count: 6;
+  column-gap: 10px;
   div {
     text-align: center;
   }

@@ -5,7 +5,7 @@ import Layout from '../components/layout/layout.component'
 import { SEO } from '../components/seo/seo.component'
 
 export const Head = () => (
-  <SEO />
+  <SEO title="Thank you page"/>
 )
 
 const NotFound = props => {

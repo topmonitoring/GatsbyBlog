@@ -11,9 +11,12 @@ export const StyledHeroContent=styled.div`
   p{
     text-align: start;
     padding: 0px 45px;
+    @media screen and (max-width: 800px) {
+    padding: 0px;
+  }
   }
   span{
-    
+   
   }
 `
 
@@ -50,12 +53,16 @@ display: flex;
 flex-direction: column;
 padding: 30px 5px;
  span{
+    text-align: start;
     padding: 0px 45px;
-    text-align: justify;
     font-size: larger;
     font-weight: 800;
   }
-    
+  @media screen and (max-width: 800px) {
+    span{
+      padding: 20px 0px;
+    }
+  }
 `
 
 export const StyledInputContainer = styled.div`

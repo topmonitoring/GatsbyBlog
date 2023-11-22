@@ -16,7 +16,7 @@ const Footer = () => (
   <StyledFooter>
     <StyledFooterGrid>
       <StyledFooterInfo>
-        <h1>ABOUT</h1>
+        <h1>About</h1>
         <span>
         Hi ,There I am
         <b>
@@ -27,11 +27,11 @@ const Footer = () => (
         </span>
       </StyledFooterInfo>
       <StyledFooterSocials>
-        <h1>SOCIAL MEDIA</h1>
+        <h1>Social Media</h1>
         <SocialMediaLinks />
       </StyledFooterSocials>
       <div>
-        <h1>PAGES</h1>
+        <h1>Pages</h1>
         <NavbarLinks isFooter={true} />
       </div>
     </StyledFooterGrid>

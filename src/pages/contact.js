@@ -25,7 +25,7 @@ const ContactPage = props => {
         Contact me
       </h1>
       <p style={{ textAlign:"center", width: '80vw',margin:"auto" }}>If you find this blog usefull or you need some help with you're buisness, project, or client. Do not hasitate to drop me a line</p>
-      <hr style={{ width: '80vw' }} />
+      <hr style={{ width: '80vw',height:'2px',border:'none',backgroundColor: 'rgb(102, 155, 188)' }} />
       <div
         style={{
           width: '50vw',
@@ -35,7 +35,7 @@ const ContactPage = props => {
       >
         <SocialMediaLinks />
       </div>
-      <hr style={{ width: '80vw' }} />
+      <hr style={{ width: '80vw',height:'2px',border:'none',backgroundColor: 'rgb(102, 155, 188)' }} />
       <FormComponent />
     </Layout>
   )

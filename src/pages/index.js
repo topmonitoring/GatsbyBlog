@@ -12,7 +12,7 @@ import { SEO } from '../components/seo/seo.component'
 import AnauncmentBanner from '../components/anouncment-banner/anouncment-banner.component'
 
 export const Head = () => (
-  <SEO />
+  <SEO title="Home page"/>
 )
 const RootIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')

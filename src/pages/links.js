@@ -7,7 +7,7 @@ import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
 import { SEO } from '../components/seo/seo.component'
 
 export const Head = () => (
-  <SEO />
+  <SEO title="Links page"/>
 )
 
 const LinksPage = props => {

@@ -4,7 +4,7 @@ import Resources from './resources-dropdown-menu'
 import styled from 'styled-components'
 import { getGlobalForeground } from '../theme/colors'
 
-const NAV_ITEMS = ['About', 'Contact', 'Blog']
+const NAV_ITEMS = ['Work','About', 'Contact', 'Blog']
 
 const NavbarLinks = ({ isFooter }) => (
   <>
@@ -28,7 +28,7 @@ export default NavbarLinks
 
 const StyledNavLink = styled(Link)`
   color: ${getGlobalForeground};
-  min-width: 50px;
+  //min-width: 45px;
   //text-transform: uppercase;
   //font-weight: 600;
   border-bottom: 1px solid transparent;

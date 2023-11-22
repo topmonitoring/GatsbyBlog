@@ -7,29 +7,32 @@ import { getBackgroundForBlogPostsPreview } from '../components/theme/colors'
 import { SEO } from '../components/seo/seo.component'
 
 export const Head = () => (
-  <SEO title="open source projects page"/>
+  <SEO title="Work page"/>
 )
 
-const ProjectsPage = props => {
+const WorkPage = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   return (
     <Layout location={props.location}>
       <StyledSection>
-        <h1>Free open source projects</h1>
+        <h1>Landing pages</h1>
         <div>
-          You can find all my projects on my portfolio website{' '}
-          <a href="https://dobrindobrev.com">dobrindobrev.com</a>
+          comming soon...
         </div>
+        <h1>AI chatbots</h1>
         <div>
-          or on my github profile{' '}
-          <a href="https://github.com/topmonitoring">topmonitoring</a>
+        comming soon...
+        </div>
+        <h1>Media</h1>
+        <div>
+        comming soon...
         </div>
       </StyledSection>
     </Layout>
   )
 }
 
-export default ProjectsPage
+export default WorkPage
 
 export const pageQuery = graphql`
   query ProjectsQuery {

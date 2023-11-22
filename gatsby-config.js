@@ -75,10 +75,10 @@ module.exports = {
         name: `Pirate Cactus`,
         short_name: `Pirate Cactus`,
         start_url: `/`,
-        icon: `static/favicons/logo3.png`,
+        icon: `static/favicons/logo1.png`,
         icons: [
           {
-            "src": "static/favicons/maskable_icon_x512.png",
+            "src": "static/favicons/maskable_icon.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
