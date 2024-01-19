@@ -9,9 +9,8 @@ export const SocialLinksContainer = styled.div`
   top: 35%;
 
   a {
-    margin: 0px;
+    margin: 5px;
     div {
-      border-radius: 0px;
       height: 30px;
       width: 30px;
       div {

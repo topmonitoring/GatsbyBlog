@@ -28,7 +28,7 @@ export const Head = props => {
 const BlogPostTemplate = props => {
   const post = get(props, 'data.contentfulBlogPost')
   const slug = get(props, 'data.contentfulBlogPost.slug')
-  const baseURL = 'https://piratecactus.com/'
+  const baseURL = 'https://dobrindobrev.com/'
   const fullURL = baseURL +'blog/'+ slug
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,

@@ -19,14 +19,6 @@ const WorkPage = props => {
         <div>
           comming soon...
         </div>
-        <h1>AI chatbots</h1>
-        <div>
-        comming soon...
-        </div>
-        <h1>Media</h1>
-        <div>
-        comming soon...
-        </div>
       </StyledSection>
     </Layout>
   )

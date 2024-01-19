@@ -8,13 +8,12 @@ import { HackerNews } from 'react-social-sharing'
 import { Mail } from 'react-social-sharing'
 import { SocialLinksContainer } from './share-buttons.styles'
 
-const IconStyle = { margin: '0px', borderRadios: '0px' }
 
 const SocialButtons = ({ link, message }) => (
   <SocialLinksContainer>
-    <Facebook solid small style={IconStyle} link={link} message={message} />
-    <Twitter solid small style={IconStyle} message={message} link={link} />
-    <Reddit solid small style={IconStyle} link={link} />
+    <Facebook solid small  link={link} message={message} />
+    <Twitter solid small  message={message} link={link} />
+    <Reddit solid small link={link} />
     <Tumblr solid small link={link} />
     <Pinterest solid small message={message} link={link} />
     <HackerNews solid small message={message} link={link} />

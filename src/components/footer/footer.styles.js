@@ -47,3 +47,6 @@ export const StyledFooterSocials = styled.div`
 export const StyledFooterLinks = styled.div`
   grid-area: links;
 `
+export const StyledForm = styled.div`
+margin: auto;
+`

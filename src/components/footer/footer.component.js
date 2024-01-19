@@ -8,6 +8,7 @@ import {
   StyledFooterInfo,
   StyledFooterLinks,
   StyledFooterSocials,
+  StyledForm
 } from './footer.styles'
 
 import './footer.styles.js'
@@ -43,6 +44,22 @@ const Footer = () => (
         </a>
       </b>{' '}
       © {new Date().getFullYear()} Powerd by Gatsby and Contentfull{' '}
+      <StyledForm
+      action="https://www.paypal.com/cgi-bin/webscr"
+      method="post"
+      target="_top"
+    >
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="5MY575CESZALS" />
+      <input
+        type="image"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
+        border="0"
+        name="submit"
+        title="PayPal - The safer, easier way to pay online!"
+        alt="Donate with PayPal button"
+      />
+    </StyledForm>
     </StyledFooterEnd>
   </StyledFooter>
 )
