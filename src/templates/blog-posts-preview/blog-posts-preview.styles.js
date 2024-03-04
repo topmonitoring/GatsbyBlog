@@ -14,12 +14,7 @@ export const StyledPreview = styled.div`
 export const StyledHeding = styled.h1`
   text-align: center;
 `
-export const StyledHR = styled.hr`
-  max-width: 800px;
-  height: 2px;
-  background-color: rgb(102, 155, 188);
-  border: none;
-`
+
 export const StyledInfo = styled.p`
   text-align: center;
   align-content: center;

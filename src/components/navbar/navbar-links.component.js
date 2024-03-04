@@ -4,7 +4,7 @@ import Resources from './resources-dropdown-menu'
 import styled from 'styled-components'
 import { getGlobalForeground } from '../theme/colors'
 
-const NAV_ITEMS = ['Work','About', 'Contact', 'Blog']
+const NAV_ITEMS = ['About', 'Contact', 'Blog']
 
 const NavbarLinks = ({ isFooter }) => (
   <>

@@ -52,6 +52,7 @@ const BlogPostTemplate = props => {
     <Layout location={props.location}>
       <PostBagroundImg alt={post.title} image={getImage(post.heroImage)} />
       <BlogPostBody >
+      
         <StyledHeder>{post.title}</StyledHeder>
         <StyledContainer>
           <StyledDate>{post.publishDate}</StyledDate>/

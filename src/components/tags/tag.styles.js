@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { Link } from 'gatsby'
 
+export const StyledHR = styled.hr`
+  max-width: 800px;
+  height: 2px;
+  background-color: rgb(102, 155, 188);
+  border: none;
+`
+
 export const StyledTag=styled(Link)`
 -webkit-flex: 30px 1;
 text-align: center;

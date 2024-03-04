@@ -123,12 +123,28 @@ module.exports = {
         chunkSize: 10000, // default: 1000
       },
     },
+    
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-mdx-tts",
+            options: {
+              awsProfile: "gatsby-mdx-tts",
+              awsRegion: "eu-central-1",
+              defaultVoiceId: "Joey",
+            },
+          },
+        ],
+      },
+    },  
     {
       resolve: `gatsby-transformer-remark`,
       options: {
